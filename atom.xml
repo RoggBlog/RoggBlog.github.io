@@ -42,11 +42,11 @@
   </entry>
   
   <entry>
-    <title></title>
+    <title>算法分类</title>
     <link href="http://stark365.com/2019/03/28/%E7%AE%97%E6%B3%95%E5%88%86%E7%B1%BB/"/>
     <id>http://stark365.com/2019/03/28/算法分类/</id>
     <published>2019-03-28T08:04:21.122Z</published>
-    <updated>2019-03-29T03:55:47.755Z</updated>
+    <updated>2019-03-30T09:45:07.005Z</updated>
     
     <content type="html"><![CDATA[<h1 id="算法分类"><a href="#算法分类" class="headerlink" title="算法分类"></a>算法分类</h1><h2 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h2><p>有特征值和目标值。</p><p>算法：</p><ul><li>分类：目标值为离散型<ul><li><a href="./K-近邻算法.md">K-近邻算法</a></li><li><a href>朴素贝叶斯算法</a></li><li><a href>决策树</a></li><li><a href>随机森林</a></li><li><a href>逻辑回归</a></li><li><a href>神经网络</a></li></ul></li><li>回归：目标值为连续型<ul><li><a href>线性回归</a></li><li><a href>岭回归</a></li></ul></li></ul><h2 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h2><p>只有特征值。</p><p>算法：</p><ul><li><a href>聚类</a></li><li><a href>k-means</a></li></ul>]]></content>
     
@@ -59,15 +59,44 @@
     
     </summary>
     
+      <category term="机器学习笔记" scheme="http://stark365.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
     
   </entry>
   
   <entry>
-    <title></title>
+    <title>数据类型</title>
+    <link href="http://stark365.com/2019/03/28/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>http://stark365.com/2019/03/28/数据类型/</id>
+    <published>2019-03-28T07:54:52.096Z</published>
+    <updated>2019-03-30T09:44:44.223Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><ul><li>离散型数据</li><li>连续型数据</li></ul><h2 id="离散型数据"><a href="#离散型数据" class="headerlink" title="离散型数据"></a>离散型数据</h2><p>由记录不同类别个体的数目所得到的数据，计数数据，所有数据全部为整数，而且不能再细分，也不能再进一步的提升精确度。</p><h2 id="连续型数据"><a href="#连续型数据" class="headerlink" title="连续型数据"></a>连续型数据</h2><p>变量可在某个范围内取任意数，可连续，如长度、时间、质量等，这类数通常是非整数，含有小数部分。</p><hr><p><strong>离散型数据区间内不可再分，而连续型数据区间内可再分</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;数据类型&quot;&gt;&lt;a href=&quot;#数据类型&quot; class=&quot;headerlink&quot; title=&quot;数据类型&quot;&gt;&lt;/a&gt;数据类型&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;离散型数据&lt;/li&gt;
+&lt;li&gt;连续型数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;离散型数据&quot;&gt;&lt;a href=&quot;
+      
+    
+    </summary>
+    
+      <category term="机器学习笔记" scheme="http://stark365.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Scikit-Learn 数据集 API</title>
     <link href="http://stark365.com/2019/03/28/sklearn%E6%95%B0%E6%8D%AE%E9%9B%86API/"/>
     <id>http://stark365.com/2019/03/28/sklearn数据集API/</id>
     <published>2019-03-28T05:45:22.517Z</published>
-    <updated>2019-03-28T05:49:19.014Z</updated>
+    <updated>2019-03-30T09:46:26.195Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Scikit-Learn-数据集-API"><a href="#Scikit-Learn-数据集-API" class="headerlink" title="Scikit-Learn 数据集 API"></a>Scikit-Learn 数据集 API</h1><h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.datasets</span><br></pre></td></tr></table></figure><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">datasets.load_*()  <span class="comment"># 获取 sklearn 内置的小型数据集。</span></span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">datasets_fetch_*(data_home=<span class="literal">None</span>)  <span class="comment"># 获取大规模数据集，从互联网上下载，data_home 需要指定下载目录。</span></span><br></pre></td></tr></table></figure>]]></content>
     
@@ -80,15 +109,17 @@
     
     </summary>
     
+      <category term="机器学习笔记" scheme="http://stark365.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
     
   </entry>
   
   <entry>
-    <title></title>
+    <title>主成分分析 PCA</title>
     <link href="http://stark365.com/2019/03/28/%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90/"/>
     <id>http://stark365.com/2019/03/28/主成分分析/</id>
     <published>2019-03-28T01:49:02.490Z</published>
-    <updated>2019-03-28T05:11:53.693Z</updated>
+    <updated>2019-03-30T09:45:54.995Z</updated>
     
     <content type="html"><![CDATA[<h1 id="主成分分析-PCA"><a href="#主成分分析-PCA" class="headerlink" title="主成分分析 PCA"></a>主成分分析 PCA</h1><p>PCA 是一种分析、简化数据集的技术,目的是数据降维压缩，尽可能降低原数据的维数复杂度，会<strong>损失少量信息</strong>。</p><h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.decomposition</span><br></pre></td></tr></table></figure><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PCA(n_components=<span class="number">0.9</span>) <span class="comment"># 小数表示特征信息保留百分比，整数表示特征保留数</span></span><br><span class="line">PCA.fit_transform(X)</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -101,15 +132,17 @@
     
     </summary>
     
+      <category term="机器学习笔记" scheme="http://stark365.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
     
   </entry>
   
   <entry>
-    <title></title>
+    <title>特征选择</title>
     <link href="http://stark365.com/2019/03/28/%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9/"/>
     <id>http://stark365.com/2019/03/28/特征选择/</id>
     <published>2019-03-28T01:18:15.752Z</published>
-    <updated>2019-03-28T05:33:54.730Z</updated>
+    <updated>2019-03-30T09:45:33.185Z</updated>
     
     <content type="html"><![CDATA[<h1 id="特征选择"><a href="#特征选择" class="headerlink" title="特征选择"></a>特征选择</h1><p>部分特征的相关度高，容易消耗计算机性能；部分特征对预测结果有影响。</p><h2 id="主要方法"><a href="#主要方法" class="headerlink" title="主要方法"></a>主要方法</h2><ul><li>Filter(过滤式):VarianceThreshold</li><li>Embedded(嵌入式):正则化、决策树</li><li>Wrapper(包裹式)</li></ul><h2 id="Filter-过滤式"><a href="#Filter-过滤式" class="headerlink" title="Filter(过滤式)"></a>Filter(过滤式)</h2><p>从方差大小考虑特征数据情况</p><h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.feature_selection.VarianceThreshold</span><br></pre></td></tr></table></figure><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">VarianceThreshold(threshold = <span class="number">0.0</span>)</span><br><span class="line">Variance.fit_transform(<span class="number">0.0</span>)</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -123,15 +156,17 @@
     
     </summary>
     
+      <category term="机器学习笔记" scheme="http://stark365.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
     
   </entry>
   
   <entry>
-    <title></title>
+    <title>标准缩放</title>
     <link href="http://stark365.com/2019/03/27/%E5%BD%92%E4%B8%80%E5%8C%96%E6%A0%87%E5%87%86%E5%8C%96/"/>
     <id>http://stark365.com/2019/03/27/归一化标准化/</id>
     <published>2019-03-27T06:48:29.554Z</published>
-    <updated>2019-03-30T07:35:31.885Z</updated>
+    <updated>2019-03-30T09:44:31.004Z</updated>
     
     <content type="html"><![CDATA[<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><h1 id="标准缩放"><a href="#标准缩放" class="headerlink" title="标准缩放"></a>标准缩放</h1><h2 id="归一化"><a href="#归一化" class="headerlink" title="归一化"></a><strong>归一化</strong></h2><p>当多个特征同等重要的时候，需要进行归一化。使得某一个特征对最终结果不会造成较大影响。比如某个特征比其他特征位数大得多，导致其他特征对结果几乎没有影响时，则需要使用归一化。</p><h3 id="公式：-X’-frac-x-min-max-min-X’’-X’-mx-mi-mi"><a href="#公式：-X’-frac-x-min-max-min-X’’-X’-mx-mi-mi" class="headerlink" title="公式： $$X’=\frac{x-min}{max-min}$$ $$X’’=X’*(mx-mi)+mi$$"></a>公式： $$X’=\frac{x-min}{max-min}$$ $$X’’=X’*(mx-mi)+mi$$</h3><blockquote><p>x 为特征值，min 为最小特征值， max 为最大特征值，X’’ 为归一化后结果值，mx 为结果区间最大值， mi 为结果区间最小值</p></blockquote><p>归一化公式中最大值与最小值容易受到异常点影响，所以这种方法<strong>鲁棒性</strong>较差，只适合传统精确小数据场景。</p><h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.preprocessing.MinMaxScaler</span><br></pre></td></tr></table></figure><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MinMaxScalar(feature_range=(<span class="number">0</span>,<span class="number">1</span>))  <span class="comment"># 缩小范围</span></span><br><span class="line">MinMaxScalar.fit_transform(X)</span><br></pre></td></tr></table></figure><h2 id="标准化"><a href="#标准化" class="headerlink" title="标准化"></a><strong>标准化</strong></h2><p>通过对原始数据进行变换把数据变换到均值为0，方差为1范围内。</p><h3 id="公式：-var-frac-x1-mean-2-x2-mean-2-···-n-每个特征的样本数-sigma-sqrt-var-X’-frac-x-mean-sigma"><a href="#公式：-var-frac-x1-mean-2-x2-mean-2-···-n-每个特征的样本数-sigma-sqrt-var-X’-frac-x-mean-sigma" class="headerlink" title="公式：   $$var=\frac{(x1-mean)^2+(x2-mean)^2+···}{n(每个特征的样本数)}$$ $$\sigma=\sqrt{var}$$  $$X’=\frac{x-mean}{\sigma}$$"></a>公式：   $$var=\frac{(x1-mean)^2+(x2-mean)^2+···}{n(每个特征的样本数)}$$ $$\sigma=\sqrt{var}$$  $$X’=\frac{x-mean}{\sigma}$$</h3><blockquote><p>mean 为平均值，σ 为标准差，var 为方差</p></blockquote><p>标准化中标准差可以应对异常点的数值突出，影响较小。在已有<strong>样本足够多的情况下比较稳定</strong>，适合现代嘈杂大数据场景。</p><h3 id="API-1"><a href="#API-1" class="headerlink" title="API"></a>API</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.preprocessing.StandardScaler</span><br></pre></td></tr></table></figure><h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sta = StandardScaler()</span><br><span class="line">sta.fit_stansform(X)</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -146,15 +181,17 @@
     
     </summary>
     
+      <category term="机器学习笔记" scheme="http://stark365.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
     
   </entry>
   
   <entry>
-    <title></title>
+    <title>机器学习笔记</title>
     <link href="http://stark365.com/2018/10/23/README/"/>
     <id>http://stark365.com/2018/10/23/README/</id>
     <published>2018-10-22T16:11:18.000Z</published>
-    <updated>2019-03-30T00:57:58.615Z</updated>
+    <updated>2019-03-30T09:46:12.542Z</updated>
     
     <content type="html"><![CDATA[<h1 id="机器学习笔记"><a href="#机器学习笔记" class="headerlink" title="机器学习笔记"></a>机器学习笔记</h1><ul><li>数据特征预处理<ul><li><a href="./归一化标准化.md">归一化标准化</a></li></ul></li><li>数据降维<ul><li><a href="./特征选择.md">特征选择</a></li><li><a href="./主成分分析.md">主成分分析</a></li></ul></li><li>算法简述<ul><li><a href="./数据类型.md">数据类型</a></li><li><a href="./算法分类.md">算法分类</a></li></ul></li><li>分类算法(有监督学习)<ul><li><a href="./sklearn数据集API.md">scikit-learn 数据集 API </a></li><li><a href="./K-近邻算法.md">K-近邻/KNN</a></li><li><a href>朴素贝叶斯</a></li><li><a href>决策树</a></li><li><a href>随机森林</a></li></ul></li></ul>]]></content>
     
@@ -168,6 +205,8 @@
       
     
     </summary>
+    
+      <category term="机器学习笔记" scheme="http://stark365.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
   </entry>
