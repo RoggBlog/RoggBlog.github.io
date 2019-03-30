@@ -18,8 +18,8 @@
   
   <entry>
     <title>K-近邻算法/KNN 算法</title>
-    <link href="http://stark365.com/2019/03/29/K-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95/"/>
-    <id>http://stark365.com/2019/03/29/K-近邻算法/</id>
+    <link href="http://stark365.com/K-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95/"/>
+    <id>http://stark365.com/K-近邻算法/</id>
     <published>2019-03-29T01:02:57.792Z</published>
     <updated>2019-03-30T09:41:34.171Z</updated>
     
@@ -43,8 +43,8 @@
   
   <entry>
     <title>算法分类</title>
-    <link href="http://stark365.com/2019/03/28/%E7%AE%97%E6%B3%95%E5%88%86%E7%B1%BB/"/>
-    <id>http://stark365.com/2019/03/28/算法分类/</id>
+    <link href="http://stark365.com/%E7%AE%97%E6%B3%95%E5%88%86%E7%B1%BB/"/>
+    <id>http://stark365.com/算法分类/</id>
     <published>2019-03-28T08:04:21.122Z</published>
     <updated>2019-03-30T09:45:07.005Z</updated>
     
@@ -66,8 +66,8 @@
   
   <entry>
     <title>数据类型</title>
-    <link href="http://stark365.com/2019/03/28/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    <id>http://stark365.com/2019/03/28/数据类型/</id>
+    <link href="http://stark365.com/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>http://stark365.com/数据类型/</id>
     <published>2019-03-28T07:54:52.096Z</published>
     <updated>2019-03-30T09:44:44.223Z</updated>
     
@@ -93,8 +93,8 @@
   
   <entry>
     <title>Scikit-Learn 数据集 API</title>
-    <link href="http://stark365.com/2019/03/28/sklearn%E6%95%B0%E6%8D%AE%E9%9B%86API/"/>
-    <id>http://stark365.com/2019/03/28/sklearn数据集API/</id>
+    <link href="http://stark365.com/sklearn%E6%95%B0%E6%8D%AE%E9%9B%86API/"/>
+    <id>http://stark365.com/sklearn数据集API/</id>
     <published>2019-03-28T05:45:22.517Z</published>
     <updated>2019-03-30T09:46:26.195Z</updated>
     
@@ -116,8 +116,8 @@
   
   <entry>
     <title>主成分分析 PCA</title>
-    <link href="http://stark365.com/2019/03/28/%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90/"/>
-    <id>http://stark365.com/2019/03/28/主成分分析/</id>
+    <link href="http://stark365.com/%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90/"/>
+    <id>http://stark365.com/主成分分析/</id>
     <published>2019-03-28T01:49:02.490Z</published>
     <updated>2019-03-30T09:45:54.995Z</updated>
     
@@ -139,8 +139,8 @@
   
   <entry>
     <title>特征选择</title>
-    <link href="http://stark365.com/2019/03/28/%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9/"/>
-    <id>http://stark365.com/2019/03/28/特征选择/</id>
+    <link href="http://stark365.com/%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9/"/>
+    <id>http://stark365.com/特征选择/</id>
     <published>2019-03-28T01:18:15.752Z</published>
     <updated>2019-03-30T09:45:33.185Z</updated>
     
@@ -163,8 +163,8 @@
   
   <entry>
     <title>标准缩放</title>
-    <link href="http://stark365.com/2019/03/27/%E5%BD%92%E4%B8%80%E5%8C%96%E6%A0%87%E5%87%86%E5%8C%96/"/>
-    <id>http://stark365.com/2019/03/27/归一化标准化/</id>
+    <link href="http://stark365.com/%E5%BD%92%E4%B8%80%E5%8C%96%E6%A0%87%E5%87%86%E5%8C%96/"/>
+    <id>http://stark365.com/归一化标准化/</id>
     <published>2019-03-27T06:48:29.554Z</published>
     <updated>2019-03-30T09:44:31.004Z</updated>
     
@@ -188,12 +188,12 @@
   
   <entry>
     <title>机器学习笔记</title>
-    <link href="http://stark365.com/2018/10/23/README/"/>
-    <id>http://stark365.com/2018/10/23/README/</id>
+    <link href="http://stark365.com/README/"/>
+    <id>http://stark365.com/README/</id>
     <published>2018-10-22T16:11:18.000Z</published>
-    <updated>2019-03-30T09:49:17.718Z</updated>
+    <updated>2019-03-30T11:51:33.902Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="机器学习笔记"><a href="#机器学习笔记" class="headerlink" title="机器学习笔记"></a>机器学习笔记</h1><ul><li>数据特征预处理<ul><li><a href="/归一化标准化.md">归一化标准化</a></li></ul></li><li>数据降维<ul><li><a href="./特征选择.md">特征选择</a></li><li><a href="./主成分分析.md">主成分分析</a></li></ul></li><li>算法简述<ul><li><a href="./数据类型.md">数据类型</a></li><li><a href="./算法分类.md">算法分类</a></li></ul></li><li>分类算法(有监督学习)<ul><li><a href="./sklearn数据集API.md">scikit-learn 数据集 API </a></li><li><a href="./K-近邻算法.md">K-近邻/KNN</a></li><li><a href>朴素贝叶斯</a></li><li><a href>决策树</a></li><li><a href>随机森林</a></li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="机器学习笔记"><a href="#机器学习笔记" class="headerlink" title="机器学习笔记"></a>机器学习笔记</h1><ul><li>数据特征预处理<ul><li><a href="/归一化标准化">归一化标准化</a></li></ul></li><li>数据降维<ul><li><a href="./特征选择.md">特征选择</a></li><li><a href="./主成分分析.md">主成分分析</a></li></ul></li><li>算法简述<ul><li><a href="./数据类型.md">数据类型</a></li><li><a href="./算法分类.md">算法分类</a></li></ul></li><li>分类算法(有监督学习)<ul><li><a href="./sklearn数据集API.md">scikit-learn 数据集 API </a></li><li><a href="./K-近邻算法.md">K-近邻/KNN</a></li><li><a href>朴素贝叶斯</a></li><li><a href>决策树</a></li><li><a href>随机森林</a></li></ul></li></ul>]]></content>
     
     <summary type="html">
     
@@ -201,7 +201,7 @@
       
         &lt;h1 id=&quot;机器学习笔记&quot;&gt;&lt;a href=&quot;#机器学习笔记&quot; class=&quot;headerlink&quot; title=&quot;机器学习笔记&quot;&gt;&lt;/a&gt;机器学习笔记&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;数据特征预处理&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/归一化标准化.md&quot;&gt;归一化标准化&lt;/a&gt;&lt;
+&lt;li&gt;&lt;a href=&quot;/归一化标准化&quot;&gt;归一化标准化&lt;/a&gt;&lt;/li
       
     
     </summary>
