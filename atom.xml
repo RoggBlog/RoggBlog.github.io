@@ -191,9 +191,9 @@
     <link href="http://stark365.com/2018/10/23/README/"/>
     <id>http://stark365.com/2018/10/23/README/</id>
     <published>2018-10-22T16:11:18.000Z</published>
-    <updated>2019-03-30T09:46:12.542Z</updated>
+    <updated>2019-03-30T09:49:17.718Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="机器学习笔记"><a href="#机器学习笔记" class="headerlink" title="机器学习笔记"></a>机器学习笔记</h1><ul><li>数据特征预处理<ul><li><a href="./归一化标准化.md">归一化标准化</a></li></ul></li><li>数据降维<ul><li><a href="./特征选择.md">特征选择</a></li><li><a href="./主成分分析.md">主成分分析</a></li></ul></li><li>算法简述<ul><li><a href="./数据类型.md">数据类型</a></li><li><a href="./算法分类.md">算法分类</a></li></ul></li><li>分类算法(有监督学习)<ul><li><a href="./sklearn数据集API.md">scikit-learn 数据集 API </a></li><li><a href="./K-近邻算法.md">K-近邻/KNN</a></li><li><a href>朴素贝叶斯</a></li><li><a href>决策树</a></li><li><a href>随机森林</a></li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="机器学习笔记"><a href="#机器学习笔记" class="headerlink" title="机器学习笔记"></a>机器学习笔记</h1><ul><li>数据特征预处理<ul><li><a href="/归一化标准化.md">归一化标准化</a></li></ul></li><li>数据降维<ul><li><a href="./特征选择.md">特征选择</a></li><li><a href="./主成分分析.md">主成分分析</a></li></ul></li><li>算法简述<ul><li><a href="./数据类型.md">数据类型</a></li><li><a href="./算法分类.md">算法分类</a></li></ul></li><li>分类算法(有监督学习)<ul><li><a href="./sklearn数据集API.md">scikit-learn 数据集 API </a></li><li><a href="./K-近邻算法.md">K-近邻/KNN</a></li><li><a href>朴素贝叶斯</a></li><li><a href>决策树</a></li><li><a href>随机森林</a></li></ul></li></ul>]]></content>
     
     <summary type="html">
     
@@ -201,7 +201,7 @@
       
         &lt;h1 id=&quot;机器学习笔记&quot;&gt;&lt;a href=&quot;#机器学习笔记&quot; class=&quot;headerlink&quot; title=&quot;机器学习笔记&quot;&gt;&lt;/a&gt;机器学习笔记&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;数据特征预处理&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;./归一化标准化.md&quot;&gt;归一化标准化&lt;/a&gt;
+&lt;li&gt;&lt;a href=&quot;/归一化标准化.md&quot;&gt;归一化标准化&lt;/a&gt;&lt;
       
     
     </summary>
