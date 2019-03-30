@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stark365.com/"/>
-  <updated>2019-03-30T07:30:22.498Z</updated>
+  <updated>2019-03-30T09:41:34.171Z</updated>
   <id>http://stark365.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>K-近邻算法/KNN 算法</title>
     <link href="http://stark365.com/2019/03/29/K-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95/"/>
     <id>http://stark365.com/2019/03/29/K-近邻算法/</id>
     <published>2019-03-29T01:02:57.792Z</published>
-    <updated>2019-03-30T07:30:22.498Z</updated>
+    <updated>2019-03-30T09:41:34.171Z</updated>
     
     <content type="html"><![CDATA[<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><h1 id="K-近邻算法-KNN-算法"><a href="#K-近邻算法-KNN-算法" class="headerlink" title="K-近邻算法/KNN 算法"></a>K-近邻算法/KNN 算法</h1><p>如果一个样本在特征空间中的 k 个最相似(即特征空间中最邻近)的样本中的大多数属于某一个类别，则该样本也属于这个类别。</p><p>最近邻居法采用<strong>向量空间模型</strong>来分类，概念为相同类别的案例，彼此的相似度高，而可以借由计算与已知类别案例之相似度，来评估未知类别案例可能的分类。</p><h2 id="欧式距离"><a href="#欧式距离" class="headerlink" title="欧式距离"></a>欧式距离</h2><h3 id="公式："><a href="#公式：" class="headerlink" title="公式："></a>公式：</h3><h2 id="sqrt-a-1-b-1-2-a-2-b-2-2-a-3-b-3-2"><a href="#sqrt-a-1-b-1-2-a-2-b-2-2-a-3-b-3-2" class="headerlink" title="$$\sqrt{(a_1 - b_1)^2 + (a_2 - b_2)^2 + (a_3 - b_3)^2}$$"></a>$$\sqrt{(a_1 - b_1)^2 + (a_2 - b_2)^2 + (a_3 - b_3)^2}$$</h2><h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><p>K-近邻算法需要做标准化处理</p><h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.neighbors.KNeighborsClassifier</span><br></pre></td></tr></table></figure><h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">KNeighborsClassifier(n_neighbors=<span class="number">5</span>, algorithm=<span class="string">'auto'</span>)</span><br></pre></td></tr></table></figure><blockquote><p><strong>n_neighbors: int</strong> 查询默认使用的邻居数。</p></blockquote><blockquote><p><strong>algorithm: {‘auto’, ‘ball_tree’, ‘kd_tree’, ‘brute’}</strong> 可选用于计算最近邻居的算法，’ball_tree’ 将使用 BallTree，’kd_tree’ 将使用 KDTree。’auto’ 将尝试根据传递给 fit 方法的值来决定最合适的算法。</p></blockquote><h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>计算量大，性能问题严峻。</p>]]></content>
     
@@ -35,6 +35,8 @@
       
     
     </summary>
+    
+      <category term="机器学习笔记" scheme="http://stark365.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
   </entry>
