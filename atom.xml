@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Logg 罗格</title>
+  
+  <subtitle>Stay Hungry, Stay Foolish</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://stark365.com/"/>
+  <updated>2019-03-30T07:30:22.498Z</updated>
+  <id>http://stark365.com/</id>
+  
+  <author>
+    <name>Logg 罗格</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://stark365.com/2019/03/29/K-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95/"/>
+    <id>http://stark365.com/2019/03/29/K-近邻算法/</id>
+    <published>2019-03-29T01:02:57.792Z</published>
+    <updated>2019-03-30T07:30:22.498Z</updated>
+    
+    <content type="html"><![CDATA[<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><h1 id="K-近邻算法-KNN-算法"><a href="#K-近邻算法-KNN-算法" class="headerlink" title="K-近邻算法/KNN 算法"></a>K-近邻算法/KNN 算法</h1><p>如果一个样本在特征空间中的 k 个最相似(即特征空间中最邻近)的样本中的大多数属于某一个类别，则该样本也属于这个类别。</p><p>最近邻居法采用<strong>向量空间模型</strong>来分类，概念为相同类别的案例，彼此的相似度高，而可以借由计算与已知类别案例之相似度，来评估未知类别案例可能的分类。</p><h2 id="欧式距离"><a href="#欧式距离" class="headerlink" title="欧式距离"></a>欧式距离</h2><h3 id="公式："><a href="#公式：" class="headerlink" title="公式："></a>公式：</h3><h2 id="sqrt-a-1-b-1-2-a-2-b-2-2-a-3-b-3-2"><a href="#sqrt-a-1-b-1-2-a-2-b-2-2-a-3-b-3-2" class="headerlink" title="$$\sqrt{(a_1 - b_1)^2 + (a_2 - b_2)^2 + (a_3 - b_3)^2}$$"></a>$$\sqrt{(a_1 - b_1)^2 + (a_2 - b_2)^2 + (a_3 - b_3)^2}$$</h2><h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><p>K-近邻算法需要做标准化处理</p><h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.neighbors.KNeighborsClassifier</span><br></pre></td></tr></table></figure><h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">KNeighborsClassifier(n_neighbors=<span class="number">5</span>, algorithm=<span class="string">'auto'</span>)</span><br></pre></td></tr></table></figure><blockquote><p><strong>n_neighbors: int</strong> 查询默认使用的邻居数。</p></blockquote><blockquote><p><strong>algorithm: {‘auto’, ‘ball_tree’, ‘kd_tree’, ‘brute’}</strong> 可选用于计算最近邻居的算法，’ball_tree’ 将使用 BallTree，’kd_tree’ 将使用 KDTree。’auto’ 将尝试根据传递给 fit 方法的值来决定最合适的算法。</p></blockquote><h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>计算量大，性能问题严峻。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&gt;&lt;/script&gt;
+
+&lt;h1 id=&quot;K-近邻算法-KNN-算法&quot;&gt;&lt;a hr
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://stark365.com/2019/03/28/%E7%AE%97%E6%B3%95%E5%88%86%E7%B1%BB/"/>
+    <id>http://stark365.com/2019/03/28/算法分类/</id>
+    <published>2019-03-28T08:04:21.122Z</published>
+    <updated>2019-03-29T03:55:47.755Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="算法分类"><a href="#算法分类" class="headerlink" title="算法分类"></a>算法分类</h1><h2 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h2><p>有特征值和目标值。</p><p>算法：</p><ul><li>分类：目标值为离散型<ul><li><a href="./K-近邻算法.md">K-近邻算法</a></li><li><a href>朴素贝叶斯算法</a></li><li><a href>决策树</a></li><li><a href>随机森林</a></li><li><a href>逻辑回归</a></li><li><a href>神经网络</a></li></ul></li><li>回归：目标值为连续型<ul><li><a href>线性回归</a></li><li><a href>岭回归</a></li></ul></li></ul><h2 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h2><p>只有特征值。</p><p>算法：</p><ul><li><a href>聚类</a></li><li><a href>k-means</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;算法分类&quot;&gt;&lt;a href=&quot;#算法分类&quot; class=&quot;headerlink&quot; title=&quot;算法分类&quot;&gt;&lt;/a&gt;算法分类&lt;/h1&gt;&lt;h2 id=&quot;监督学习&quot;&gt;&lt;a href=&quot;#监督学习&quot; class=&quot;headerlink&quot; title=&quot;监督学习&quot;&gt;&lt;/a
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://stark365.com/2019/03/28/sklearn%E6%95%B0%E6%8D%AE%E9%9B%86API/"/>
+    <id>http://stark365.com/2019/03/28/sklearn数据集API/</id>
+    <published>2019-03-28T05:45:22.517Z</published>
+    <updated>2019-03-28T05:49:19.014Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Scikit-Learn-数据集-API"><a href="#Scikit-Learn-数据集-API" class="headerlink" title="Scikit-Learn 数据集 API"></a>Scikit-Learn 数据集 API</h1><h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.datasets</span><br></pre></td></tr></table></figure><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">datasets.load_*()  <span class="comment"># 获取 sklearn 内置的小型数据集。</span></span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">datasets_fetch_*(data_home=<span class="literal">None</span>)  <span class="comment"># 获取大规模数据集，从互联网上下载，data_home 需要指定下载目录。</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Scikit-Learn-数据集-API&quot;&gt;&lt;a href=&quot;#Scikit-Learn-数据集-API&quot; class=&quot;headerlink&quot; title=&quot;Scikit-Learn 数据集 API&quot;&gt;&lt;/a&gt;Scikit-Learn 数据集 API&lt;/h1&gt;&lt;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://stark365.com/2019/03/28/%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90/"/>
+    <id>http://stark365.com/2019/03/28/主成分分析/</id>
+    <published>2019-03-28T01:49:02.490Z</published>
+    <updated>2019-03-28T05:11:53.693Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="主成分分析-PCA"><a href="#主成分分析-PCA" class="headerlink" title="主成分分析 PCA"></a>主成分分析 PCA</h1><p>PCA 是一种分析、简化数据集的技术,目的是数据降维压缩，尽可能降低原数据的维数复杂度，会<strong>损失少量信息</strong>。</p><h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.decomposition</span><br></pre></td></tr></table></figure><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PCA(n_components=<span class="number">0.9</span>) <span class="comment"># 小数表示特征信息保留百分比，整数表示特征保留数</span></span><br><span class="line">PCA.fit_transform(X)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;主成分分析-PCA&quot;&gt;&lt;a href=&quot;#主成分分析-PCA&quot; class=&quot;headerlink&quot; title=&quot;主成分分析 PCA&quot;&gt;&lt;/a&gt;主成分分析 PCA&lt;/h1&gt;&lt;p&gt;PCA 是一种分析、简化数据集的技术,目的是数据降维压缩，尽可能降低原数据的维数复杂
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://stark365.com/2019/03/28/%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9/"/>
+    <id>http://stark365.com/2019/03/28/特征选择/</id>
+    <published>2019-03-28T01:18:15.752Z</published>
+    <updated>2019-03-28T05:33:54.730Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="特征选择"><a href="#特征选择" class="headerlink" title="特征选择"></a>特征选择</h1><p>部分特征的相关度高，容易消耗计算机性能；部分特征对预测结果有影响。</p><h2 id="主要方法"><a href="#主要方法" class="headerlink" title="主要方法"></a>主要方法</h2><ul><li>Filter(过滤式):VarianceThreshold</li><li>Embedded(嵌入式):正则化、决策树</li><li>Wrapper(包裹式)</li></ul><h2 id="Filter-过滤式"><a href="#Filter-过滤式" class="headerlink" title="Filter(过滤式)"></a>Filter(过滤式)</h2><p>从方差大小考虑特征数据情况</p><h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.feature_selection.VarianceThreshold</span><br></pre></td></tr></table></figure><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">VarianceThreshold(threshold = <span class="number">0.0</span>)</span><br><span class="line">Variance.fit_transform(<span class="number">0.0</span>)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;特征选择&quot;&gt;&lt;a href=&quot;#特征选择&quot; class=&quot;headerlink&quot; title=&quot;特征选择&quot;&gt;&lt;/a&gt;特征选择&lt;/h1&gt;&lt;p&gt;部分特征的相关度高，容易消耗计算机性能；部分特征对预测结果有影响。&lt;/p&gt;
+&lt;h2 id=&quot;主要方法&quot;&gt;&lt;a href=&quot;#
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://stark365.com/2019/03/27/%E5%BD%92%E4%B8%80%E5%8C%96%E6%A0%87%E5%87%86%E5%8C%96/"/>
+    <id>http://stark365.com/2019/03/27/归一化标准化/</id>
+    <published>2019-03-27T06:48:29.554Z</published>
+    <updated>2019-03-30T07:35:31.885Z</updated>
+    
+    <content type="html"><![CDATA[<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><h1 id="标准缩放"><a href="#标准缩放" class="headerlink" title="标准缩放"></a>标准缩放</h1><h2 id="归一化"><a href="#归一化" class="headerlink" title="归一化"></a><strong>归一化</strong></h2><p>当多个特征同等重要的时候，需要进行归一化。使得某一个特征对最终结果不会造成较大影响。比如某个特征比其他特征位数大得多，导致其他特征对结果几乎没有影响时，则需要使用归一化。</p><h3 id="公式：-X’-frac-x-min-max-min-X’’-X’-mx-mi-mi"><a href="#公式：-X’-frac-x-min-max-min-X’’-X’-mx-mi-mi" class="headerlink" title="公式： $$X’=\frac{x-min}{max-min}$$ $$X’’=X’*(mx-mi)+mi$$"></a>公式： $$X’=\frac{x-min}{max-min}$$ $$X’’=X’*(mx-mi)+mi$$</h3><blockquote><p>x 为特征值，min 为最小特征值， max 为最大特征值，X’’ 为归一化后结果值，mx 为结果区间最大值， mi 为结果区间最小值</p></blockquote><p>归一化公式中最大值与最小值容易受到异常点影响，所以这种方法<strong>鲁棒性</strong>较差，只适合传统精确小数据场景。</p><h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.preprocessing.MinMaxScaler</span><br></pre></td></tr></table></figure><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MinMaxScalar(feature_range=(<span class="number">0</span>,<span class="number">1</span>))  <span class="comment"># 缩小范围</span></span><br><span class="line">MinMaxScalar.fit_transform(X)</span><br></pre></td></tr></table></figure><h2 id="标准化"><a href="#标准化" class="headerlink" title="标准化"></a><strong>标准化</strong></h2><p>通过对原始数据进行变换把数据变换到均值为0，方差为1范围内。</p><h3 id="公式：-var-frac-x1-mean-2-x2-mean-2-···-n-每个特征的样本数-sigma-sqrt-var-X’-frac-x-mean-sigma"><a href="#公式：-var-frac-x1-mean-2-x2-mean-2-···-n-每个特征的样本数-sigma-sqrt-var-X’-frac-x-mean-sigma" class="headerlink" title="公式：   $$var=\frac{(x1-mean)^2+(x2-mean)^2+···}{n(每个特征的样本数)}$$ $$\sigma=\sqrt{var}$$  $$X’=\frac{x-mean}{\sigma}$$"></a>公式：   $$var=\frac{(x1-mean)^2+(x2-mean)^2+···}{n(每个特征的样本数)}$$ $$\sigma=\sqrt{var}$$  $$X’=\frac{x-mean}{\sigma}$$</h3><blockquote><p>mean 为平均值，σ 为标准差，var 为方差</p></blockquote><p>标准化中标准差可以应对异常点的数值突出，影响较小。在已有<strong>样本足够多的情况下比较稳定</strong>，适合现代嘈杂大数据场景。</p><h3 id="API-1"><a href="#API-1" class="headerlink" title="API"></a>API</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.preprocessing.StandardScaler</span><br></pre></td></tr></table></figure><h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sta = StandardScaler()</span><br><span class="line">sta.fit_stansform(X)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&gt;&lt;/script&gt;
+
+&lt;h1 id=&quot;标准缩放&quot;&gt;&lt;a href=&quot;#标准缩放
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://stark365.com/2018/10/23/README/"/>
+    <id>http://stark365.com/2018/10/23/README/</id>
+    <published>2018-10-22T16:11:18.000Z</published>
+    <updated>2019-03-30T00:57:58.615Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="机器学习笔记"><a href="#机器学习笔记" class="headerlink" title="机器学习笔记"></a>机器学习笔记</h1><ul><li>数据特征预处理<ul><li><a href="./归一化标准化.md">归一化标准化</a></li></ul></li><li>数据降维<ul><li><a href="./特征选择.md">特征选择</a></li><li><a href="./主成分分析.md">主成分分析</a></li></ul></li><li>算法简述<ul><li><a href="./数据类型.md">数据类型</a></li><li><a href="./算法分类.md">算法分类</a></li></ul></li><li>分类算法(有监督学习)<ul><li><a href="./sklearn数据集API.md">scikit-learn 数据集 API </a></li><li><a href="./K-近邻算法.md">K-近邻/KNN</a></li><li><a href>朴素贝叶斯</a></li><li><a href>决策树</a></li><li><a href>随机森林</a></li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;机器学习笔记&quot;&gt;&lt;a href=&quot;#机器学习笔记&quot; class=&quot;headerlink&quot; title=&quot;机器学习笔记&quot;&gt;&lt;/a&gt;机器学习笔记&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;数据特征预处理&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;./归一化标准化.md&quot;&gt;归一化标准化&lt;/a&gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
