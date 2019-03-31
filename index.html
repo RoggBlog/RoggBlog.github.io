@@ -357,7 +357,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  75
+                  77
                 </span>
               
 
@@ -398,7 +398,7 @@
           
             <h1 id="机器学习笔记"><a href="#机器学习笔记" class="headerlink" title="机器学习笔记"></a>机器学习笔记</h1><ul>
 <li>数据特征预处理<ul>
-<li><a href="/归一化标准化">归一化标准化</a></li>
+<li><a href="/归一化标准化">标准缩放</a></li>
 </ul>
 </li>
 <li>数据降维<ul>
@@ -414,13 +414,166 @@
 <li>分类算法(有监督学习)<ul>
 <li><a href="./sklearn数据集API">scikit-learn 数据集 API </a></li>
 <li><a href="./K-近邻算法">K-近邻/KNN</a></li>
-<li><a href>朴素贝叶斯</a></li>
+<li><a href>朴素贝叶斯</a><ul>
+<li><a href="./概率基础">概率基础</a></li>
+</ul>
+</li>
 <li><a href>决策树</a></li>
 <li><a href>随机森林</a></li>
 </ul>
 </li>
 </ul>
 
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://stark365.com/概率基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Logg 罗格">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Logg 罗格">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/概率基础/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-31T09:11:26+08:00">
+                2019-03-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  0
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
           
         
       
@@ -596,7 +749,7 @@
 
 <h1 id="K-近邻算法-KNN-算法"><a href="#K-近邻算法-KNN-算法" class="headerlink" title="K-近邻算法/KNN 算法"></a>K-近邻算法/KNN 算法</h1><p>如果一个样本在特征空间中的 k 个最相似(即特征空间中最邻近)的样本中的大多数属于某一个类别，则该样本也属于这个类别。</p>
 <p>最近邻居法采用<strong>向量空间模型</strong>来分类，概念为相同类别的案例，彼此的相似度高，而可以借由计算与已知类别案例之相似度，来评估未知类别案例可能的分类。</p>
-<h2 id="欧式距离"><a href="#欧式距离" class="headerlink" title="欧式距离"></a>欧式距离</h2><h3 id="公式："><a href="#公式：" class="headerlink" title="公式："></a>公式：</h3><h2 id="sqrt-a-1-b-1-2-a-2-b-2-2-a-3-b-3-2"><a href="#sqrt-a-1-b-1-2-a-2-b-2-2-a-3-b-3-2" class="headerlink" title="$$\sqrt{(a_1 - b_1)^2 + (a_2 - b_2)^2 + (a_3 - b_3)^2}$$"></a>$$\sqrt{(a_1 - b_1)^2 + (a_2 - b_2)^2 + (a_3 - b_3)^2}$$</h2><h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><p>K-近邻算法需要做标准化处理</p>
+<h2 id="欧式距离"><a href="#欧式距离" class="headerlink" title="欧式距离"></a>欧式距离</h2><h3 id="公式："><a href="#公式：" class="headerlink" title="公式："></a>公式：</h3><h2 id="sqrt-a-1-b-1-2-a-2-b-2-2-a-3-b-3-2"><a href="#sqrt-a-1-b-1-2-a-2-b-2-2-a-3-b-3-2" class="headerlink" title="$$\sqrt{(a_1 - b_1)^2 + (a_2 - b_2)^2 + (a_3 - b_3)^2}$$"></a>$$\sqrt{(a_1 - b_1)^2 + (a_2 - b_2)^2 + (a_3 - b_3)^2}$$</h2><h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><p><strong>K-近邻算法需要做标准化处理</strong></p>
 <h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.neighbors.KNeighborsClassifier</span><br></pre></td></tr></table></figure>
 <h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">KNeighborsClassifier(n_neighbors=<span class="number">5</span>, algorithm=<span class="string">'auto'</span>)</span><br></pre></td></tr></table></figure>
 <blockquote>
@@ -782,7 +935,7 @@
 <p>算法：</p>
 <ul>
 <li>分类：目标值为离散型<ul>
-<li><a href="./K-近邻算法">K-近邻算法</a></li>
+<li><a href="../K-近邻算法">K-近邻算法</a></li>
 <li><a href>朴素贝叶斯算法</a></li>
 <li><a href>决策树</a></li>
 <li><a href>随机森林</a></li>
@@ -1782,7 +1935,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

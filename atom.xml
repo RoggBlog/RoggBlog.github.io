@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stark365.com/"/>
-  <updated>2019-03-30T09:41:34.171Z</updated>
+  <updated>2019-03-31T01:12:35.982Z</updated>
   <id>http://stark365.com/</id>
   
   <author>
@@ -17,13 +17,27 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="http://stark365.com/%E6%A6%82%E7%8E%87%E5%9F%BA%E7%A1%80/"/>
+    <id>http://stark365.com/概率基础/</id>
+    <published>2019-03-31T01:11:26.005Z</published>
+    <updated>2019-03-31T01:12:35.982Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>K-近邻算法/KNN 算法</title>
     <link href="http://stark365.com/K-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95/"/>
     <id>http://stark365.com/K-近邻算法/</id>
     <published>2019-03-29T01:02:57.792Z</published>
-    <updated>2019-03-30T09:41:34.171Z</updated>
+    <updated>2019-03-31T01:10:42.702Z</updated>
     
-    <content type="html"><![CDATA[<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><h1 id="K-近邻算法-KNN-算法"><a href="#K-近邻算法-KNN-算法" class="headerlink" title="K-近邻算法/KNN 算法"></a>K-近邻算法/KNN 算法</h1><p>如果一个样本在特征空间中的 k 个最相似(即特征空间中最邻近)的样本中的大多数属于某一个类别，则该样本也属于这个类别。</p><p>最近邻居法采用<strong>向量空间模型</strong>来分类，概念为相同类别的案例，彼此的相似度高，而可以借由计算与已知类别案例之相似度，来评估未知类别案例可能的分类。</p><h2 id="欧式距离"><a href="#欧式距离" class="headerlink" title="欧式距离"></a>欧式距离</h2><h3 id="公式："><a href="#公式：" class="headerlink" title="公式："></a>公式：</h3><h2 id="sqrt-a-1-b-1-2-a-2-b-2-2-a-3-b-3-2"><a href="#sqrt-a-1-b-1-2-a-2-b-2-2-a-3-b-3-2" class="headerlink" title="$$\sqrt{(a_1 - b_1)^2 + (a_2 - b_2)^2 + (a_3 - b_3)^2}$$"></a>$$\sqrt{(a_1 - b_1)^2 + (a_2 - b_2)^2 + (a_3 - b_3)^2}$$</h2><h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><p>K-近邻算法需要做标准化处理</p><h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.neighbors.KNeighborsClassifier</span><br></pre></td></tr></table></figure><h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">KNeighborsClassifier(n_neighbors=<span class="number">5</span>, algorithm=<span class="string">'auto'</span>)</span><br></pre></td></tr></table></figure><blockquote><p><strong>n_neighbors: int</strong> 查询默认使用的邻居数。</p></blockquote><blockquote><p><strong>algorithm: {‘auto’, ‘ball_tree’, ‘kd_tree’, ‘brute’}</strong> 可选用于计算最近邻居的算法，’ball_tree’ 将使用 BallTree，’kd_tree’ 将使用 KDTree。’auto’ 将尝试根据传递给 fit 方法的值来决定最合适的算法。</p></blockquote><h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>计算量大，性能问题严峻。</p>]]></content>
+    <content type="html"><![CDATA[<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><h1 id="K-近邻算法-KNN-算法"><a href="#K-近邻算法-KNN-算法" class="headerlink" title="K-近邻算法/KNN 算法"></a>K-近邻算法/KNN 算法</h1><p>如果一个样本在特征空间中的 k 个最相似(即特征空间中最邻近)的样本中的大多数属于某一个类别，则该样本也属于这个类别。</p><p>最近邻居法采用<strong>向量空间模型</strong>来分类，概念为相同类别的案例，彼此的相似度高，而可以借由计算与已知类别案例之相似度，来评估未知类别案例可能的分类。</p><h2 id="欧式距离"><a href="#欧式距离" class="headerlink" title="欧式距离"></a>欧式距离</h2><h3 id="公式："><a href="#公式：" class="headerlink" title="公式："></a>公式：</h3><h2 id="sqrt-a-1-b-1-2-a-2-b-2-2-a-3-b-3-2"><a href="#sqrt-a-1-b-1-2-a-2-b-2-2-a-3-b-3-2" class="headerlink" title="$$\sqrt{(a_1 - b_1)^2 + (a_2 - b_2)^2 + (a_3 - b_3)^2}$$"></a>$$\sqrt{(a_1 - b_1)^2 + (a_2 - b_2)^2 + (a_3 - b_3)^2}$$</h2><h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><p><strong>K-近邻算法需要做标准化处理</strong></p><h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.neighbors.KNeighborsClassifier</span><br></pre></td></tr></table></figure><h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">KNeighborsClassifier(n_neighbors=<span class="number">5</span>, algorithm=<span class="string">'auto'</span>)</span><br></pre></td></tr></table></figure><blockquote><p><strong>n_neighbors: int</strong> 查询默认使用的邻居数。</p></blockquote><blockquote><p><strong>algorithm: {‘auto’, ‘ball_tree’, ‘kd_tree’, ‘brute’}</strong> 可选用于计算最近邻居的算法，’ball_tree’ 将使用 BallTree，’kd_tree’ 将使用 KDTree。’auto’ 将尝试根据传递给 fit 方法的值来决定最合适的算法。</p></blockquote><h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>计算量大，性能问题严峻。</p>]]></content>
     
     <summary type="html">
     
@@ -46,9 +60,9 @@
     <link href="http://stark365.com/%E7%AE%97%E6%B3%95%E5%88%86%E7%B1%BB/"/>
     <id>http://stark365.com/算法分类/</id>
     <published>2019-03-28T08:04:21.122Z</published>
-    <updated>2019-03-30T11:58:52.794Z</updated>
+    <updated>2019-03-31T01:13:30.471Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="算法分类"><a href="#算法分类" class="headerlink" title="算法分类"></a>算法分类</h1><h2 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h2><p>有特征值和目标值。</p><p>算法：</p><ul><li>分类：目标值为离散型<ul><li><a href="./K-近邻算法">K-近邻算法</a></li><li><a href>朴素贝叶斯算法</a></li><li><a href>决策树</a></li><li><a href>随机森林</a></li><li><a href>逻辑回归</a></li><li><a href>神经网络</a></li></ul></li><li>回归：目标值为连续型<ul><li><a href>线性回归</a></li><li><a href>岭回归</a></li></ul></li></ul><h2 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h2><p>只有特征值。</p><p>算法：</p><ul><li><a href>聚类</a></li><li><a href>k-means</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="算法分类"><a href="#算法分类" class="headerlink" title="算法分类"></a>算法分类</h1><h2 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h2><p>有特征值和目标值。</p><p>算法：</p><ul><li>分类：目标值为离散型<ul><li><a href="../K-近邻算法">K-近邻算法</a></li><li><a href>朴素贝叶斯算法</a></li><li><a href>决策树</a></li><li><a href>随机森林</a></li><li><a href>逻辑回归</a></li><li><a href>神经网络</a></li></ul></li><li>回归：目标值为连续型<ul><li><a href>线性回归</a></li><li><a href>岭回归</a></li></ul></li></ul><h2 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h2><p>只有特征值。</p><p>算法：</p><ul><li><a href>聚类</a></li><li><a href>k-means</a></li></ul>]]></content>
     
     <summary type="html">
     
@@ -191,9 +205,9 @@
     <link href="http://stark365.com/README/"/>
     <id>http://stark365.com/README/</id>
     <published>2018-10-22T16:11:18.000Z</published>
-    <updated>2019-03-30T12:12:28.130Z</updated>
+    <updated>2019-03-31T01:11:37.660Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="机器学习笔记"><a href="#机器学习笔记" class="headerlink" title="机器学习笔记"></a>机器学习笔记</h1><ul><li>数据特征预处理<ul><li><a href="/归一化标准化">归一化标准化</a></li></ul></li><li>数据降维<ul><li><a href="./特征选择">特征选择</a></li><li><a href="./主成分分析">主成分分析</a></li></ul></li><li>算法简述<ul><li><a href="./数据类型">数据类型</a></li><li><a href="./算法分类">算法分类</a></li></ul></li><li>分类算法(有监督学习)<ul><li><a href="./sklearn数据集API">scikit-learn 数据集 API </a></li><li><a href="./K-近邻算法">K-近邻/KNN</a></li><li><a href>朴素贝叶斯</a></li><li><a href>决策树</a></li><li><a href>随机森林</a></li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="机器学习笔记"><a href="#机器学习笔记" class="headerlink" title="机器学习笔记"></a>机器学习笔记</h1><ul><li>数据特征预处理<ul><li><a href="/归一化标准化">标准缩放</a></li></ul></li><li>数据降维<ul><li><a href="./特征选择">特征选择</a></li><li><a href="./主成分分析">主成分分析</a></li></ul></li><li>算法简述<ul><li><a href="./数据类型">数据类型</a></li><li><a href="./算法分类">算法分类</a></li></ul></li><li>分类算法(有监督学习)<ul><li><a href="./sklearn数据集API">scikit-learn 数据集 API </a></li><li><a href="./K-近邻算法">K-近邻/KNN</a></li><li><a href>朴素贝叶斯</a><ul><li><a href="./概率基础">概率基础</a></li></ul></li><li><a href>决策树</a></li><li><a href>随机森林</a></li></ul></li></ul>]]></content>
     
     <summary type="html">
     
@@ -201,7 +215,8 @@
       
         &lt;h1 id=&quot;机器学习笔记&quot;&gt;&lt;a href=&quot;#机器学习笔记&quot; class=&quot;headerlink&quot; title=&quot;机器学习笔记&quot;&gt;&lt;/a&gt;机器学习笔记&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;数据特征预处理&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/归一化标准化&quot;&gt;归一化标准化&lt;/a&gt;&lt;/li
+&lt;li&gt;&lt;a href=&quot;/归一化标准化&quot;&gt;标准缩放&lt;/a&gt;&lt;/li&gt;
+
       
     
     </summary>
