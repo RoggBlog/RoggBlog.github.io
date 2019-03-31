@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="朴素贝叶斯算法朴素贝叶斯算法基于条件概率，特征与特征之间相互独立互不影响。 贝叶斯公式$$ P(C|W)=\frac{P(W|C)P(C)}{P(W)} $$  \(W\)为给定文档的特征值（频数统计，预测文档提供），\(C\)为文档类别。  公式可理解为： $$ P(C|F_1,F_2,…)=\frac{P(F_1,F_2,…|C)}{P(F_1,F_2,…)} $$  其中\(C\)可以是">
+<meta name="description" content="朴素贝叶斯算法朴素贝叶斯算法基于条件概率，特征与特征之间相互独立互不影响。 贝叶斯公式$$ P(C|W)=\frac{P(W|C)P(C)}{P(W)} $$  \(W\)为给定文档的特征值（频数统计，预测文档提供），\(C\)为文档类别。  公式可理解为： $$ P(C|F_1,F_2,…)=\frac{P(F_1,F_2,…|C)P(C)}{P(F_1,F_2,…)} $$  其中\(C\">
 <meta name="keywords" content="罗格">
 <meta property="og:type" content="article">
 <meta property="og:title" content="朴素贝叶斯">
 <meta property="og:url" content="http://stark365.com/朴素贝叶斯/index.html">
 <meta property="og:site_name" content="Logg 罗格">
-<meta property="og:description" content="朴素贝叶斯算法朴素贝叶斯算法基于条件概率，特征与特征之间相互独立互不影响。 贝叶斯公式$$ P(C|W)=\frac{P(W|C)P(C)}{P(W)} $$  \(W\)为给定文档的特征值（频数统计，预测文档提供），\(C\)为文档类别。  公式可理解为： $$ P(C|F_1,F_2,…)=\frac{P(F_1,F_2,…|C)}{P(F_1,F_2,…)} $$  其中\(C\)可以是">
+<meta property="og:description" content="朴素贝叶斯算法朴素贝叶斯算法基于条件概率，特征与特征之间相互独立互不影响。 贝叶斯公式$$ P(C|W)=\frac{P(W|C)P(C)}{P(W)} $$  \(W\)为给定文档的特征值（频数统计，预测文档提供），\(C\)为文档类别。  公式可理解为： $$ P(C|F_1,F_2,…)=\frac{P(F_1,F_2,…|C)P(C)}{P(F_1,F_2,…)} $$  其中\(C\">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-31T06:00:16.927Z">
+<meta property="og:updated_time" content="2019-03-31T06:25:09.661Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="朴素贝叶斯">
-<meta name="twitter:description" content="朴素贝叶斯算法朴素贝叶斯算法基于条件概率，特征与特征之间相互独立互不影响。 贝叶斯公式$$ P(C|W)=\frac{P(W|C)P(C)}{P(W)} $$  \(W\)为给定文档的特征值（频数统计，预测文档提供），\(C\)为文档类别。  公式可理解为： $$ P(C|F_1,F_2,…)=\frac{P(F_1,F_2,…|C)}{P(F_1,F_2,…)} $$  其中\(C\)可以是">
+<meta name="twitter:description" content="朴素贝叶斯算法朴素贝叶斯算法基于条件概率，特征与特征之间相互独立互不影响。 贝叶斯公式$$ P(C|W)=\frac{P(W|C)P(C)}{P(W)} $$  \(W\)为给定文档的特征值（频数统计，预测文档提供），\(C\)为文档类别。  公式可理解为： $$ P(C|F_1,F_2,…)=\frac{P(F_1,F_2,…|C)P(C)}{P(F_1,F_2,…)} $$  其中\(C\">
 
 
 
@@ -355,7 +355,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  398
+                  400
                 </span>
               
 
@@ -400,7 +400,7 @@
 <p>\(W\)为给定文档的特征值（频数统计，预测文档提供），\(C\)为文档类别。</p>
 </blockquote>
 <p>公式可理解为：</p>
-<p>$$ P(C|F_1,F_2,…)=\frac{P(F_1,F_2,…|C)}{P(F_1,F_2,…)} $$</p>
+<p>$$ P(C|F_1,F_2,…)=\frac{P(F_1,F_2,…|C)P(C)}{P(F_1,F_2,…)} $$</p>
 <blockquote>
 <p>其中\(C\)可以是不同类别。</p>
 </blockquote>
@@ -474,6 +474,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/混淆矩阵/" rel="prev" title="混淆矩阵">
+                混淆矩阵 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -550,7 +554,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -653,7 +657,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">1.6k</span>
+    <span title="Site words total count">1.7k</span>
   
 </div>
 
