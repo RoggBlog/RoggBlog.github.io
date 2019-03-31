@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stark365.com/"/>
-  <updated>2019-03-31T01:12:35.982Z</updated>
+  <updated>2019-03-31T04:49:26.487Z</updated>
   <id>http://stark365.com/</id>
   
   <author>
@@ -17,15 +17,51 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://stark365.com/%E6%A6%82%E7%8E%87%E5%9F%BA%E7%A1%80/"/>
-    <id>http://stark365.com/概率基础/</id>
-    <published>2019-03-31T01:11:26.005Z</published>
-    <updated>2019-03-31T01:12:35.982Z</updated>
+    <title>朴素贝叶斯</title>
+    <link href="http://stark365.com/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF/"/>
+    <id>http://stark365.com/朴素贝叶斯/</id>
+    <published>2019-03-31T01:53:10.007Z</published>
+    <updated>2019-03-31T04:49:26.487Z</updated>
+    
+    <content type="html"><![CDATA[<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><h1 id="朴素贝叶斯算法"><a href="#朴素贝叶斯算法" class="headerlink" title="朴素贝叶斯算法"></a>朴素贝叶斯算法</h1><p>朴素贝叶斯算法基于条件概率，特征与特征之间相互独立互不影响。</p><h2 id="贝叶斯公式"><a href="#贝叶斯公式" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h2><p>$$ P(C|W)=\frac{P(W|C)P(C)}{P(W)} $$</p><blockquote><p>$W$为给定文档的特征值（频数统计，预测文档提供），$C$为文档类别。</p></blockquote><p>公式可理解为：</p><p>$$ P(C|F_1,F_2,…)=\frac{P(F_1,F_2,…|C)}{P(F_1,F_2,…)} $$</p><blockquote><p>其中$C$可以是不同类别。</p></blockquote><h3 id="公式举例"><a href="#公式举例" class="headerlink" title="公式举例"></a>公式举例</h3><ul><li><p>$P(C)$为每个文档类别的概率（某文档类别数/总文档数）</p></li><li><p>$P(W|C)$为给定类别下特征（被预测文档中出现的词）的概率</p><ul><li>计算方法：$P(F_1|C)=\frac{N_I}{N}$</li><li></li><li>$N_i$为该$F_1$词在$C$类别所有文档中出现的次数</li><li></li><li>$N$为所属类别$C$下的文档所有词出现的次数和</li></ul></li><li><p>$P(F_1,F_2,…)$预测文档中每个词的概率</p></li></ul><p>在贝叶斯公式中会因为某个特征为0而导致最终概率结果为0，为避免这种不合理情况的发生，<strong>需要添加拉普拉斯平滑系数</strong>。</p><h2 id="拉普拉斯平滑"><a href="#拉普拉斯平滑" class="headerlink" title="拉普拉斯平滑"></a>拉普拉斯平滑</h2><p>公式：</p><p>$$ P(F_1|C)=\frac{N_I+\alpha}{N+\alpha m} $$</p><blockquote><p>$\alpha$为指定的系数，一般为1，m为训练文档中统计出的 <strong>特征词</strong> 个数。</p></blockquote><h2 id="sklearn-API"><a href="#sklearn-API" class="headerlink" title="sklearn API"></a>sklearn API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.vaive_bayes.MultinomialNB</span><br></pre></td></tr></table></figure><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MultinomialNB(alpha=<span class="number">1.0</span>)</span><br></pre></td></tr></table></figure><blockquote><p>alpha 为拉普拉斯平滑系数</p></blockquote><h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>若训练集误差较大，则会严重影响结果。</p><h2 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h2><ul><li>优点：<ul><li>具有稳定的分类效率</li><li>对缺失数据不太敏感</li><li>分类准确度高</li></ul></li><li>缺点：<ul><li>当样本属性具有关联性时效果会下降</li></ul></li></ul>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&gt;&lt;/script&gt;
+
+&lt;h1 id=&quot;朴素贝叶斯算法&quot;&gt;&lt;a href=&quot;#朴
+      
+    
     </summary>
+    
+      <category term="机器学习笔记" scheme="http://stark365.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>概率基础</title>
+    <link href="http://stark365.com/%E6%A6%82%E7%8E%87%E5%9F%BA%E7%A1%80/"/>
+    <id>http://stark365.com/概率基础/</id>
+    <published>2019-03-31T01:11:26.005Z</published>
+    <updated>2019-03-31T01:52:52.838Z</updated>
+    
+    <content type="html"><![CDATA[<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><h1 id="概率基础"><a href="#概率基础" class="headerlink" title="概率基础"></a>概率基础</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>概率定义为一件事情发生的可能性。</p><h1 id="联合概率和条件概率"><a href="#联合概率和条件概率" class="headerlink" title="联合概率和条件概率"></a>联合概率和条件概率</h1><h2 id="联合概率"><a href="#联合概率" class="headerlink" title="联合概率"></a>联合概率</h2><blockquote><p>包含多个条件，且所有条件同时成立的概率</p></blockquote><p>记做：$P(A,B)=P(A)P(B)$</p><h2 id="条件概率"><a href="#条件概率" class="headerlink" title="条件概率"></a>条件概率</h2><blockquote><p>事件 A 在另外一个事件 B 已经发生条件下的发生概率</p></blockquote><p>记做：$P(A|B)$</p><p>特性：$P(A_1,A_2|B)=p(A_1|B)P(A_2|B)$</p><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p><strong>此条件概率的成立，是由于 $A_1,A_2$相互独立的结果</strong>，相互独立即双方条件不相互影响。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&gt;&lt;/script&gt;
+
+&lt;h1 id=&quot;概率基础&quot;&gt;&lt;a href=&quot;#概率基础
+      
+    
+    </summary>
+    
+      <category term="机器学习笔记" scheme="http://stark365.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
   </entry>
@@ -35,9 +71,9 @@
     <link href="http://stark365.com/K-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95/"/>
     <id>http://stark365.com/K-近邻算法/</id>
     <published>2019-03-29T01:02:57.792Z</published>
-    <updated>2019-03-31T01:10:42.702Z</updated>
+    <updated>2019-03-31T01:58:02.340Z</updated>
     
-    <content type="html"><![CDATA[<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><h1 id="K-近邻算法-KNN-算法"><a href="#K-近邻算法-KNN-算法" class="headerlink" title="K-近邻算法/KNN 算法"></a>K-近邻算法/KNN 算法</h1><p>如果一个样本在特征空间中的 k 个最相似(即特征空间中最邻近)的样本中的大多数属于某一个类别，则该样本也属于这个类别。</p><p>最近邻居法采用<strong>向量空间模型</strong>来分类，概念为相同类别的案例，彼此的相似度高，而可以借由计算与已知类别案例之相似度，来评估未知类别案例可能的分类。</p><h2 id="欧式距离"><a href="#欧式距离" class="headerlink" title="欧式距离"></a>欧式距离</h2><h3 id="公式："><a href="#公式：" class="headerlink" title="公式："></a>公式：</h3><h2 id="sqrt-a-1-b-1-2-a-2-b-2-2-a-3-b-3-2"><a href="#sqrt-a-1-b-1-2-a-2-b-2-2-a-3-b-3-2" class="headerlink" title="$$\sqrt{(a_1 - b_1)^2 + (a_2 - b_2)^2 + (a_3 - b_3)^2}$$"></a>$$\sqrt{(a_1 - b_1)^2 + (a_2 - b_2)^2 + (a_3 - b_3)^2}$$</h2><h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><p><strong>K-近邻算法需要做标准化处理</strong></p><h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.neighbors.KNeighborsClassifier</span><br></pre></td></tr></table></figure><h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">KNeighborsClassifier(n_neighbors=<span class="number">5</span>, algorithm=<span class="string">'auto'</span>)</span><br></pre></td></tr></table></figure><blockquote><p><strong>n_neighbors: int</strong> 查询默认使用的邻居数。</p></blockquote><blockquote><p><strong>algorithm: {‘auto’, ‘ball_tree’, ‘kd_tree’, ‘brute’}</strong> 可选用于计算最近邻居的算法，’ball_tree’ 将使用 BallTree，’kd_tree’ 将使用 KDTree。’auto’ 将尝试根据传递给 fit 方法的值来决定最合适的算法。</p></blockquote><h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>计算量大，性能问题严峻。</p>]]></content>
+    <content type="html"><![CDATA[<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><h1 id="K-近邻算法-KNN-算法"><a href="#K-近邻算法-KNN-算法" class="headerlink" title="K-近邻算法/KNN 算法"></a>K-近邻算法/KNN 算法</h1><p>如果一个样本在特征空间中的 k 个最相似(即特征空间中最邻近)的样本中的大多数属于某一个类别，则该样本也属于这个类别。</p><p>最近邻居法采用<strong>向量空间模型</strong>来分类，概念为相同类别的案例，彼此的相似度高，而可以借由计算与已知类别案例之相似度，来评估未知类别案例可能的分类。</p><h2 id="欧式距离"><a href="#欧式距离" class="headerlink" title="欧式距离"></a>欧式距离</h2><h3 id="公式：-sqrt-a-1-b-1-2-a-2-b-2-2-a-3-b-3-2"><a href="#公式：-sqrt-a-1-b-1-2-a-2-b-2-2-a-3-b-3-2" class="headerlink" title="公式：  $$\sqrt{(a_1 - b_1)^2 + (a_2 - b_2)^2 + (a_3 - b_3)^2}$$"></a>公式：  $$\sqrt{(a_1 - b_1)^2 + (a_2 - b_2)^2 + (a_3 - b_3)^2}$$</h3><h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><p><strong>K-近邻算法需要做标准化处理</strong></p><h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.neighbors.KNeighborsClassifier</span><br></pre></td></tr></table></figure><h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">KNeighborsClassifier(n_neighbors=<span class="number">5</span>, algorithm=<span class="string">'auto'</span>)</span><br></pre></td></tr></table></figure><blockquote><p><strong>n_neighbors: int</strong> 查询默认使用的邻居数。</p></blockquote><blockquote><p><strong>algorithm: {‘auto’, ‘ball_tree’, ‘kd_tree’, ‘brute’}</strong> 可选用于计算最近邻居的算法，’ball_tree’ 将使用 BallTree，’kd_tree’ 将使用 KDTree。’auto’ 将尝试根据传递给 fit 方法的值来决定最合适的算法。</p></blockquote><h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>计算量大，性能问题严峻。</p>]]></content>
     
     <summary type="html">
     
@@ -60,9 +96,9 @@
     <link href="http://stark365.com/%E7%AE%97%E6%B3%95%E5%88%86%E7%B1%BB/"/>
     <id>http://stark365.com/算法分类/</id>
     <published>2019-03-28T08:04:21.122Z</published>
-    <updated>2019-03-31T01:13:30.471Z</updated>
+    <updated>2019-03-31T02:46:32.893Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="算法分类"><a href="#算法分类" class="headerlink" title="算法分类"></a>算法分类</h1><h2 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h2><p>有特征值和目标值。</p><p>算法：</p><ul><li>分类：目标值为离散型<ul><li><a href="../K-近邻算法">K-近邻算法</a></li><li><a href>朴素贝叶斯算法</a></li><li><a href>决策树</a></li><li><a href>随机森林</a></li><li><a href>逻辑回归</a></li><li><a href>神经网络</a></li></ul></li><li>回归：目标值为连续型<ul><li><a href>线性回归</a></li><li><a href>岭回归</a></li></ul></li></ul><h2 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h2><p>只有特征值。</p><p>算法：</p><ul><li><a href>聚类</a></li><li><a href>k-means</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="算法分类"><a href="#算法分类" class="headerlink" title="算法分类"></a>算法分类</h1><h2 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h2><p>有特征值和目标值。</p><p>算法：</p><ul><li>分类：目标值为离散型<ul><li><a href="../K-近邻算法">K-近邻算法</a></li><li><a href="../朴素贝叶斯">朴素贝叶斯算法</a></li><li><a href>决策树</a></li><li><a href>随机森林</a></li><li><a href>逻辑回归</a></li><li><a href>神经网络</a></li></ul></li><li>回归：目标值为连续型<ul><li><a href>线性回归</a></li><li><a href>岭回归</a></li></ul></li></ul><h2 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h2><p>只有特征值。</p><p>算法：</p><ul><li><a href>聚类</a></li><li><a href>k-means</a></li></ul>]]></content>
     
     <summary type="html">
     
@@ -205,9 +241,9 @@
     <link href="http://stark365.com/README/"/>
     <id>http://stark365.com/README/</id>
     <published>2018-10-22T16:11:18.000Z</published>
-    <updated>2019-03-31T01:11:37.660Z</updated>
+    <updated>2019-03-31T01:53:31.805Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="机器学习笔记"><a href="#机器学习笔记" class="headerlink" title="机器学习笔记"></a>机器学习笔记</h1><ul><li>数据特征预处理<ul><li><a href="/归一化标准化">标准缩放</a></li></ul></li><li>数据降维<ul><li><a href="./特征选择">特征选择</a></li><li><a href="./主成分分析">主成分分析</a></li></ul></li><li>算法简述<ul><li><a href="./数据类型">数据类型</a></li><li><a href="./算法分类">算法分类</a></li></ul></li><li>分类算法(有监督学习)<ul><li><a href="./sklearn数据集API">scikit-learn 数据集 API </a></li><li><a href="./K-近邻算法">K-近邻/KNN</a></li><li><a href>朴素贝叶斯</a><ul><li><a href="./概率基础">概率基础</a></li></ul></li><li><a href>决策树</a></li><li><a href>随机森林</a></li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="机器学习笔记"><a href="#机器学习笔记" class="headerlink" title="机器学习笔记"></a>机器学习笔记</h1><ul><li>数据特征预处理<ul><li><a href="/归一化标准化">标准缩放</a></li></ul></li><li>数据降维<ul><li><a href="./特征选择">特征选择</a></li><li><a href="./主成分分析">主成分分析</a></li></ul></li><li>算法简述<ul><li><a href="./数据类型">数据类型</a></li><li><a href="./算法分类">算法分类</a></li></ul></li><li>分类算法(有监督学习)<ul><li><a href="./sklearn数据集API">scikit-learn 数据集 API </a></li><li><a href="./K-近邻算法">K-近邻/KNN</a></li><li><a href="./朴素贝叶斯">朴素贝叶斯</a><ul><li><a href="./概率基础">概率基础</a></li></ul></li><li><a href>决策树</a></li><li><a href>随机森林</a></li></ul></li></ul>]]></content>
     
     <summary type="html">
     
