@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="混淆矩阵在分类任务下，预测结果(Predicted Condition)与正确标记(True Condition)之间存在四种不同的组合，构成混淆矩阵(适用于多分类)。     预测正例 预测假例     真实正例 真正例TP 伪反例FN   真实假例 伪正例FP 真反例TN    召回率">
+<meta name="description" content="分类模型评估混淆矩阵在分类任务下，预测结果(Predicted Condition)与正确标记(True Condition)之间存在四种不同的组合，构成混淆矩阵(适用于多分类)。     预测正例 预测假例     真实正例 真正例TP 伪反例FN   真实假例 伪正例FP 真反例TN    召回率真实为正例的样本中预测结果为正例的比例。     预测正例 预测假例     真实正例 真正例">
 <meta name="keywords" content="罗格">
 <meta property="og:type" content="article">
-<meta property="og:title" content="混淆矩阵">
+<meta property="og:title" content="分类模型评估">
 <meta property="og:url" content="http://stark365.com/混淆矩阵/index.html">
 <meta property="og:site_name" content="Logg 罗格">
-<meta property="og:description" content="混淆矩阵在分类任务下，预测结果(Predicted Condition)与正确标记(True Condition)之间存在四种不同的组合，构成混淆矩阵(适用于多分类)。     预测正例 预测假例     真实正例 真正例TP 伪反例FN   真实假例 伪正例FP 真反例TN    召回率">
+<meta property="og:description" content="分类模型评估混淆矩阵在分类任务下，预测结果(Predicted Condition)与正确标记(True Condition)之间存在四种不同的组合，构成混淆矩阵(适用于多分类)。     预测正例 预测假例     真实正例 真正例TP 伪反例FN   真实假例 伪正例FP 真反例TN    召回率真实为正例的样本中预测结果为正例的比例。     预测正例 预测假例     真实正例 真正例">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-31T07:51:08.503Z">
+<meta property="og:updated_time" content="2019-03-31T08:04:51.342Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="混淆矩阵">
-<meta name="twitter:description" content="混淆矩阵在分类任务下，预测结果(Predicted Condition)与正确标记(True Condition)之间存在四种不同的组合，构成混淆矩阵(适用于多分类)。     预测正例 预测假例     真实正例 真正例TP 伪反例FN   真实假例 伪正例FP 真反例TN    召回率">
+<meta name="twitter:title" content="分类模型评估">
+<meta name="twitter:description" content="分类模型评估混淆矩阵在分类任务下，预测结果(Predicted Condition)与正确标记(True Condition)之间存在四种不同的组合，构成混淆矩阵(适用于多分类)。     预测正例 预测假例     真实正例 真正例TP 伪反例FN   真实假例 伪正例FP 真反例TN    召回率真实为正例的样本中预测结果为正例的比例。     预测正例 预测假例     真实正例 真正例">
 
 
 
@@ -135,7 +135,7 @@
 
 
 
-  <title>混淆矩阵 | Logg 罗格</title>
+  <title>分类模型评估 | Logg 罗格</title>
   
 
 
@@ -289,7 +289,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">混淆矩阵</h1>
+          <h1 class="post-title" itemprop="name headline">分类模型评估</h1>
         
 
         <div class="post-meta">
@@ -355,7 +355,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  81
+                  220
                 </span>
               
 
@@ -392,7 +392,9 @@
       
 
       
-        <h1 id="混淆矩阵"><a href="#混淆矩阵" class="headerlink" title="混淆矩阵"></a>混淆矩阵</h1><p>在分类任务下，预测结果(Predicted Condition)与正确标记(True Condition)之间存在四种不同的组合，构成混淆矩阵(适用于多分类)。</p>
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<h1 id="分类模型评估"><a href="#分类模型评估" class="headerlink" title="分类模型评估"></a>分类模型评估</h1><h2 id="混淆矩阵"><a href="#混淆矩阵" class="headerlink" title="混淆矩阵"></a>混淆矩阵</h2><p>在分类任务下，预测结果(Predicted Condition)与正确标记(True Condition)之间存在四种不同的组合，构成混淆矩阵(适用于多分类)。</p>
 <table>
 <thead>
 <tr>
@@ -414,7 +416,39 @@
 </tr>
 </tbody>
 </table>
-<h2 id="召回率"><a href="#召回率" class="headerlink" title="召回率"></a>召回率</h2>
+<h2 id="召回率"><a href="#召回率" class="headerlink" title="召回率"></a>召回率</h2><p><strong>真实为正例</strong>的样本中预测结果为正例的比例。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:right">预测正例</th>
+<th style="text-align:center">预测假例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>真实正例</td>
+<td style="text-align:right"><strong><em>真正例TP</em></strong></td>
+<td style="text-align:center"><strong><em>伪反例FN</em></strong></td>
+</tr>
+<tr>
+<td>真实假例</td>
+<td style="text-align:right">伪正例FP</td>
+<td style="text-align:center">真反例TN</td>
+</tr>
+</tbody>
+</table>
+<h2 id="F1-score"><a href="#F1-score" class="headerlink" title="F1-score"></a>F1-score</h2><p>F1-score 反映了模型的稳健性。</p>
+<p>$$ F1=\frac{2TP}{2TP+FN+FP}=\frac{2·Precision·Recall}{Precision+Recall} $$</p>
+<h2 id="分类模型评估-API"><a href="#分类模型评估-API" class="headerlink" title="分类模型评估 API"></a>分类模型评估 API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.metrics.classification_report</span><br></pre></td></tr></table></figure>
+<h2 id="分类模型评估用法"><a href="#分类模型评估用法" class="headerlink" title="分类模型评估用法"></a>分类模型评估用法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.metrics.classification_report(y_true, y_pred, target_names=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>y_true: 真实目标值</li>
+<li>y_pred: 估计器预测目标值</li>
+<li>target_names: 目标类别名称</li>
+<li><strong><em>return</em></strong>: 每个类别精确率与召回率</li>
+</ul>
+
       
     </div>
     
@@ -592,7 +626,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#混淆矩阵"><span class="nav-number">1.</span> <span class="nav-text">混淆矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#召回率"><span class="nav-number">1.1.</span> <span class="nav-text">召回率</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分类模型评估"><span class="nav-number">1.</span> <span class="nav-text">分类模型评估</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#混淆矩阵"><span class="nav-number">1.1.</span> <span class="nav-text">混淆矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#召回率"><span class="nav-number">1.2.</span> <span class="nav-text">召回率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#F1-score"><span class="nav-number">1.3.</span> <span class="nav-text">F1-score</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分类模型评估-API"><span class="nav-number">1.4.</span> <span class="nav-text">分类模型评估 API</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分类模型评估用法"><span class="nav-number">1.5.</span> <span class="nav-text">分类模型评估用法</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -626,7 +660,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">1.7k</span>
+    <span title="Site words total count">1.9k</span>
   
 </div>
 
