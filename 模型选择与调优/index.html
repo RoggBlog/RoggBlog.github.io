@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="Logg 罗格">
 <meta property="og:description" content="模型选择与调优交叉验证为了让被评估的模型更加精确可信。 原理把训练集数据分成 n 等份，每一份包含训练集和验证集，求每一份模型准确率再计算平均值。 超参数搜索/网格搜索通常情况下，很多算法参数需要手动指定，如 k-近邻算法 中的 k 值，这种参数叫超参数。但是手动调制过程繁杂，所以需要对模型进行预设几种超参数组合，每组超参数都采用交叉验证来进行评估。最后选出最优参数组合建立模型。 API1sk">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-31T09:38:45.802Z">
+<meta property="og:updated_time" content="2019-04-01T02:08:58.029Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="模型选择与调优">
 <meta name="twitter:description" content="模型选择与调优交叉验证为了让被评估的模型更加精确可信。 原理把训练集数据分成 n 等份，每一份包含训练集和验证集，求每一份模型准确率再计算平均值。 超参数搜索/网格搜索通常情况下，很多算法参数需要手动指定，如 k-近邻算法 中的 k 值，这种参数叫超参数。但是手动调制过程繁杂，所以需要对模型进行预设几种超参数组合，每组超参数都采用交叉验证来进行评估。最后选出最优参数组合建立模型。 API1sk">
@@ -409,7 +409,7 @@
 <ul>
 <li>fit: 输入训练数据</li>
 <li>score: 准确率</li>
-<li>best_score_: 在交叉验证中最好的结果</li>
+<li>best_score_: 在交叉验证中最高准确率</li>
 <li>best_estimator_: 最好的参数模型</li>
 <li>cv_results_: 每次交叉验证后的验证集准确率结果和训练集准确率结果</li>
 </ul>
@@ -446,6 +446,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/决策树/" rel="prev" title="决策树">
+                决策树 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -522,7 +526,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -625,7 +629,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">2.1k</span>
+    <span title="Site words total count">3k</span>
   
 </div>
 
