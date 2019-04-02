@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stark365.com/"/>
-  <updated>2019-04-02T07:00:37.172Z</updated>
+  <updated>2019-04-02T07:02:58.419Z</updated>
   <id>http://stark365.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://stark365.com/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/"/>
     <id>http://stark365.com/线性回归/</id>
     <published>2019-04-02T05:15:23.285Z</published>
-    <updated>2019-04-02T07:00:37.172Z</updated>
+    <updated>2019-04-02T07:02:58.419Z</updated>
     
-    <content type="html"><![CDATA[<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><h1 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h1><p>寻找一种能预测的趋势</p><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>线性回归通过一个或者多个<strong>自变量</strong>(<em>特征值</em>)与<strong>因变量</strong>(<em>目标值</em>)之间进行建模的回归分析，其中可以认为一个或者多个自变量之间的线性组合。</p><p>一元线性回归：涉及到的变量只有一个</p><p>多元线性回归：涉及到多个变量</p><h2 id="线性关系模型"><a href="#线性关系模型" class="headerlink" title="线性关系模型"></a>线性关系模型</h2><p>一个通过属性的线性组合来进行预测的函数</p><p>公式；</p><p>$$ f(x)=w_1x_1+w_2x_2+···+w_\alpha x_\alpha + b $$</p><blockquote><p>\(w\) 为权重，\(b\)为偏置顶</p></blockquote><h2 id="矩阵乘法"><a href="#矩阵乘法" class="headerlink" title="矩阵乘法"></a>矩阵乘法</h2><p>(m行, l列)*(l行, n列) = (m行, n列)</p><h2 id="通用公式"><a href="#通用公式" class="headerlink" title="通用公式"></a>通用公式</h2><p>$$ h(w)=w_0+w_1x_1+w_2x_2+···=w^Tx $$</p><p>其中\(w,x\)为矩阵：</p><p>$$ w=\begin{pmatrix}w_0\w_1\w_2\end{pmatrix} $$</p><p>$$ x=\begin{pmatrix}1\x_1\x_2\end{pmatrix} $$</p><h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><ul><li>\(y_i为第i个训练样本的真实值\)</li><li>\(h_w(x_i)为i个训练样本特征值组合预测函数\)</li></ul><h3 id="总损失定义："><a href="#总损失定义：" class="headerlink" title="总损失定义："></a>总损失定义：</h3><p>$$ J(\theta)=(h_w(x_1)-y_1)^2+(h_w(x_2)-y_2)^2+···+(h_w(x_m)-y_m)^2 $$</p><p>$$=\sum_{i=1}^{m}(h_w(x_i)-y_i)^2$$</p><p>又称<strong>最小二乘法</strong></p>]]></content>
+    <content type="html"><![CDATA[<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><h1 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h1><p>寻找一种能预测的趋势</p><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>线性回归通过一个或者多个<strong>自变量</strong>(<em>特征值</em>)与<strong>因变量</strong>(<em>目标值</em>)之间进行建模的回归分析，其中可以认为一个或者多个自变量之间的线性组合。</p><p>一元线性回归：涉及到的变量只有一个</p><p>多元线性回归：涉及到多个变量</p><h2 id="线性关系模型"><a href="#线性关系模型" class="headerlink" title="线性关系模型"></a>线性关系模型</h2><p>一个通过属性的线性组合来进行预测的函数</p><p>公式；</p><p>$$ f(x)=w_1x_1+w_2x_2+···+w_\alpha x_\alpha + b $$</p><blockquote><p>\(w\) 为权重，\(b\)为偏置顶</p></blockquote><h2 id="矩阵乘法"><a href="#矩阵乘法" class="headerlink" title="矩阵乘法"></a>矩阵乘法</h2><p>(m行, l列)*(l行, n列) = (m行, n列)</p><h2 id="通用公式"><a href="#通用公式" class="headerlink" title="通用公式"></a>通用公式</h2><p>$$ h(w)=w_0+w_1x_1+w_2x_2+···=w^Tx $$</p><p>其中\(w,x\)为矩阵：</p><p>$$ w=\begin{pmatrix}w_0\ w_1\ w_2\end{pmatrix} $$</p><p>$$ x=\begin{pmatrix}1\ x_1\ x_2\end{pmatrix} $$</p><h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><ul><li>\(y_i为第i个训练样本的真实值\)</li><li>\(h_w(x_i)为i个训练样本特征值组合预测函数\)</li></ul><h3 id="总损失定义："><a href="#总损失定义：" class="headerlink" title="总损失定义："></a>总损失定义：</h3><p>$$ J(\theta)=(h_w(x_1)-y_1)^2+(h_w(x_2)-y_2)^2+···+(h_w(x_m)-y_m)^2 $$</p><p>$$=\sum_{i=1}^{m}(h_w(x_i)-y_i)^2$$</p><p>又称<strong>最小二乘法</strong></p>]]></content>
     
     <summary type="html">
     
