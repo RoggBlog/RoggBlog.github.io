@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="Logg 罗格">
 <meta property="og:description" content="线性回归寻找一种能预测的趋势,需要做标准化处理。 定义线性回归通过一个或者多个自变量(特征值)与因变量(目标值)之间进行建模的回归分析，其中可以认为一个或者多个自变量之间的线性组合。 一元线性回归：涉及到的变量只有一个 多元线性回归：涉及到多个变量 线性关系模型一个通过属性的线性组合来进行预测的函数 公式； $$ f(x)=w_1x_1+w_2x_2+···+w_\alpha x_\alpha">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-02T09:36:13.607Z">
+<meta property="og:updated_time" content="2019-04-03T06:19:30.057Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性回归">
 <meta name="twitter:description" content="线性回归寻找一种能预测的趋势,需要做标准化处理。 定义线性回归通过一个或者多个自变量(特征值)与因变量(目标值)之间进行建模的回归分析，其中可以认为一个或者多个自变量之间的线性组合。 一元线性回归：涉及到的变量只有一个 多元线性回归：涉及到多个变量 线性关系模型一个通过属性的线性组合来进行预测的函数 公式； $$ f(x)=w_1x_1+w_2x_2+···+w_\alpha x_\alpha">
@@ -355,7 +355,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  512
+                  529
                 </span>
               
 
@@ -420,6 +420,7 @@
 <h2 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h2><p>沿着函数下降的方向找，最后找到误差的最低点，然后更新 W 值。梯度下降适合10W以上数据集使用，反之适合正规方程。梯度下降适用于各种类型的模型。</p>
 <h2 id="sklearn-API"><a href="#sklearn-API" class="headerlink" title="sklearn API"></a>sklearn API</h2><h3 id="正规方程-1"><a href="#正规方程-1" class="headerlink" title="正规方程"></a>正规方程</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.linear_model.LinearRegression</span><br></pre></td></tr></table></figure>
 <p><strong>注意</strong>:需要将数据转换为二维数组</p>
+<p><strong>警告</strong>:容易出现过拟合，需要进行L2正则化</p>
 <h3 id="梯度下降-1"><a href="#梯度下降-1" class="headerlink" title="梯度下降"></a>梯度下降</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.linear_model.SGDRegressor</span><br></pre></td></tr></table></figure>
 <h2 id="回归性能评估"><a href="#回归性能评估" class="headerlink" title="回归性能评估"></a>回归性能评估</h2><h3 id="均方误差-Mean-Squared-Error-评价机制"><a href="#均方误差-Mean-Squared-Error-评价机制" class="headerlink" title="均方误差(Mean Squared Error)评价机制"></a>均方误差(Mean Squared Error)评价机制</h3><p>公式：</p>
 <p>$$ MSE=\frac{1}{m} \sum_{i=1} ^{m} (y^i-y_z)^2 $$</p>
@@ -466,6 +467,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/欠拟合与过拟合/" rel="prev" title="欠拟合与过拟合">
+                欠拟合与过拟合 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -542,7 +547,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -645,7 +650,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">3.5k</span>
+    <span title="Site words total count">3.9k</span>
   
 </div>
 
