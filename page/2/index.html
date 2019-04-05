@@ -272,6 +272,455 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://stark365.com/混淆矩阵/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Logg 罗格">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Logg 罗格">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/混淆矩阵/" itemprop="url">分类模型评估</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-31T15:41:57+08:00">
+                2019-03-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/机器学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  220
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<h1 id="分类模型评估"><a href="#分类模型评估" class="headerlink" title="分类模型评估"></a>分类模型评估</h1><h2 id="混淆矩阵"><a href="#混淆矩阵" class="headerlink" title="混淆矩阵"></a>混淆矩阵</h2><p>在分类任务下，预测结果(Predicted Condition)与正确标记(True Condition)之间存在四种不同的组合，构成混淆矩阵(适用于多分类)。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:right">预测正例</th>
+<th style="text-align:center">预测假例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>真实正例</td>
+<td style="text-align:right">真正例TP</td>
+<td style="text-align:center">伪反例FN</td>
+</tr>
+<tr>
+<td>真实假例</td>
+<td style="text-align:right">伪正例FP</td>
+<td style="text-align:center">真反例TN</td>
+</tr>
+</tbody>
+</table>
+<h2 id="召回率"><a href="#召回率" class="headerlink" title="召回率"></a>召回率</h2><p><strong>真实为正例</strong>的样本中预测结果为正例的比例。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:right">预测正例</th>
+<th style="text-align:center">预测假例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>真实正例</td>
+<td style="text-align:right"><strong><em>真正例TP</em></strong></td>
+<td style="text-align:center"><strong><em>伪反例FN</em></strong></td>
+</tr>
+<tr>
+<td>真实假例</td>
+<td style="text-align:right">伪正例FP</td>
+<td style="text-align:center">真反例TN</td>
+</tr>
+</tbody>
+</table>
+<h2 id="F1-score"><a href="#F1-score" class="headerlink" title="F1-score"></a>F1-score</h2><p>F1-score 反映了模型的稳健性。</p>
+<p>$$ F1=\frac{2TP}{2TP+FN+FP}=\frac{2·Precision·Recall}{Precision+Recall} $$</p>
+<h2 id="分类模型评估-API"><a href="#分类模型评估-API" class="headerlink" title="分类模型评估 API"></a>分类模型评估 API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.metrics.classification_report</span><br></pre></td></tr></table></figure>
+<h2 id="分类模型评估用法"><a href="#分类模型评估用法" class="headerlink" title="分类模型评估用法"></a>分类模型评估用法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.metrics.classification_report(y_true, y_pred, target_names=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>y_true: 真实目标值</li>
+<li>y_pred: 估计器预测目标值</li>
+<li>target_names: 目标类别名称</li>
+<li><strong><em>return</em></strong>: 每个类别精确率与召回率</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://stark365.com/朴素贝叶斯/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Logg 罗格">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Logg 罗格">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/朴素贝叶斯/" itemprop="url">朴素贝叶斯</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-31T09:53:10+08:00">
+                2019-03-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/机器学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  400
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<h1 id="朴素贝叶斯算法"><a href="#朴素贝叶斯算法" class="headerlink" title="朴素贝叶斯算法"></a>朴素贝叶斯算法</h1><p>朴素贝叶斯算法基于条件概率，特征与特征之间相互独立互不影响。</p>
+<h2 id="贝叶斯公式"><a href="#贝叶斯公式" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h2><p>$$ P(C|W)=\frac{P(W|C)P(C)}{P(W)} $$</p>
+<blockquote>
+<p>\(W\)为给定文档的特征值（频数统计，预测文档提供），\(C\)为文档类别。</p>
+</blockquote>
+<p>公式可理解为：</p>
+<p>$$ P(C|F_1,F_2,…)=\frac{P(F_1,F_2,…|C)P(C)}{P(F_1,F_2,…)} $$</p>
+<blockquote>
+<p>其中\(C\)可以是不同类别。</p>
+</blockquote>
+<h3 id="公式举例"><a href="#公式举例" class="headerlink" title="公式举例"></a>公式举例</h3><ul>
+<li><p>\(P(C)\)为每个文档类别的概率（某文档类别数/总文档数）</p>
+</li>
+<li><p>\(P(W|C)\)为给定类别下特征（被预测文档中出现的词）的概率</p>
+<ul>
+<li>计算方法：\(P(F_1|C)=\frac{N_I}{N}\)</li>
+<li>\(N_i\)为该\(F_1\)词在\(C\)类别所有文档中出现的次数</li>
+<li>\(N\)为所属类别\(C\)下的文档所有词出现的次数和</li>
+</ul>
+</li>
+<li><p>\(P(F_1,F_2,…)\)预测文档中每个词的概率</p>
+</li>
+</ul>
+<p>在贝叶斯公式中会因为某个特征为0而导致最终概率结果为0，为避免这种不合理情况的发生，<strong>需要添加拉普拉斯平滑系数</strong>。</p>
+<h2 id="拉普拉斯平滑"><a href="#拉普拉斯平滑" class="headerlink" title="拉普拉斯平滑"></a>拉普拉斯平滑</h2><p>公式：</p>
+<p>$$ P(F_1|C)=\frac{N_I+\alpha}{N+\alpha m} $$</p>
+<blockquote>
+<p>\(\alpha\)为指定的系数，一般为1，m为训练文档中统计出的 <strong>特征词</strong> 个数。</p>
+</blockquote>
+<h2 id="sklearn-API"><a href="#sklearn-API" class="headerlink" title="sklearn API"></a>sklearn API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.vaive_bayes.MultinomialNB</span><br></pre></td></tr></table></figure>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MultinomialNB(alpha=<span class="number">1.0</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>alpha 为拉普拉斯平滑系数</p>
+</blockquote>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>若训练集误差较大，则会严重影响结果。</p>
+<h2 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h2><ul>
+<li>优点：<ul>
+<li>具有稳定的分类效率</li>
+<li>对缺失数据不太敏感</li>
+<li>分类准确度高</li>
+</ul>
+</li>
+<li>缺点：<ul>
+<li>当样本属性具有关联性时效果会下降</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://stark365.com/概率基础/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -775,7 +1224,7 @@
 <li><a href="../朴素贝叶斯">朴素贝叶斯算法</a></li>
 <li><a href="../决策树">决策树</a></li>
 <li><a href="../随机森林">随机森林</a></li>
-<li><a href>逻辑回归</a></li>
+<li><a href="../逻辑回归">逻辑回归</a></li>
 <li><a href>神经网络</a></li>
 </ul>
 </li>
@@ -1775,7 +2224,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1862,7 +2311,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">3.9k</span>
+    <span title="Site words total count">4.2k</span>
   
 </div>
 

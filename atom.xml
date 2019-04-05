@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stark365.com/"/>
-  <updated>2019-04-03T06:39:22.023Z</updated>
+  <updated>2019-04-05T02:57:15.842Z</updated>
   <id>http://stark365.com/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>逻辑回归</title>
+    <link href="http://stark365.com/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/"/>
+    <id>http://stark365.com/逻辑回归/</id>
+    <published>2019-04-05T01:37:48.231Z</published>
+    <updated>2019-04-05T02:57:15.842Z</updated>
+    
+    <content type="html"><![CDATA[<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><h1 id="逻辑回归"><a href="#逻辑回归" class="headerlink" title="逻辑回归"></a>逻辑回归</h1><p>逻辑回归主要解决二分类问题，可以获得概率。</p><p>逻辑回归需要<strong>标准化</strong>。</p><p>逻辑回归可以解决过拟合问题。</p><h2 id="sigmoid-函数"><a href="#sigmoid-函数" class="headerlink" title="sigmoid 函数"></a>sigmoid 函数</h2><p><img src="./sigmoid.gif" alt></p><p>sigmoid 函数可以把输入值转换为0到1之间的数然后输出,默认0.5。</p><h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><p>$$ g(z)=\frac{1}{1+e^-z} $$</p><blockquote><p>e固定值为2.71，z为回归结果</p></blockquote><p>输出为[0,1]区间的概率值，默认为0.5</p><h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><p>对数似然损失</p><p>对数似然损失存在多个局部最小值，目前无法解决。可以使用多次随机初始化,比较最小值结果；也可在求解过程中调整学习率</p><h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><p>梯度下降</p><h2 id="sklearn-API"><a href="#sklearn-API" class="headerlink" title="sklearn API"></a>sklearn API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.linear_model.LogisticRegression</span><br></pre></td></tr></table></figure><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LogisticRegression(penalty=<span class="string">'l2'</span>,C=<span class="number">1.0</span>)</span><br></pre></td></tr></table></figure><ul><li>penalty 正则化方式</li><li>C 正则化力度</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&gt;&lt;/script&gt;
+
+&lt;h1 id=&quot;逻辑回归&quot;&gt;&lt;a href=&quot;#逻辑回归
+      
+    
+    </summary>
+    
+      <category term="机器学习笔记" scheme="http://stark365.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>sklearn 模型保存预加载</title>
+    <link href="http://stark365.com/skl%E6%A8%A1%E5%9E%8B%E4%BF%9D%E5%AD%98%E9%A2%84%E5%8A%A0%E8%BD%BD/"/>
+    <id>http://stark365.com/skl模型保存预加载/</id>
+    <published>2019-04-05T01:03:57.918Z</published>
+    <updated>2019-04-05T01:38:16.130Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="sklearn-模型保存预加载"><a href="#sklearn-模型保存预加载" class="headerlink" title="sklearn 模型保存预加载"></a>sklearn 模型保存预加载</h1><h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.externals <span class="keyword">import</span> joblib</span><br></pre></td></tr></table></figure><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><h3 id="保存"><a href="#保存" class="headerlink" title="保存"></a>保存</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">joblib.dump(rf, <span class="string">'test.pkl'</span>)</span><br></pre></td></tr></table></figure><blockquote><p>rf 为模型</p></blockquote><h3 id="加载"><a href="#加载" class="headerlink" title="加载"></a>加载</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">estimator = joblib.load(<span class="string">'test.pkl'</span>)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;sklearn-模型保存预加载&quot;&gt;&lt;a href=&quot;#sklearn-模型保存预加载&quot; class=&quot;headerlink&quot; title=&quot;sklearn 模型保存预加载&quot;&gt;&lt;/a&gt;sklearn 模型保存预加载&lt;/h1&gt;&lt;h2 id=&quot;API&quot;&gt;&lt;a href=
+      
+    
+    </summary>
+    
+      <category term="机器学习笔记" scheme="http://stark365.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>岭回归</title>
@@ -69,9 +117,9 @@
     <link href="http://stark365.com/%E6%AC%A0%E6%8B%9F%E5%90%88%E4%B8%8E%E8%BF%87%E6%8B%9F%E5%90%88/"/>
     <id>http://stark365.com/欠拟合与过拟合/</id>
     <published>2019-04-03T05:34:08.929Z</published>
-    <updated>2019-04-03T05:59:29.733Z</updated>
+    <updated>2019-04-04T05:55:26.389Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="欠拟合与过拟合"><a href="#欠拟合与过拟合" class="headerlink" title="欠拟合与过拟合"></a>欠拟合与过拟合</h1><h2 id="过拟合"><a href="#过拟合" class="headerlink" title="过拟合"></a>过拟合</h2><p>一个假设在训练数据上能够获得比其他假设更好的拟合，但是在训练数据外的数据集上却不能很好地拟合数据，此时认为这个假设出现了过拟合现象。（模型过于复杂）</p><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>源氏特征过多，存在一些嘈杂特征，模型过于复杂是因为模型尝试去兼顾各个测试数据点。</p><h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><ul><li>进行特征选择，消除关联性大的特征</li><li>交叉验证，让所有数据都有进行过训练</li><li>正则化</li></ul><h2 id="欠拟合"><a href="#欠拟合" class="headerlink" title="欠拟合"></a>欠拟合</h2><p>一个假设在训练数据上不能获得更好的拟合，但是在训练数据外的数据集上也不能很好的拟合数据，此时认为这个假设出现了过拟合的现象。（模型过于简单）</p><h3 id="原因-1"><a href="#原因-1" class="headerlink" title="原因"></a>原因</h3><p>学习数据的特征过少</p><h3 id="解决方法-1"><a href="#解决方法-1" class="headerlink" title="解决方法"></a>解决方法</h3><p>增加数据的特征数量</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="欠拟合与过拟合"><a href="#欠拟合与过拟合" class="headerlink" title="欠拟合与过拟合"></a>欠拟合与过拟合</h1><h2 id="过拟合"><a href="#过拟合" class="headerlink" title="过拟合"></a>过拟合</h2><p>一个假设在训练数据上能够获得比其他假设更好的拟合，但是在训练数据外的数据集上却不能很好地拟合数据，此时认为这个假设出现了过拟合现象。（模型过于复杂）</p><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>原始特征过多，存在一些嘈杂特征，模型过于复杂是因为模型尝试去兼顾各个测试数据点。</p><h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><ul><li>进行特征选择，消除关联性大的特征</li><li>交叉验证，让所有数据都有进行过训练</li><li>正则化</li></ul><h2 id="欠拟合"><a href="#欠拟合" class="headerlink" title="欠拟合"></a>欠拟合</h2><p>一个假设在训练数据上不能获得更好的拟合，但是在训练数据外的数据集上也不能很好的拟合数据，此时认为这个假设出现了过拟合的现象。（模型过于简单）</p><h3 id="原因-1"><a href="#原因-1" class="headerlink" title="原因"></a>原因</h3><p>学习数据的特征过少</p><h3 id="解决方法-1"><a href="#解决方法-1" class="headerlink" title="解决方法"></a>解决方法</h3><p>增加数据的特征数量</p>]]></content>
     
     <summary type="html">
     
@@ -292,9 +340,9 @@
     <link href="http://stark365.com/%E7%AE%97%E6%B3%95%E5%88%86%E7%B1%BB/"/>
     <id>http://stark365.com/算法分类/</id>
     <published>2019-03-28T08:04:21.122Z</published>
-    <updated>2019-04-03T06:20:24.440Z</updated>
+    <updated>2019-04-05T01:37:42.947Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="算法分类"><a href="#算法分类" class="headerlink" title="算法分类"></a>算法分类</h1><h2 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h2><p>有特征值和目标值。</p><p>算法：</p><ul><li>分类：目标值为离散型<ul><li><a href="../K-近邻算法">K-近邻算法</a></li><li><a href="../朴素贝叶斯">朴素贝叶斯算法</a></li><li><a href="../决策树">决策树</a></li><li><a href="../随机森林">随机森林</a></li><li><a href>逻辑回归</a></li><li><a href>神经网络</a></li></ul></li><li>回归：目标值为连续型，目标值过多<ul><li><a href="../线性回归">线性回归</a></li><li><a href="../岭回归">岭回归</a></li></ul></li></ul><h2 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h2><p>只有特征值。</p><p>算法：</p><ul><li><a href>聚类</a></li><li><a href>k-means</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="算法分类"><a href="#算法分类" class="headerlink" title="算法分类"></a>算法分类</h1><h2 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h2><p>有特征值和目标值。</p><p>算法：</p><ul><li>分类：目标值为离散型<ul><li><a href="../K-近邻算法">K-近邻算法</a></li><li><a href="../朴素贝叶斯">朴素贝叶斯算法</a></li><li><a href="../决策树">决策树</a></li><li><a href="../随机森林">随机森林</a></li><li><a href="../逻辑回归">逻辑回归</a></li><li><a href>神经网络</a></li></ul></li><li>回归：目标值为连续型，目标值过多<ul><li><a href="../线性回归">线性回归</a></li><li><a href="../岭回归">岭回归</a></li></ul></li></ul><h2 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h2><p>只有特征值。</p><p>算法：</p><ul><li><a href>聚类</a></li><li><a href>k-means</a></li></ul>]]></content>
     
     <summary type="html">
     
@@ -437,9 +485,9 @@
     <link href="http://stark365.com/README/"/>
     <id>http://stark365.com/README/</id>
     <published>2018-10-22T16:11:18.000Z</published>
-    <updated>2019-04-03T06:20:11.845Z</updated>
+    <updated>2019-04-05T01:37:29.837Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="机器学习笔记"><a href="#机器学习笔记" class="headerlink" title="机器学习笔记"></a>机器学习笔记</h1><ul><li>数据特征预处理<ul><li><a href="/归一化标准化">标准缩放</a></li></ul></li><li>数据降维<ul><li><a href="./特征选择">特征选择</a></li><li><a href="./主成分分析">主成分分析</a></li></ul></li><li>算法简述<ul><li><a href="./数据类型">数据类型</a></li><li><a href="./算法分类">算法分类</a></li></ul></li><li>监督学习<ul><li>分类算法<ul><li><a href="./sklearn数据集API">scikit-learn 数据集 API </a></li><li><a href="./K-近邻算法">K-近邻/KNN</a></li><li><a href="./朴素贝叶斯">朴素贝叶斯</a><ul><li><a href="./概率基础">概率基础</a></li><li><a href="./混淆矩阵">分类模型评估</a></li><li><a href="./模型选择与调优">模型选择与调优</a></li></ul></li><li><a href="./决策树">决策树</a></li><li><a href="./随机森林">随机森林</a></li></ul></li><li>回归算法<ul><li><a href="./线性回归">线性回归</a><ul><li><a href="./欠拟合与过拟合">欠拟合与过拟合</a></li><li><a href="./正则化">L2正则化</a></li></ul></li><li><a href="./岭回归">岭回归</a></li></ul></li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="机器学习笔记"><a href="#机器学习笔记" class="headerlink" title="机器学习笔记"></a>机器学习笔记</h1><ul><li>数据特征预处理<ul><li><a href="/归一化标准化">标准缩放</a></li></ul></li><li>数据降维<ul><li><a href="./特征选择">特征选择</a></li><li><a href="./主成分分析">主成分分析</a></li></ul></li><li>算法简述<ul><li><a href="./数据类型">数据类型</a></li><li><a href="./算法分类">算法分类</a></li></ul></li><li><a href="./skl模型保存预加载">scikit-learn 模型保存预加载</a></li><li>监督学习<ul><li>分类算法<ul><li><a href="./sklearn数据集API">scikit-learn 数据集 API </a></li><li><a href="./K-近邻算法">K-近邻/KNN</a></li><li><a href="./朴素贝叶斯">朴素贝叶斯</a><ul><li><a href="./概率基础">概率基础</a></li><li><a href="./混淆矩阵">分类模型评估</a></li><li><a href="./模型选择与调优">模型选择与调优</a></li></ul></li><li><a href="./决策树">决策树</a></li><li><a href="./随机森林">随机森林</a></li><li><a href="./逻辑回归">逻辑回归</a></li></ul></li><li>回归算法<ul><li><a href="./线性回归">线性回归</a><ul><li><a href="./欠拟合与过拟合">欠拟合与过拟合</a></li><li><a href="./正则化">L2正则化</a></li></ul></li><li><a href="./岭回归">岭回归</a></li></ul></li></ul></li></ul>]]></content>
     
     <summary type="html">
     
