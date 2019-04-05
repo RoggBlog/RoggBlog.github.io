@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stark365.com/"/>
-  <updated>2019-04-05T02:57:15.842Z</updated>
+  <updated>2019-04-05T09:38:55.367Z</updated>
   <id>http://stark365.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://stark365.com/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/"/>
     <id>http://stark365.com/逻辑回归/</id>
     <published>2019-04-05T01:37:48.231Z</published>
-    <updated>2019-04-05T02:57:15.842Z</updated>
+    <updated>2019-04-05T09:38:55.367Z</updated>
     
-    <content type="html"><![CDATA[<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><h1 id="逻辑回归"><a href="#逻辑回归" class="headerlink" title="逻辑回归"></a>逻辑回归</h1><p>逻辑回归主要解决二分类问题，可以获得概率。</p><p>逻辑回归需要<strong>标准化</strong>。</p><p>逻辑回归可以解决过拟合问题。</p><h2 id="sigmoid-函数"><a href="#sigmoid-函数" class="headerlink" title="sigmoid 函数"></a>sigmoid 函数</h2><p><img src="./sigmoid.gif" alt></p><p>sigmoid 函数可以把输入值转换为0到1之间的数然后输出,默认0.5。</p><h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><p>$$ g(z)=\frac{1}{1+e^-z} $$</p><blockquote><p>e固定值为2.71，z为回归结果</p></blockquote><p>输出为[0,1]区间的概率值，默认为0.5</p><h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><p>对数似然损失</p><p>对数似然损失存在多个局部最小值，目前无法解决。可以使用多次随机初始化,比较最小值结果；也可在求解过程中调整学习率</p><h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><p>梯度下降</p><h2 id="sklearn-API"><a href="#sklearn-API" class="headerlink" title="sklearn API"></a>sklearn API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.linear_model.LogisticRegression</span><br></pre></td></tr></table></figure><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LogisticRegression(penalty=<span class="string">'l2'</span>,C=<span class="number">1.0</span>)</span><br></pre></td></tr></table></figure><ul><li>penalty 正则化方式</li><li>C 正则化力度</li></ul>]]></content>
+    <content type="html"><![CDATA[<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><h1 id="逻辑回归"><a href="#逻辑回归" class="headerlink" title="逻辑回归"></a>逻辑回归</h1><p>逻辑回归主要解决二分类问题，可以获得概率。</p><p>逻辑回归需要<strong>标准化</strong>。</p><p>逻辑回归可以解决过拟合问题。</p><h2 id="sigmoid-函数"><a href="#sigmoid-函数" class="headerlink" title="sigmoid 函数"></a>sigmoid 函数</h2><p><img src="./sigmoid.gif" alt></p><p>sigmoid 函数可以把输入值转换为0到1之间的数然后输出,默认0.5。</p><h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><p>$$ g(z)=\frac{1}{1+e^-z} $$</p><blockquote><p>e固定值为2.71，z为回归结果</p></blockquote><p>输出为[0,1]区间的概率值，默认为0.5</p><h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><p>对数似然损失</p><p>对数似然损失存在多个局部最小值，目前无法解决。可以使用多次随机初始化,比较最小值结果；也可在求解过程中调整学习率</p><h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><p>梯度下降</p><h2 id="sklearn-API"><a href="#sklearn-API" class="headerlink" title="sklearn API"></a>sklearn API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.linear_model.LogisticRegression</span><br></pre></td></tr></table></figure><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LogisticRegression(penalty=<span class="string">'l2'</span>,C=<span class="number">1.0</span>)</span><br></pre></td></tr></table></figure><ul><li>penalty 正则化方式</li><li>C 正则化力度</li></ul><h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>广告点击率预测、是否患病预测、需家账号识别等。</p><h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><p>适合需要的到一个分类概率的场景，简单速度快。</p><h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>不好处理多分类问题。</p>]]></content>
     
     <summary type="html">
     
