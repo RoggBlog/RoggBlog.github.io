@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stark365.com/"/>
-  <updated>2019-04-05T09:38:55.367Z</updated>
+  <updated>2019-04-06T01:57:50.692Z</updated>
   <id>http://stark365.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>k-means 聚类</title>
+    <link href="http://stark365.com/k-means/"/>
+    <id>http://stark365.com/k-means/</id>
+    <published>2019-04-06T00:29:47.074Z</published>
+    <updated>2019-04-06T01:57:50.692Z</updated>
+    
+    <content type="html"><![CDATA[<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><h1 id="k-means-聚类"><a href="#k-means-聚类" class="headerlink" title="k-means 聚类"></a>k-means 聚类</h1><p>只有特征值没有目标值可以归为无监督学习。</p><h2 id="k-means-原理"><a href="#k-means-原理" class="headerlink" title="k-means 原理"></a>k-means 原理</h2><blockquote><p>k：把数据划分为多少个类别</p></blockquote><ol><li>随机在数据中抽取 k 个样本，当做 k 个类别的中心点。</li><li>计算其余的点分别到这 k 个点的距离，从中选出距离最近的一个点作为自己的标记，形成 k 个族群。</li><li>分别计算这 k 个族群的平均值，把 k 个平均值和之前的 k 个旧中心点进行比较，如果相同则结束聚类，否则把这 k 个平均值作为新的中心点，重复第二步。</li></ol><h2 id="sklearn-API"><a href="#sklearn-API" class="headerlink" title="sklearn API"></a>sklearn API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.cluster.KMeans</span><br></pre></td></tr></table></figure><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">KMeans(n_clusters=<span class="number">8</span>,init=<span class="string">'k-means++'</span>)</span><br></pre></td></tr></table></figure><blockquote><p>n_clusters:开始的聚类中心数量</p><p>init:初始化方法，默认 k-means++</p></blockquote><blockquote><p>默认标记的类型，可以和真实值比较（不是值比较）</p></blockquote><h2 id="k-means-性能评估指标-轮廓系数"><a href="#k-means-性能评估指标-轮廓系数" class="headerlink" title="k-means 性能评估指标:轮廓系数"></a>k-means 性能评估指标:轮廓系数</h2><h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><p>$$ sc_i = \frac{b_i-a_i}{max(b_i,a_i)} $$</p><p>对于每个点 i 为聚类数据中的样本，bi 为 i 到其他族群的所有样本的距离最小值，ai 为 i 到本身族的距离平均值。</p><p>最终计算出所有的样本点的轮廓系数平均值。</p><p>最终轮廓系数会落在-1到1之间，越接近1越好，反之效果越差。</p><h3 id="sklearn-API-1"><a href="#sklearn-API-1" class="headerlink" title="sklearn API"></a>sklearn API</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.metrics.silhouette_score</span><br></pre></td></tr></table></figure><h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">silhouette_score(X, labels)</span><br></pre></td></tr></table></figure><blockquote><p>X:特征值</p><p>labels:被聚类标记的目标值</p></blockquote><h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><p>采用迭代式算法，直观且实用</p><h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>容易收敛到局部最优解（多次聚类）</p><h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>聚类一般做在分类之前</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&gt;&lt;/script&gt;
+
+&lt;h1 id=&quot;k-means-聚类&quot;&gt;&lt;a href=
+      
+    
+    </summary>
+    
+      <category term="机器学习笔记" scheme="http://stark365.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>逻辑回归</title>
@@ -340,9 +365,9 @@
     <link href="http://stark365.com/%E7%AE%97%E6%B3%95%E5%88%86%E7%B1%BB/"/>
     <id>http://stark365.com/算法分类/</id>
     <published>2019-03-28T08:04:21.122Z</published>
-    <updated>2019-04-05T01:37:42.947Z</updated>
+    <updated>2019-04-06T00:29:55.034Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="算法分类"><a href="#算法分类" class="headerlink" title="算法分类"></a>算法分类</h1><h2 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h2><p>有特征值和目标值。</p><p>算法：</p><ul><li>分类：目标值为离散型<ul><li><a href="../K-近邻算法">K-近邻算法</a></li><li><a href="../朴素贝叶斯">朴素贝叶斯算法</a></li><li><a href="../决策树">决策树</a></li><li><a href="../随机森林">随机森林</a></li><li><a href="../逻辑回归">逻辑回归</a></li><li><a href>神经网络</a></li></ul></li><li>回归：目标值为连续型，目标值过多<ul><li><a href="../线性回归">线性回归</a></li><li><a href="../岭回归">岭回归</a></li></ul></li></ul><h2 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h2><p>只有特征值。</p><p>算法：</p><ul><li><a href>聚类</a></li><li><a href>k-means</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="算法分类"><a href="#算法分类" class="headerlink" title="算法分类"></a>算法分类</h1><h2 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h2><p>有特征值和目标值。</p><p>算法：</p><ul><li>分类：目标值为离散型<ul><li><a href="../K-近邻算法">K-近邻算法</a></li><li><a href="../朴素贝叶斯">朴素贝叶斯算法</a></li><li><a href="../决策树">决策树</a></li><li><a href="../随机森林">随机森林</a></li><li><a href="../逻辑回归">逻辑回归</a></li><li><a href>神经网络</a></li></ul></li><li>回归：目标值为连续型，目标值过多<ul><li><a href="../线性回归">线性回归</a></li><li><a href="../岭回归">岭回归</a></li></ul></li></ul><h2 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h2><p>只有特征值。</p><p>算法：</p><ul><li><a href="../k-means">k-means 聚类</a></li></ul>]]></content>
     
     <summary type="html">
     
@@ -485,9 +510,9 @@
     <link href="http://stark365.com/README/"/>
     <id>http://stark365.com/README/</id>
     <published>2018-10-22T16:11:18.000Z</published>
-    <updated>2019-04-05T01:37:29.837Z</updated>
+    <updated>2019-04-06T00:29:32.389Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="机器学习笔记"><a href="#机器学习笔记" class="headerlink" title="机器学习笔记"></a>机器学习笔记</h1><ul><li>数据特征预处理<ul><li><a href="/归一化标准化">标准缩放</a></li></ul></li><li>数据降维<ul><li><a href="./特征选择">特征选择</a></li><li><a href="./主成分分析">主成分分析</a></li></ul></li><li>算法简述<ul><li><a href="./数据类型">数据类型</a></li><li><a href="./算法分类">算法分类</a></li></ul></li><li><a href="./skl模型保存预加载">scikit-learn 模型保存预加载</a></li><li>监督学习<ul><li>分类算法<ul><li><a href="./sklearn数据集API">scikit-learn 数据集 API </a></li><li><a href="./K-近邻算法">K-近邻/KNN</a></li><li><a href="./朴素贝叶斯">朴素贝叶斯</a><ul><li><a href="./概率基础">概率基础</a></li><li><a href="./混淆矩阵">分类模型评估</a></li><li><a href="./模型选择与调优">模型选择与调优</a></li></ul></li><li><a href="./决策树">决策树</a></li><li><a href="./随机森林">随机森林</a></li><li><a href="./逻辑回归">逻辑回归</a></li></ul></li><li>回归算法<ul><li><a href="./线性回归">线性回归</a><ul><li><a href="./欠拟合与过拟合">欠拟合与过拟合</a></li><li><a href="./正则化">L2正则化</a></li></ul></li><li><a href="./岭回归">岭回归</a></li></ul></li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="机器学习笔记"><a href="#机器学习笔记" class="headerlink" title="机器学习笔记"></a>机器学习笔记</h1><ul><li>数据特征预处理<ul><li><a href="/归一化标准化">标准缩放</a></li></ul></li><li>数据降维<ul><li><a href="./特征选择">特征选择</a></li><li><a href="./主成分分析">主成分分析</a></li></ul></li><li>算法简述<ul><li><a href="./数据类型">数据类型</a></li><li><a href="./算法分类">算法分类</a></li></ul></li><li><a href="./skl模型保存预加载">scikit-learn 模型保存预加载</a></li><li>监督学习<ul><li>分类算法<ul><li><a href="./sklearn数据集API">scikit-learn 数据集 API </a></li><li><a href="./K-近邻算法">K-近邻/KNN</a></li><li><a href="./朴素贝叶斯">朴素贝叶斯</a><ul><li><a href="./概率基础">概率基础</a></li><li><a href="./混淆矩阵">分类模型评估</a></li><li><a href="./模型选择与调优">模型选择与调优</a></li></ul></li><li><a href="./决策树">决策树</a></li><li><a href="./随机森林">随机森林</a></li><li><a href="./逻辑回归">逻辑回归</a></li></ul></li><li>回归算法<ul><li><a href="./线性回归">线性回归</a><ul><li><a href="./欠拟合与过拟合">欠拟合与过拟合</a></li><li><a href="./正则化">L2正则化</a></li></ul></li><li><a href="./岭回归">岭回归</a></li></ul></li></ul></li><li>非监督学习(只有特征值)<ul><li><a href="./k-means">k-means 聚类</a></li></ul></li></ul>]]></content>
     
     <summary type="html">
     
