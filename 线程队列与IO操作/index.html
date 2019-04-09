@@ -88,17 +88,18 @@
 
 
 
-<meta name="description" content="Logg 罗格的个人博客，用于存放学习笔记。">
+<meta name="description" content="线程队列队列12# 先进先出队列tf.FIFOQueue(capacity, dtypes, name=&quot;&quot;)  capacity 整数，可存储的元素数量上限 dtypes 列表，dtypes长度必须等于每个队列元素中的张量数，dtypes的类型形状决定了后面进队列元素的形状  12# 随机出队列tf.RandomShuffleQueue 队列管理器1tf.train.QueueRunner(qu">
 <meta name="keywords" content="罗格">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Logg 罗格">
-<meta property="og:url" content="http://stark365.com/archives/2019/page/2/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="线程队列与IO操作">
+<meta property="og:url" content="http://stark365.com/线程队列与IO操作/index.html">
 <meta property="og:site_name" content="Logg 罗格">
-<meta property="og:description" content="Logg 罗格的个人博客，用于存放学习笔记。">
+<meta property="og:description" content="线程队列队列12# 先进先出队列tf.FIFOQueue(capacity, dtypes, name=&quot;&quot;)  capacity 整数，可存储的元素数量上限 dtypes 列表，dtypes长度必须等于每个队列元素中的张量数，dtypes的类型形状决定了后面进队列元素的形状  12# 随机出队列tf.RandomShuffleQueue 队列管理器1tf.train.QueueRunner(qu">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-04-09T08:07:39.590Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Logg 罗格">
-<meta name="twitter:description" content="Logg 罗格的个人博客，用于存放学习笔记。">
+<meta name="twitter:title" content="线程队列与IO操作">
+<meta name="twitter:description" content="线程队列队列12# 先进先出队列tf.FIFOQueue(capacity, dtypes, name=&quot;&quot;)  capacity 整数，可存储的元素数量上限 dtypes 列表，dtypes长度必须等于每个队列元素中的张量数，dtypes的类型形状决定了后面进队列元素的形状  12# 随机出队列tf.RandomShuffleQueue 队列管理器1tf.train.QueueRunner(qu">
 
 
 
@@ -128,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://stark365.com/archives/2019/page/2/">
+  <link rel="canonical" href="http://stark365.com/线程队列与IO操作/">
 
 
 
 
 
-  <title>归档 | Logg 罗格</title>
+  <title>线程队列与IO操作 | Logg 罗格</title>
   
 
 
@@ -153,7 +154,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -257,391 +258,210 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://stark365.com/线程队列与IO操作/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Logg 罗格">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Logg 罗格">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">线程队列与IO操作</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-09T10:41:09+08:00">
+                2019-04-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 29 篇日志。 继续努力。
-      </span>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/深度学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">深度学习笔记</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/skl模型保存预加载/" itemprop="url">
+          
+
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">sklearn 模型保存预加载</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  175
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-05T09:03:57+08:00" content="2019-04-05">
-          04-05
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/岭回归/" itemprop="url">
-              
-                <span itemprop="name">岭回归</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-03T14:20:17+08:00" content="2019-04-03">
-          04-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/正则化/" itemprop="url">
-              
-                <span itemprop="name">正则化</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-03T14:14:32+08:00" content="2019-04-03">
-          04-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h1 id="线程队列"><a href="#线程队列" class="headerlink" title="线程队列"></a>线程队列</h1><h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先进先出队列</span></span><br><span class="line">tf.FIFOQueue(capacity, dtypes, name=<span class="string">""</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>capacity 整数，可存储的元素数量上限</li>
+<li>dtypes 列表，dtypes长度必须等于每个队列元素中的张量数，dtypes的类型形状决定了后面进队列元素的形状</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 随机出队列</span></span><br><span class="line">tf.RandomShuffleQueue</span><br></pre></td></tr></table></figure>
+<h2 id="队列管理器"><a href="#队列管理器" class="headerlink" title="队列管理器"></a>队列管理器</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.train.QueueRunner(queue, enqueue_ops=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>queue 队列</li>
+<li>enqueue_ops  添加线程的队列操作列表，[]*2 指定两个线程</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建线程来运行给定会话的入队操作</span></span><br><span class="line">create_threads(sess, coord=<span class="literal">None</span>, start=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>coord 线程协调器，后面线程管理需要用到</li>
+<li>start True启动线程，False必须手动调用 start() 启动线程。</li>
+<li>return 线程的实例</li>
+</ul>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/欠拟合与过拟合/" itemprop="url">
-              
-                <span itemprop="name">欠拟合与过拟合</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-03T13:34:08+08:00" content="2019-04-03">
-          04-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/线性回归/" itemprop="url">
-              
-                <span itemprop="name">线性回归</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-02T13:15:23+08:00" content="2019-04-02">
-          04-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/随机森林/" itemprop="url">
-              
-                <span itemprop="name">随机森林</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-01T16:39:02+08:00" content="2019-04-01">
-          04-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/决策树/" itemprop="url">
-              
-                <span itemprop="name">决策树</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-01T10:16:23+08:00" content="2019-04-01">
-          04-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/模型选择与调优/" itemprop="url">
-              
-                <span itemprop="name">模型选择与调优</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-31T16:14:17+08:00" content="2019-03-31">
-          03-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/混淆矩阵/" itemprop="url">
-              
-                <span itemprop="name">分类模型评估</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-31T15:41:57+08:00" content="2019-03-31">
-          03-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/朴素贝叶斯/" itemprop="url">
-              
-                <span itemprop="name">朴素贝叶斯</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-31T09:53:10+08:00" content="2019-03-31">
-          03-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/模型的保存与加载/" rel="next" title="模型的保存与加载">
+                <i class="fa fa-chevron-left"></i> 模型的保存与加载
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/2019/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/archives/2019/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2019/page/3/">3</a><a class="extend next" rel="next" href="/archives/2019/page/3/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -649,6 +469,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -669,8 +493,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -744,6 +577,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#线程队列"><span class="nav-number">1.</span> <span class="nav-text">线程队列</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#队列"><span class="nav-number">1.1.</span> <span class="nav-text">队列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#队列管理器"><span class="nav-number">1.2.</span> <span class="nav-text">队列管理器</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -893,6 +742,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
