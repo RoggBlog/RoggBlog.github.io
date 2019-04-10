@@ -357,7 +357,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  185
+                  189
                 </span>
               
 
@@ -455,9 +455,205 @@
 <li><a href="./mathapi">运算 API</a></li>
 <li><a href="./gdo">梯度下降 API</a></li>
 <li><a href="./线程队列与IO操作">线程队列与IO操作</a></li>
+<li><a href="./文件读取">文件读取</a></li>
 </ul>
 </li>
 </ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://stark365.com/文件读取/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Logg 罗格">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Logg 罗格">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/文件读取/" itemprop="url">文件读取</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-10T14:51:37+08:00">
+                2019-04-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/深度学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">深度学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  231
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="文件读取"><a href="#文件读取" class="headerlink" title="文件读取"></a>文件读取</h1><h2 id="文件队列构造"><a href="#文件队列构造" class="headerlink" title="文件队列构造"></a>文件队列构造</h2><p>将输出字符串输入到管道队列</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.train.string_input_producer(string_tensor, shuffle=<span class="literal">True</span>)  <span class="comment"># 返回一个队列对象</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>string_tensor 含有文件名的1阶张量</li>
+<li>shuffle 是否乱序</li>
+</ul>
+<h2 id="文件阅读器"><a href="#文件阅读器" class="headerlink" title="文件阅读器"></a>文件阅读器</h2><h3 id="CSV"><a href="#CSV" class="headerlink" title="CSV"></a>CSV</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.TextLineReader()  <span class="comment"># 返回阅读器实例</span></span><br></pre></td></tr></table></figure>
+<h3 id="二进制"><a href="#二进制" class="headerlink" title="二进制"></a>二进制</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.FixedLengthRecordReader(record_bytes)  <span class="comment"># 返回阅读器实例</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>record_bytes 整型，指每次读取的字节数</li>
+</ul>
+<h3 id="TFRecords"><a href="#TFRecords" class="headerlink" title="TFRecords"></a>TFRecords</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.TFRecordReader()</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>都有一个公共方法 read(),返回 keys values</p>
+</blockquote>
+<h2 id="文件内容解码器"><a href="#文件内容解码器" class="headerlink" title="文件内容解码器"></a>文件内容解码器</h2><p>从文件当中读取的是字符串，需要函数去解析这些字符串到张量</p>
+<h3 id="CSV-1"><a href="#CSV-1" class="headerlink" title="CSV"></a>CSV</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.decode_csv(records, record_defaults=<span class="literal">None</span>, field_delim=<span class="literal">None</span>, name=<span class="literal">None</span>)  <span class="comment"># 有多少个列，则返回多个个列</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>records 张量型字符串，每个字符串是 csv 中的记录行</li>
+<li>field_delim 分隔符，默认“,”</li>
+<li>record_defaults 参数决定了所得张量的类型，并设置一个值在输入字符串中缺少使用默认值</li>
+</ul>
+<h3 id="二进制-1"><a href="#二进制-1" class="headerlink" title="二进制"></a>二进制</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.decode_raw(bytes, out_type, little_endian=<span class="literal">None</span>, name=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
 
           
         
@@ -591,7 +787,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  175
+                  321
                 </span>
               
 
@@ -646,6 +842,26 @@
 <li>coord 线程协调器，后面线程管理需要用到</li>
 <li>start True启动线程，False必须手动调用 start() 启动线程。</li>
 <li>return 线程的实例</li>
+</ul>
+<h2 id="线程协调器"><a href="#线程协调器" class="headerlink" title="线程协调器"></a>线程协调器</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.train.Coordinator()</span><br></pre></td></tr></table></figure>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><ul>
+<li>request_stop()  # 请求停止</li>
+<li>should_stop()  # 强制停止</li>
+<li>join(threads=None, stop_grace_period_secs=120)    # 等待线程终止</li>
+</ul>
+<p>return 线程协调员实例</p>
+<h2 id="开启线程操作"><a href="#开启线程操作" class="headerlink" title="开启线程操作"></a>开启线程操作</h2><p>收集所有图中的队列线程，并开启线程</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.train.start_queue_runners(sess=<span class="literal">None</span>, coord=<span class="literal">None</span>)  <span class="comment"># 返回所有线程队列</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>sess 会话</li>
+<li>coord 线程协调器</li>
+</ul>
+<h2 id="批处理"><a href="#批处理" class="headerlink" title="批处理"></a>批处理</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.train.batch(tensors, batch_size, num_threads=<span class="number">1</span>, capacity=<span class="number">32</span>, name=<span class="literal">None</span>)  <span class="comment"># 返回 tensors</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>tensors 可以是包含张量的列表</li>
+<li>batch_size 从队列中读取的批处理大小</li>
+<li>num_threads 进入队列的线程数</li>
+<li>capacity 队列中元素的最大数量</li>
 </ul>
 
           
@@ -2028,211 +2244,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://stark365.com/k-means/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Logg 罗格">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Logg 罗格">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/k-means/" itemprop="url">k-means 聚类</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-06T08:29:47+08:00">
-                2019-04-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/机器学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">机器学习笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  394
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-
-<h1 id="k-means-聚类"><a href="#k-means-聚类" class="headerlink" title="k-means 聚类"></a>k-means 聚类</h1><p>只有特征值没有目标值可以归为无监督学习。</p>
-<h2 id="k-means-原理"><a href="#k-means-原理" class="headerlink" title="k-means 原理"></a>k-means 原理</h2><blockquote>
-<p>k：把数据划分为多少个类别</p>
-</blockquote>
-<ol>
-<li>随机在数据中抽取 k 个样本，当做 k 个类别的中心点。</li>
-<li>计算其余的点分别到这 k 个点的距离，从中选出距离最近的一个点作为自己的标记，形成 k 个族群。</li>
-<li>分别计算这 k 个族群的平均值，把 k 个平均值和之前的 k 个旧中心点进行比较，如果相同则结束聚类，否则把这 k 个平均值作为新的中心点，重复第二步。</li>
-</ol>
-<h2 id="sklearn-API"><a href="#sklearn-API" class="headerlink" title="sklearn API"></a>sklearn API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.cluster.KMeans</span><br></pre></td></tr></table></figure>
-<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">KMeans(n_clusters=<span class="number">8</span>,init=<span class="string">'k-means++'</span>)</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>n_clusters:开始的聚类中心数量</p>
-<p>init:初始化方法，默认 k-means++</p>
-</blockquote>
-<blockquote>
-<p>默认标记的类型，可以和真实值比较（不是值比较）</p>
-</blockquote>
-<h2 id="k-means-性能评估指标-轮廓系数"><a href="#k-means-性能评估指标-轮廓系数" class="headerlink" title="k-means 性能评估指标:轮廓系数"></a>k-means 性能评估指标:轮廓系数</h2><h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><p>$$ sc_i = \frac{b_i-a_i}{max(b_i,a_i)} $$</p>
-<p>对于每个点 i 为聚类数据中的样本，bi 为 i 到其他族群的所有样本的距离最小值，ai 为 i 到本身族的距离平均值。</p>
-<p>最终计算出所有的样本点的轮廓系数平均值。</p>
-<p>最终轮廓系数会落在-1到1之间，越接近1越好，反之效果越差。</p>
-<h3 id="sklearn-API-1"><a href="#sklearn-API-1" class="headerlink" title="sklearn API"></a>sklearn API</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.metrics.silhouette_score</span><br></pre></td></tr></table></figure>
-<h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">silhouette_score(X, labels)</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>X:特征值</p>
-<p>labels:被聚类标记的目标值</p>
-</blockquote>
-<h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><p>采用迭代式算法，直观且实用</p>
-<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>容易收敛到局部最优解（多次聚类）</p>
-<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>聚类一般做在分类之前</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2283,7 +2294,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2370,7 +2381,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6.2k</span>
+    <span title="Site words total count">6.6k</span>
   
 </div>
 

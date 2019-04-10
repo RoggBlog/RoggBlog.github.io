@@ -272,6 +272,211 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://stark365.com/k-means/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Logg 罗格">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Logg 罗格">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/k-means/" itemprop="url">k-means 聚类</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-06T08:29:47+08:00">
+                2019-04-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/机器学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  394
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<h1 id="k-means-聚类"><a href="#k-means-聚类" class="headerlink" title="k-means 聚类"></a>k-means 聚类</h1><p>只有特征值没有目标值可以归为无监督学习。</p>
+<h2 id="k-means-原理"><a href="#k-means-原理" class="headerlink" title="k-means 原理"></a>k-means 原理</h2><blockquote>
+<p>k：把数据划分为多少个类别</p>
+</blockquote>
+<ol>
+<li>随机在数据中抽取 k 个样本，当做 k 个类别的中心点。</li>
+<li>计算其余的点分别到这 k 个点的距离，从中选出距离最近的一个点作为自己的标记，形成 k 个族群。</li>
+<li>分别计算这 k 个族群的平均值，把 k 个平均值和之前的 k 个旧中心点进行比较，如果相同则结束聚类，否则把这 k 个平均值作为新的中心点，重复第二步。</li>
+</ol>
+<h2 id="sklearn-API"><a href="#sklearn-API" class="headerlink" title="sklearn API"></a>sklearn API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.cluster.KMeans</span><br></pre></td></tr></table></figure>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">KMeans(n_clusters=<span class="number">8</span>,init=<span class="string">'k-means++'</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>n_clusters:开始的聚类中心数量</p>
+<p>init:初始化方法，默认 k-means++</p>
+</blockquote>
+<blockquote>
+<p>默认标记的类型，可以和真实值比较（不是值比较）</p>
+</blockquote>
+<h2 id="k-means-性能评估指标-轮廓系数"><a href="#k-means-性能评估指标-轮廓系数" class="headerlink" title="k-means 性能评估指标:轮廓系数"></a>k-means 性能评估指标:轮廓系数</h2><h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><p>$$ sc_i = \frac{b_i-a_i}{max(b_i,a_i)} $$</p>
+<p>对于每个点 i 为聚类数据中的样本，bi 为 i 到其他族群的所有样本的距离最小值，ai 为 i 到本身族的距离平均值。</p>
+<p>最终计算出所有的样本点的轮廓系数平均值。</p>
+<p>最终轮廓系数会落在-1到1之间，越接近1越好，反之效果越差。</p>
+<h3 id="sklearn-API-1"><a href="#sklearn-API-1" class="headerlink" title="sklearn API"></a>sklearn API</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.metrics.silhouette_score</span><br></pre></td></tr></table></figure>
+<h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">silhouette_score(X, labels)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>X:特征值</p>
+<p>labels:被聚类标记的目标值</p>
+</blockquote>
+<h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><p>采用迭代式算法，直观且实用</p>
+<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>容易收敛到局部最优解（多次聚类）</p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>聚类一般做在分类之前</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://stark365.com/逻辑回归/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1994,234 +2199,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://stark365.com/混淆矩阵/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Logg 罗格">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Logg 罗格">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/混淆矩阵/" itemprop="url">分类模型评估</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-31T15:41:57+08:00">
-                2019-03-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/机器学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">机器学习笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  220
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-
-<h1 id="分类模型评估"><a href="#分类模型评估" class="headerlink" title="分类模型评估"></a>分类模型评估</h1><h2 id="混淆矩阵"><a href="#混淆矩阵" class="headerlink" title="混淆矩阵"></a>混淆矩阵</h2><p>在分类任务下，预测结果(Predicted Condition)与正确标记(True Condition)之间存在四种不同的组合，构成混淆矩阵(适用于多分类)。</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th style="text-align:right">预测正例</th>
-<th style="text-align:center">预测假例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>真实正例</td>
-<td style="text-align:right">真正例TP</td>
-<td style="text-align:center">伪反例FN</td>
-</tr>
-<tr>
-<td>真实假例</td>
-<td style="text-align:right">伪正例FP</td>
-<td style="text-align:center">真反例TN</td>
-</tr>
-</tbody>
-</table>
-<h2 id="召回率"><a href="#召回率" class="headerlink" title="召回率"></a>召回率</h2><p><strong>真实为正例</strong>的样本中预测结果为正例的比例。</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th style="text-align:right">预测正例</th>
-<th style="text-align:center">预测假例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>真实正例</td>
-<td style="text-align:right"><strong><em>真正例TP</em></strong></td>
-<td style="text-align:center"><strong><em>伪反例FN</em></strong></td>
-</tr>
-<tr>
-<td>真实假例</td>
-<td style="text-align:right">伪正例FP</td>
-<td style="text-align:center">真反例TN</td>
-</tr>
-</tbody>
-</table>
-<h2 id="F1-score"><a href="#F1-score" class="headerlink" title="F1-score"></a>F1-score</h2><p>F1-score 反映了模型的稳健性。</p>
-<p>$$ F1=\frac{2TP}{2TP+FN+FP}=\frac{2·Precision·Recall}{Precision+Recall} $$</p>
-<h2 id="分类模型评估-API"><a href="#分类模型评估-API" class="headerlink" title="分类模型评估 API"></a>分类模型评估 API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.metrics.classification_report</span><br></pre></td></tr></table></figure>
-<h2 id="分类模型评估用法"><a href="#分类模型评估用法" class="headerlink" title="分类模型评估用法"></a>分类模型评估用法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.metrics.classification_report(y_true, y_pred, target_names=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>y_true: 真实目标值</li>
-<li>y_pred: 估计器预测目标值</li>
-<li>target_names: 目标类别名称</li>
-<li><strong><em>return</em></strong>: 每个类别精确率与召回率</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2272,7 +2249,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2359,7 +2336,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6.2k</span>
+    <span title="Site words total count">6.6k</span>
   
 </div>
 
