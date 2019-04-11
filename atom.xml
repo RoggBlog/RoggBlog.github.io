@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stark365.com/"/>
-  <updated>2019-04-10T08:24:40.112Z</updated>
+  <updated>2019-04-11T07:53:24.689Z</updated>
   <id>http://stark365.com/</id>
   
   <author>
@@ -17,11 +17,60 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>TFRecords</title>
+    <link href="http://stark365.com/TFRecords/"/>
+    <id>http://stark365.com/TFRecords/</id>
+    <published>2019-04-11T07:33:27.971Z</published>
+    <updated>2019-04-11T07:53:24.689Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="TFRecords"><a href="#TFRecords" class="headerlink" title="TFRecords"></a>TFRecords</h1><h2 id="建立-TFRecords-储存器"><a href="#建立-TFRecords-储存器" class="headerlink" title="建立 TFRecords 储存器"></a>建立 TFRecords 储存器</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.python_io.TFRecordWriter(path)  <span class="comment"># 返回写文件</span></span><br></pre></td></tr></table></figure><p>参数</p><ul><li>path 文件的路径</li></ul><p>方法</p><ul><li>write(record)  向文件中写入一个 Example</li><li>close()  关闭写入器</li></ul><blockquote><p>Example(类字典) = Example.SerializeToString()</p></blockquote><h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><h3 id="写入-tfrecords-文件"><a href="#写入-tfrecords-文件" class="headerlink" title="写入 tfrecords 文件"></a>写入 tfrecords 文件</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.train.Example(features=<span class="literal">None</span>)  <span class="comment"># 返回 Example 格式协议块</span></span><br></pre></td></tr></table></figure><ul><li>features Features类型的特征实例对象</li></ul><h3 id="构建每个样本的信息键值对"><a href="#构建每个样本的信息键值对" class="headerlink" title="构建每个样本的信息键值对"></a>构建每个样本的信息键值对</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.train.Features(feature=<span class="literal">None</span>)  <span class="comment"># 返回 Features 类型数据</span></span><br></pre></td></tr></table></figure><ul><li>feature 字典类型数据，key 为要保存的名字，value 为 tf.train.Feature 实例对象</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.train.Feature(**options)  <span class="comment"># 返回 Feature 实例对象</span></span><br></pre></td></tr></table></figure><ul><li>**options：<ul><li>bytes_list = tf.train.BytesList(value=[Bytes])</li><li>int64_list = tf.train.Int64List(value=[Value])</li><li>float_list = tf.train.FloatList(value=[Value])</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;TFRecords&quot;&gt;&lt;a href=&quot;#TFRecords&quot; class=&quot;headerlink&quot; title=&quot;TFRecords&quot;&gt;&lt;/a&gt;TFRecords&lt;/h1&gt;&lt;h2 id=&quot;建立-TFRecords-储存器&quot;&gt;&lt;a href=&quot;#建立-TFReco
+      
+    
+    </summary>
+    
+      <category term="深度学习笔记" scheme="http://stark365.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>图像读取</title>
+    <link href="http://stark365.com/%E5%9B%BE%E5%83%8F%E8%AF%BB%E5%8F%96/"/>
+    <id>http://stark365.com/图像读取/</id>
+    <published>2019-04-11T01:44:29.899Z</published>
+    <updated>2019-04-11T03:33:09.749Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="图像读取"><a href="#图像读取" class="headerlink" title="图像读取"></a>图像读取</h1><p>做图片处理时，需要所有图片特征数量统一(像素一致)</p><p>目的：</p><ol><li>增加图片数据的统一性</li><li>所有图片转换成指定大小</li><li>缩小图片数据量，防止增加开销</li></ol><h2 id="缩放图片"><a href="#缩放图片" class="headerlink" title="缩放图片"></a>缩放图片</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">image_resize = tf.image.resize_images(images, size)  <span class="comment"># 返回 4-D 格式或者 3-D 格式图片</span></span><br></pre></td></tr></table></figure><p>图片缩放后会从 uint8 变为 float32 类型</p><ul><li>images 4-D 形状 [batch, height, width, channels] 或 3-D 形状的张量 [height, width, channels] 的图片数据</li><li>size 1-D int32 张量 [new_height, new_width] 图像的新尺寸</li></ul><blockquote><p>注意，在批处理的时候要求所有数据必须定义图片需要指定通道：image_resize.set_shape([200, 200, 3])</p></blockquote><h2 id="图片读取器"><a href="#图片读取器" class="headerlink" title="图片读取器"></a>图片读取器</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.WholeFileReader  <span class="comment"># 返回读取器实例对象</span></span><br></pre></td></tr></table></figure><p>read(file_queue) 输出文件名(key)和该文件的内容(value)</p><h2 id="图像解码器"><a href="#图像解码器" class="headerlink" title="图像解码器"></a>图像解码器</h2><h3 id="jpeg"><a href="#jpeg" class="headerlink" title="jpeg"></a>jpeg</h3><p>将 JPEG 图像解码为 uint8 张量</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">image = tf.image.decode_jpeg(contents)  <span class="comment"># 返回 uint8 张量， 3-D 形状</span></span><br></pre></td></tr></table></figure><ul><li>contents 就是读取器读取的文件内容(value)</li></ul><h3 id="png"><a href="#png" class="headerlink" title="png"></a>png</h3><p>将 PNG 图像解码为 uint8 或 uint16 张量</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">image = tf.image.decode_png(contents)  <span class="comment"># 返回张量， 3-D 形状</span></span><br></pre></td></tr></table></figure><ul><li>contents 就是读取器读取的文件内容(value)</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;图像读取&quot;&gt;&lt;a href=&quot;#图像读取&quot; class=&quot;headerlink&quot; title=&quot;图像读取&quot;&gt;&lt;/a&gt;图像读取&lt;/h1&gt;&lt;p&gt;做图片处理时，需要所有图片特征数量统一(像素一致)&lt;/p&gt;
+&lt;p&gt;目的：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;增加图片数据的统一性&lt;/
+      
+    
+    </summary>
+    
+      <category term="深度学习笔记" scheme="http://stark365.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>文件读取</title>
     <link href="http://stark365.com/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/"/>
     <id>http://stark365.com/文件读取/</id>
     <published>2019-04-10T06:51:37.763Z</published>
-    <updated>2019-04-10T08:24:40.112Z</updated>
+    <updated>2019-04-11T00:47:07.070Z</updated>
     
     <content type="html"><![CDATA[<h1 id="文件读取"><a href="#文件读取" class="headerlink" title="文件读取"></a>文件读取</h1><h2 id="文件队列构造"><a href="#文件队列构造" class="headerlink" title="文件队列构造"></a>文件队列构造</h2><p>将输出字符串输入到管道队列</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.train.string_input_producer(string_tensor, shuffle=<span class="literal">True</span>)  <span class="comment"># 返回一个队列对象</span></span><br></pre></td></tr></table></figure><ul><li>string_tensor 含有文件名的1阶张量</li><li>shuffle 是否乱序</li></ul><h2 id="文件阅读器"><a href="#文件阅读器" class="headerlink" title="文件阅读器"></a>文件阅读器</h2><h3 id="CSV"><a href="#CSV" class="headerlink" title="CSV"></a>CSV</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.TextLineReader()  <span class="comment"># 返回阅读器实例</span></span><br></pre></td></tr></table></figure><h3 id="二进制"><a href="#二进制" class="headerlink" title="二进制"></a>二进制</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.FixedLengthRecordReader(record_bytes)  <span class="comment"># 返回阅读器实例</span></span><br></pre></td></tr></table></figure><ul><li>record_bytes 整型，指每次读取的字节数</li></ul><h3 id="TFRecords"><a href="#TFRecords" class="headerlink" title="TFRecords"></a>TFRecords</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.TFRecordReader()</span><br></pre></td></tr></table></figure><blockquote><p>都有一个公共方法 read(),返回 keys values</p></blockquote><h2 id="文件内容解码器"><a href="#文件内容解码器" class="headerlink" title="文件内容解码器"></a>文件内容解码器</h2><p>从文件当中读取的是字符串，需要函数去解析这些字符串到张量</p><h3 id="CSV-1"><a href="#CSV-1" class="headerlink" title="CSV"></a>CSV</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.decode_csv(records, record_defaults=<span class="literal">None</span>, field_delim=<span class="literal">None</span>, name=<span class="literal">None</span>)  <span class="comment"># 有多少个列，则返回多个个列</span></span><br></pre></td></tr></table></figure><ul><li>records 张量型字符串，每个字符串是 csv 中的记录行</li><li>field_delim 分隔符，默认“,”</li><li>record_defaults 参数决定了所得张量的类型，并设置一个值在输入字符串中缺少使用默认值</li></ul><h3 id="二进制-1"><a href="#二进制-1" class="headerlink" title="二进制"></a>二进制</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.decode_raw(bytes, out_type, little_endian=<span class="literal">None</span>, name=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -44,7 +93,7 @@
     <link href="http://stark365.com/%E7%BA%BF%E7%A8%8B%E9%98%9F%E5%88%97%E4%B8%8EIO%E6%93%8D%E4%BD%9C/"/>
     <id>http://stark365.com/线程队列与IO操作/</id>
     <published>2019-04-09T02:41:09.974Z</published>
-    <updated>2019-04-10T09:28:31.785Z</updated>
+    <updated>2019-04-11T00:47:05.424Z</updated>
     
     <content type="html"><![CDATA[<h1 id="线程队列"><a href="#线程队列" class="headerlink" title="线程队列"></a>线程队列</h1><h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先进先出队列</span></span><br><span class="line">tf.FIFOQueue(capacity, dtypes, name=<span class="string">""</span>)</span><br></pre></td></tr></table></figure><ul><li>capacity 整数，可存储的元素数量上限</li><li>dtypes 列表，dtypes长度必须等于每个队列元素中的张量数，dtypes的类型形状决定了后面进队列元素的形状</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 随机出队列</span></span><br><span class="line">tf.RandomShuffleQueue</span><br></pre></td></tr></table></figure><h2 id="队列管理器"><a href="#队列管理器" class="headerlink" title="队列管理器"></a>队列管理器</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.train.QueueRunner(queue, enqueue_ops=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure><ul><li>queue 队列</li><li>enqueue_ops  添加线程的队列操作列表，[]*2 指定两个线程</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建线程来运行给定会话的入队操作</span></span><br><span class="line">create_threads(sess, coord=<span class="literal">None</span>, start=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure><ul><li>coord 线程协调器，后面线程管理需要用到</li><li>start True启动线程，False必须手动调用 start() 启动线程。</li><li>return 线程的实例</li></ul><h2 id="线程协调器"><a href="#线程协调器" class="headerlink" title="线程协调器"></a>线程协调器</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.train.Coordinator()</span><br></pre></td></tr></table></figure><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><ul><li>request_stop()  # 请求停止</li><li>should_stop()  # 强制停止</li><li>join(threads=None, stop_grace_period_secs=120)    # 等待线程终止</li></ul><p>return 线程协调员实例</p><h2 id="开启线程操作"><a href="#开启线程操作" class="headerlink" title="开启线程操作"></a>开启线程操作</h2><p>收集所有图中的队列线程，并开启线程</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.train.start_queue_runners(sess=<span class="literal">None</span>, coord=<span class="literal">None</span>)  <span class="comment"># 返回所有线程队列</span></span><br></pre></td></tr></table></figure><ul><li>sess 会话</li><li>coord 线程协调器</li></ul><h2 id="批处理"><a href="#批处理" class="headerlink" title="批处理"></a>批处理</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.train.batch(tensors, batch_size, num_threads=<span class="number">1</span>, capacity=<span class="number">32</span>, name=<span class="literal">None</span>)  <span class="comment"># 返回 tensors</span></span><br></pre></td></tr></table></figure><ul><li>tensors 可以是包含张量的列表</li><li>batch_size 从队列中读取的批处理大小</li><li>num_threads 进入队列的线程数</li><li>capacity 队列中元素的最大数量</li></ul>]]></content>
     
@@ -717,9 +766,9 @@
     <link href="http://stark365.com/README/"/>
     <id>http://stark365.com/README/</id>
     <published>2018-10-22T16:11:18.000Z</published>
-    <updated>2019-04-10T06:51:30.695Z</updated>
+    <updated>2019-04-11T07:33:21.815Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h1><ul><li>数据特征预处理<ul><li><a href="/归一化标准化">标准缩放</a></li></ul></li><li>数据降维<ul><li><a href="./特征选择">特征选择</a></li><li><a href="./主成分分析">主成分分析</a></li></ul></li><li>算法简述<ul><li><a href="./数据类型">数据类型</a></li><li><a href="./算法分类">算法分类</a></li></ul></li><li><a href="./skl模型保存预加载">scikit-learn 模型保存预加载</a></li><li>监督学习<ul><li>分类算法<ul><li><a href="./sklearn数据集API">scikit-learn 数据集 API </a></li><li><a href="./K-近邻算法">K-近邻/KNN</a></li><li><a href="./朴素贝叶斯">朴素贝叶斯</a><ul><li><a href="./概率基础">概率基础</a></li><li><a href="./混淆矩阵">分类模型评估</a></li><li><a href="./模型选择与调优">模型选择与调优</a></li></ul></li><li><a href="./决策树">决策树</a></li><li><a href="./随机森林">随机森林</a></li><li><a href="./逻辑回归">逻辑回归</a></li></ul></li><li>回归算法<ul><li><a href="./线性回归">线性回归</a><ul><li><a href="./欠拟合与过拟合">欠拟合与过拟合</a></li><li><a href="./正则化">L2正则化</a></li></ul></li><li><a href="./岭回归">岭回归</a></li></ul></li></ul></li><li>非监督学习(只有特征值)<ul><li><a href="./k-means">k-means 聚类</a></li></ul></li></ul><h1 id="深度学习笔记"><a href="#深度学习笔记" class="headerlink" title="深度学习笔记"></a>深度学习笔记</h1><ul><li>深度学习<ul><li><a href="./深度学习介绍">深度学习介绍</a></li></ul></li><li>TensorFlow<ul><li><a href="./TensorFlow">TensorFlow 入门</a></li><li><a href="./可视化学习">可视化学习</a></li><li><a href="./模型的保存与加载">模型的保存与加载</a></li><li><a href="./mathapi">运算 API</a></li><li><a href="./gdo">梯度下降 API</a></li><li><a href="./线程队列与IO操作">线程队列与IO操作</a></li><li><a href="./文件读取">文件读取</a></li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h1><ul><li>数据特征预处理<ul><li><a href="/归一化标准化">标准缩放</a></li></ul></li><li>数据降维<ul><li><a href="./特征选择">特征选择</a></li><li><a href="./主成分分析">主成分分析</a></li></ul></li><li>算法简述<ul><li><a href="./数据类型">数据类型</a></li><li><a href="./算法分类">算法分类</a></li></ul></li><li><a href="./skl模型保存预加载">scikit-learn 模型保存预加载</a></li><li>监督学习<ul><li>分类算法<ul><li><a href="./sklearn数据集API">scikit-learn 数据集 API </a></li><li><a href="./K-近邻算法">K-近邻/KNN</a></li><li><a href="./朴素贝叶斯">朴素贝叶斯</a><ul><li><a href="./概率基础">概率基础</a></li><li><a href="./混淆矩阵">分类模型评估</a></li><li><a href="./模型选择与调优">模型选择与调优</a></li></ul></li><li><a href="./决策树">决策树</a></li><li><a href="./随机森林">随机森林</a></li><li><a href="./逻辑回归">逻辑回归</a></li></ul></li><li>回归算法<ul><li><a href="./线性回归">线性回归</a><ul><li><a href="./欠拟合与过拟合">欠拟合与过拟合</a></li><li><a href="./正则化">L2正则化</a></li></ul></li><li><a href="./岭回归">岭回归</a></li></ul></li></ul></li><li>非监督学习(只有特征值)<ul><li><a href="./k-means">k-means 聚类</a></li></ul></li></ul><h1 id="深度学习笔记"><a href="#深度学习笔记" class="headerlink" title="深度学习笔记"></a>深度学习笔记</h1><ul><li>深度学习<ul><li><a href="./深度学习介绍">深度学习介绍</a></li></ul></li><li>TensorFlow<ul><li><a href="./TensorFlow">TensorFlow 入门</a></li><li><a href="./可视化学习">可视化学习</a></li><li><a href="./模型的保存与加载">模型的保存与加载</a></li><li><a href="./mathapi">运算 API</a></li><li><a href="./gdo">梯度下降 API</a></li><li><a href="./线程队列与IO操作">线程队列与IO操作</a></li><li><a href="./文件读取">文件读取</a></li><li><a href="./图像读取">图像读取</a></li><li><a href="./TFRecords">TFRecords</a></li></ul></li></ul>]]></content>
     
     <summary type="html">
     
