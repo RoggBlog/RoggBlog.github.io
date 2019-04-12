@@ -272,6 +272,211 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://stark365.com/随机森林/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Logg 罗格">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Logg 罗格">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/随机森林/" itemprop="url">随机森林</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-01T16:39:02+08:00">
+                2019-04-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/机器学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  409
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<h1 id="随机森林"><a href="#随机森林" class="headerlink" title="随机森林"></a>随机森林</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>随机森林是一个包含多个决策树的分类器，并且输出的类别是由个别树输出的类别的众数而定。最终结果是由全部决策树投票产生。</p>
+<h2 id="集成学习方法"><a href="#集成学习方法" class="headerlink" title="集成学习方法"></a>集成学习方法</h2><p>集成学习方法通过建立几个模型组合来解决单一预测问题，他的工作原理是<strong>生成多个分类器/模型</strong>，各自独立地学习和作出预测，这些预测最后结合成单预测，因此优于任何一个单分类的预测。</p>
+<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p>假设有 N 个样本，M 个特征。</p>
+<p>单棵树建立的过程：</p>
+<ol>
+<li>随机在 N 个样本中抽取一个，重复 N 次，有放回</li>
+<li>随机在 M 个特征中选择 m 个(m &lt; M)特征</li>
+</ol>
+<p>建立10棵决策树</p>
+<h2 id="sklearn-API"><a href="#sklearn-API" class="headerlink" title="sklearn API"></a>sklearn API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.ensemble.RandomForestClassifier</span><br></pre></td></tr></table></figure>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RandomForestClassifier(n_estimators=<span class="number">10</span>, criterion=<span class="string">'gini'</span>, max_depth=<span class="literal">None</span>, bootstrap=<span class="literal">True</span>, random_state=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>随机森林分类器</li>
+<li>n_estimators: 正整数，森林的数目量，一般为120，200，300，500，800，1200</li>
+<li>criteria：字符串，分割特征的测量方法</li>
+<li>max_depth：正整数，树的最大深度，一般为5，8，15，25，30</li>
+<li>max_features：每个决策树的最大特征数量<ul>
+<li>‘aoto’ 默认选择特征数开根号</li>
+<li>‘sqrt’ 开根号</li>
+<li>‘log2’ 求以2为底的指数</li>
+<li>None 取全部特征</li>
+</ul>
+</li>
+<li>bootstrap：布尔类型，是否在构建树时使用放回抽样</li>
+</ul>
+<h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ul>
+<li>具有极好的准确率</li>
+<li>能够有效的运行在大数据集上</li>
+<li>能够处理具有高纬度特征的输入样本，并且不需要降维</li>
+<li>能够评估各个特征在分类问题上的重要性</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://stark365.com/决策树/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2033,181 +2238,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://stark365.com/主成分分析/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Logg 罗格">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Logg 罗格">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/主成分分析/" itemprop="url">主成分分析 PCA</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-28T09:49:02+08:00">
-                2019-03-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/机器学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">机器学习笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  82
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="主成分分析-PCA"><a href="#主成分分析-PCA" class="headerlink" title="主成分分析 PCA"></a>主成分分析 PCA</h1><p>PCA 是一种分析、简化数据集的技术,目的是数据降维压缩，尽可能降低原数据的维数复杂度，会<strong>损失少量信息</strong>。</p>
-<h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.decomposition</span><br></pre></td></tr></table></figure>
-<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PCA(n_components=<span class="number">0.9</span>) <span class="comment"># 小数表示特征信息保留百分比，整数表示特征保留数</span></span><br><span class="line">PCA.fit_transform(X)</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2258,7 +2288,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2345,7 +2375,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">7.1k</span>
+    <span title="Site words total count">7.4k</span>
   
 </div>
 
