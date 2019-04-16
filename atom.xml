@@ -1,35 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Logg 罗格</title>
+  <title>Rogg 罗格</title>
   
   <subtitle>Stay Hungry, Stay Foolish</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stark365.com/"/>
-  <updated>2019-04-12T07:46:30.969Z</updated>
+  <updated>2019-04-15T01:59:19.431Z</updated>
   <id>http://stark365.com/</id>
   
   <author>
-    <name>Logg 罗格</name>
+    <name>Rogg 罗格</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>神经网络</title>
-    <link href="http://stark365.com/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
-    <id>http://stark365.com/神经网络/</id>
-    <published>2019-04-12T06:38:22.530Z</published>
-    <updated>2019-04-12T07:46:30.969Z</updated>
+    <title>卷积神经网络</title>
+    <link href="http://stark365.com/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
+    <id>http://stark365.com/卷积神经网络/</id>
+    <published>2019-04-14T06:11:04.864Z</published>
+    <updated>2019-04-15T01:59:19.431Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="神经网络"><a href="#神经网络" class="headerlink" title="神经网络"></a>神经网络</h1><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><h3 id="基础神经网络"><a href="#基础神经网络" class="headerlink" title="基础神经网络"></a>基础神经网络</h3><p>单层感知器等</p><h3 id="进阶神经网络"><a href="#进阶神经网络" class="headerlink" title="进阶神经网络"></a>进阶神经网络</h3><p>玻尔兹曼机等</p><h3 id="深度神经网络"><a href="#深度神经网络" class="headerlink" title="深度神经网络"></a>深度神经网络</h3><p>深度置信网络，卷积神经网络，循环神经网络，LSTM 网络</p><h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul><li>输入向量的维度和输入神经元的个数相同</li><li>每个链接都有权值</li><li>同一层神经元之间没有连接</li><li>由输入层、隐层、输出层组成</li><li>第 N 层与第 N-1 层的所有神经元连接，称全连接</li></ul><h2 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h2><ul><li>结构：权重、神经元等</li><li>激活函数</li><li>学习规则：学习规则制定了网络中的权重如何随着时间推进而调整(<strong>反向传播算法</strong>)</li></ul>]]></content>
+    <content type="html"><![CDATA[<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><h1 id="卷积神经网络"><a href="#卷积神经网络" class="headerlink" title="卷积神经网络"></a>卷积神经网络</h1><p>卷积神经网络的特点是把<strong>隐层</strong>分为<strong>卷积层</strong>和<strong>池化层</strong></p><ul><li>卷积层：通过在原始图像上平移来提取特征</li><li>池化层：通过特征后稀疏参数来减少学习的参数，降低网络的复杂度（最大池化和平均池化）</li></ul><h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><ul><li>卷积层过滤器</li><li>激活函数</li><li>池化层</li><li>全连接层</li></ul><h2 id="filter体积公式"><a href="#filter体积公式" class="headerlink" title="filter体积公式"></a>filter体积公式</h2><p>输入体积大小：\(H_1 <em> W_1 </em> D_1\)</p><ul><li>Filter 超参数<ul><li>Filter 数量 \(K\)</li><li>Filter 大小 \(F\)</li><li>步长 \(S\)</li><li>零填充大小 \(P\)</li></ul></li></ul><p>输出体积大小：\(H_2 <em> W_2 </em> D_2\)</p><p>$$ H_2 = \frac{H_1-F+2P}{S}+1 $$</p><p>$$ W_2 = \frac{W_1-F+2P}{S}+1 $$</p><p>$$ D_2 = K $$</p><h2 id="卷积网络-API"><a href="#卷积网络-API" class="headerlink" title="卷积网络 API"></a>卷积网络 API</h2><p>计算给定 4-D input 和 filter 张量的二维卷积</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.nn.conv2d(input, filter, strides, padding, name=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure><ul><li>input：给定的输入张量，具有[batch, height, width, channel]，类型为float32/64</li><li>filter：指定过滤器的大小，[filter_height，filter_width,in_channels(原图片通道), out_channels(过滤器数量)]</li><li>strides：strides = [1, stride, stride, 1], 步长</li><li>padding：”SAME”、”VALID”，使用的填充算法类型。”VALID”表示 filter 移动后超出图片部分舍弃；”SAME”表示填充</li></ul><h2 id="激活函数-API"><a href="#激活函数-API" class="headerlink" title="激活函数 API"></a>激活函数 API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.nn.relu(features, name=<span class="literal">None</span>)  <span class="comment"># 返回结果</span></span><br></pre></td></tr></table></figure><ul><li>features:卷积后加上偏置的结果</li></ul><h2 id="池化层计算"><a href="#池化层计算" class="headerlink" title="池化层计算"></a>池化层计算</h2><p>Pooling 层主要的作用是特征提取，通过去掉 Feature Map 中不重要的样本，进一步减少参数数量。Pooling 的方法很多，最常用的是 Max Pooling 2*2 2步长</p><h3 id="池化-API"><a href="#池化-API" class="headerlink" title="池化 API"></a>池化 API</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.nn.max_pool(value, ksize=, strides=, padding=, name=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure><ul><li>value：4-D Tensor 形状，[batch, height, width, channels]</li><li>ksize：池化窗口大小，[1, ksize, ksize, 1]</li><li>strides：步长大小, [1, strides, strides, 1]</li><li>padding：”SAME”、”VALID”，使用的填充算法类型。”VALID”表示 filter 移动后超出图片部分舍弃；”SAME”表示填充</li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;神经网络&quot;&gt;&lt;a href=&quot;#神经网络&quot; class=&quot;headerlink&quot; title=&quot;神经网络&quot;&gt;&lt;/a&gt;神经网络&lt;/h1&gt;&lt;h2 id=&quot;分类&quot;&gt;&lt;a href=&quot;#分类&quot; class=&quot;headerlink&quot; title=&quot;分类&quot;&gt;&lt;/a&gt;分类&lt;/h
+        &lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&gt;&lt;/script&gt;
+
+&lt;h1 id=&quot;卷积神经网络&quot;&gt;&lt;a href=&quot;#卷积
+      
+    
+    </summary>
+    
+      <category term="深度学习笔记" scheme="http://stark365.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>神经网络</title>
+    <link href="http://stark365.com/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
+    <id>http://stark365.com/神经网络/</id>
+    <published>2019-04-12T06:38:22.530Z</published>
+    <updated>2019-04-15T01:41:55.281Z</updated>
+    
+    <content type="html"><![CDATA[<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><h1 id="神经网络"><a href="#神经网络" class="headerlink" title="神经网络"></a>神经网络</h1><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><h3 id="基础神经网络"><a href="#基础神经网络" class="headerlink" title="基础神经网络"></a>基础神经网络</h3><p>单层感知器等</p><h3 id="进阶神经网络"><a href="#进阶神经网络" class="headerlink" title="进阶神经网络"></a>进阶神经网络</h3><p>玻尔兹曼机等</p><h3 id="深度神经网络"><a href="#深度神经网络" class="headerlink" title="深度神经网络"></a>深度神经网络</h3><p>深度置信网络，卷积神经网络，循环神经网络，LSTM 网络</p><h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul><li>输入向量的维度和输入神经元的个数相同</li><li>每个链接都有权值, 权值数=特征数*神经元个数,偏置=神经元个数</li><li>同一层神经元之间没有连接</li><li>由输入层、隐层、输出层组成</li><li>第 N 层与第 N-1 层的所有神经元连接，称全连接</li></ul><h2 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h2><ul><li>结构：权重、神经元等</li><li>激活函数</li><li>学习规则：学习规则制定了网络中的权重如何随着时间推进而调整(<strong>反向传播算法</strong>)</li></ul><h2 id="SoftMax-回归"><a href="#SoftMax-回归" class="headerlink" title="SoftMax 回归"></a>SoftMax 回归</h2><h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><p>$$ S_i=\frac{e^i}{\sum_j e^j } $$</p><ul><li>e = 2.71</li><li>i 为全连接层 SoftMax 需要计算的神经元输出</li></ul><p>$$ \sum_j e^j = \frac{e^1}{e^1+e^2+e^3+···} $$</p><h3 id="SoftMax计算、交叉熵-API"><a href="#SoftMax计算、交叉熵-API" class="headerlink" title="SoftMax计算、交叉熵 API"></a>SoftMax计算、交叉熵 API</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.nn.softmax_cross_entropy_with_logits(labels=<span class="literal">None</span>, logits=<span class="literal">None</span>, name=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure><p>计算预测值与真实值之间的交叉损失熵</p><ul><li>labels 真实值</li><li>logits 预测值</li></ul><p>返回损失值列表</p><h3 id="准确性计算"><a href="#准确性计算" class="headerlink" title="准确性计算"></a>准确性计算</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">equal_list = tf.equal(tf.argmax(y_true, <span class="number">1</span>), tf.argmax(y_predict, <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">accuracy = tf.reduce_mean(tf.cast(equal_list, tf.float32))</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&gt;&lt;/script&gt;
+
+&lt;h1 id=&quot;神经网络&quot;&gt;&lt;a href=&quot;#神经网络
       
     
     </summary>
@@ -44,7 +71,7 @@
     <link href="http://stark365.com/TFRecords/"/>
     <id>http://stark365.com/TFRecords/</id>
     <published>2019-04-11T07:33:27.971Z</published>
-    <updated>2019-04-12T02:38:39.136Z</updated>
+    <updated>2019-04-14T01:06:05.029Z</updated>
     
     <content type="html"><![CDATA[<h1 id="TFRecords"><a href="#TFRecords" class="headerlink" title="TFRecords"></a>TFRecords</h1><h2 id="建立-TFRecords-储存器"><a href="#建立-TFRecords-储存器" class="headerlink" title="建立 TFRecords 储存器"></a>建立 TFRecords 储存器</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.python_io.TFRecordWriter(path)  <span class="comment"># 返回写文件</span></span><br></pre></td></tr></table></figure><p>参数</p><ul><li>path 文件的路径</li></ul><p>方法</p><ul><li>write(record)  向文件中写入一个 Example</li><li>close()  关闭写入器</li></ul><blockquote><p>Example(类字典) = Example.SerializeToString()</p></blockquote><h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><h3 id="写入-tfrecords-文件"><a href="#写入-tfrecords-文件" class="headerlink" title="写入 tfrecords 文件"></a>写入 tfrecords 文件</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.train.Example(features=<span class="literal">None</span>)  <span class="comment"># 返回 Example 格式协议块</span></span><br></pre></td></tr></table></figure><ul><li>features Features类型的特征实例对象</li></ul><h3 id="构建每个样本的信息键值对"><a href="#构建每个样本的信息键值对" class="headerlink" title="构建每个样本的信息键值对"></a>构建每个样本的信息键值对</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.train.Features(feature=<span class="literal">None</span>)  <span class="comment"># 返回 Features 类型数据</span></span><br></pre></td></tr></table></figure><ul><li>feature 字典类型数据，key 为要保存的名字，value 为 tf.train.Feature 实例对象</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.train.Feature(**options)  <span class="comment"># 返回 Feature 实例对象</span></span><br></pre></td></tr></table></figure><ul><li>**options：<ul><li>bytes_list = tf.train.BytesList(value=[Bytes])</li><li>int64_list = tf.train.Int64List(value=[Value])</li><li>float_list = tf.train.FloatList(value=[Value])</li></ul></li></ul><h2 id="TFRecords-文件的读取"><a href="#TFRecords-文件的读取" class="headerlink" title="TFRecords 文件的读取"></a>TFRecords 文件的读取</h2><p>与读取普通文件流程几乎一致，但中间需要添加解析</p><h3 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h3><p>解析 TFRecords 的 example 协议内存块</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.parse_single_example(serialize, features=<span class="literal">None</span>, name=<span class="literal">None</span>)  <span class="comment"># 返回一个字典，键为读取的名字，值为内容</span></span><br></pre></td></tr></table></figure><ul><li>serialized 标量字符串 Tensor，一个序列化的 Example</li><li>features 字典数据，键为读取的名字，值为 FixedLenFeature</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.FixedLenFeature(shape, dtype)</span><br></pre></td></tr></table></figure><ul><li>shape 输入数据的形状，一般不指定，为空列表</li><li>dtype 输入数据类型，与储存进文件的类型要一致</li></ul>]]></content>
     
@@ -67,7 +94,7 @@
     <link href="http://stark365.com/%E5%9B%BE%E5%83%8F%E8%AF%BB%E5%8F%96/"/>
     <id>http://stark365.com/图像读取/</id>
     <published>2019-04-11T01:44:29.899Z</published>
-    <updated>2019-04-12T02:38:37.356Z</updated>
+    <updated>2019-04-14T01:06:01.623Z</updated>
     
     <content type="html"><![CDATA[<h1 id="图像读取"><a href="#图像读取" class="headerlink" title="图像读取"></a>图像读取</h1><p>做图片处理时，需要所有图片特征数量统一(像素一致)</p><p>目的：</p><ol><li>增加图片数据的统一性</li><li>所有图片转换成指定大小</li><li>缩小图片数据量，防止增加开销</li></ol><h2 id="缩放图片"><a href="#缩放图片" class="headerlink" title="缩放图片"></a>缩放图片</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">image_resize = tf.image.resize_images(images, size)  <span class="comment"># 返回 4-D 格式或者 3-D 格式图片</span></span><br></pre></td></tr></table></figure><p>图片缩放后会从 uint8 变为 float32 类型</p><ul><li>images 4-D 形状 [batch, height, width, channels] 或 3-D 形状的张量 [height, width, channels] 的图片数据</li><li>size 1-D int32 张量 [new_height, new_width] 图像的新尺寸</li></ul><blockquote><p>注意，在批处理的时候要求所有数据必须定义图片需要指定通道：image_resize.set_shape([200, 200, 3])</p></blockquote><h2 id="图片读取器"><a href="#图片读取器" class="headerlink" title="图片读取器"></a>图片读取器</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.WholeFileReader  <span class="comment"># 返回读取器实例对象</span></span><br></pre></td></tr></table></figure><p>read(file_queue) 输出文件名(key)和该文件的内容(value)</p><h2 id="图像解码器"><a href="#图像解码器" class="headerlink" title="图像解码器"></a>图像解码器</h2><h3 id="jpeg"><a href="#jpeg" class="headerlink" title="jpeg"></a>jpeg</h3><p>将 JPEG 图像解码为 uint8 张量</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">image = tf.image.decode_jpeg(contents)  <span class="comment"># 返回 uint8 张量， 3-D 形状</span></span><br></pre></td></tr></table></figure><ul><li>contents 就是读取器读取的文件内容(value)</li></ul><h3 id="png"><a href="#png" class="headerlink" title="png"></a>png</h3><p>将 PNG 图像解码为 uint8 或 uint16 张量</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">image = tf.image.decode_png(contents)  <span class="comment"># 返回张量， 3-D 形状</span></span><br></pre></td></tr></table></figure><ul><li>contents 就是读取器读取的文件内容(value)</li></ul>]]></content>
     
@@ -93,7 +120,7 @@
     <link href="http://stark365.com/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/"/>
     <id>http://stark365.com/文件读取/</id>
     <published>2019-04-10T06:51:37.763Z</published>
-    <updated>2019-04-12T02:38:55.266Z</updated>
+    <updated>2019-04-14T01:05:56.004Z</updated>
     
     <content type="html"><![CDATA[<h1 id="文件读取"><a href="#文件读取" class="headerlink" title="文件读取"></a>文件读取</h1><h2 id="文件队列构造"><a href="#文件队列构造" class="headerlink" title="文件队列构造"></a>文件队列构造</h2><p>将输出字符串输入到管道队列</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.train.string_input_producer(string_tensor, shuffle=<span class="literal">True</span>)  <span class="comment"># 返回一个队列对象</span></span><br></pre></td></tr></table></figure><ul><li>string_tensor 含有文件名的1阶张量(列表)</li><li>shuffle 是否乱序</li></ul><h2 id="文件阅读器"><a href="#文件阅读器" class="headerlink" title="文件阅读器"></a>文件阅读器</h2><h3 id="CSV"><a href="#CSV" class="headerlink" title="CSV"></a>CSV</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.TextLineReader()  <span class="comment"># 返回阅读器实例</span></span><br></pre></td></tr></table></figure><h3 id="二进制"><a href="#二进制" class="headerlink" title="二进制"></a>二进制</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.FixedLengthRecordReader(record_bytes)  <span class="comment"># 返回阅读器实例</span></span><br></pre></td></tr></table></figure><ul><li>record_bytes 整型，指每次读取的字节数</li></ul><h3 id="TFRecords"><a href="#TFRecords" class="headerlink" title="TFRecords"></a>TFRecords</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.TFRecordReader()</span><br></pre></td></tr></table></figure><blockquote><p>都有一个公共方法 read(),返回 keys values</p></blockquote><h2 id="文件内容解码器"><a href="#文件内容解码器" class="headerlink" title="文件内容解码器"></a>文件内容解码器</h2><p>从文件当中读取的是字符串，需要函数去解析这些字符串到张量</p><h3 id="CSV-1"><a href="#CSV-1" class="headerlink" title="CSV"></a>CSV</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.decode_csv(records, record_defaults=<span class="literal">None</span>, field_delim=<span class="literal">None</span>, name=<span class="literal">None</span>)  <span class="comment"># 有多少个列，则返回多个个列</span></span><br></pre></td></tr></table></figure><ul><li>records 张量型字符串，每个字符串是 csv 中的记录行</li><li>field_delim 分隔符，默认“,”</li><li>record_defaults 参数决定了所得张量的类型，并设置一个值在输入字符串中缺少使用默认值</li></ul><h3 id="二进制-1"><a href="#二进制-1" class="headerlink" title="二进制"></a>二进制</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.decode_raw(bytes, out_type, little_endian=<span class="literal">None</span>, name=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -162,7 +189,7 @@
     <link href="http://stark365.com/%E5%8F%AF%E8%A7%86%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
     <id>http://stark365.com/可视化学习/</id>
     <published>2019-04-08T08:27:47.929Z</published>
-    <updated>2019-04-08T09:44:00.511Z</updated>
+    <updated>2019-04-16T00:21:34.065Z</updated>
     
     <content type="html"><![CDATA[<h1 id="可视化学习"><a href="#可视化学习" class="headerlink" title="可视化学习"></a>可视化学习</h1><h2 id="name-属性"><a href="#name-属性" class="headerlink" title="name 属性"></a>name 属性</h2><p>在 tensorflow 后台显示，让相同 op 名字的进行区分</p><h2 id="导出事件文件"><a href="#导出事件文件" class="headerlink" title="导出事件文件"></a>导出事件文件</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.summary.FileWriter(<span class="string">"/路径/"</span>, graph=)</span><br></pre></td></tr></table></figure><h2 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tensorboard --logdir=<span class="string">"/路径/"</span></span><br></pre></td></tr></table></figure><p>浏览器打开 <a href="http://127.0.0.1:6006" target="_blank" rel="noopener">http://127.0.0.1:6006</a></p><h2 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> tf.variable_scope(<span class="string">"name"</span>):  <span class="comment"># 创建指定名字的作用于</span></span><br></pre></td></tr></table></figure><h2 id="增加变量显示"><a href="#增加变量显示" class="headerlink" title="增加变量显示"></a>增加变量显示</h2><h3 id="收集变量"><a href="#收集变量" class="headerlink" title="收集变量"></a>收集变量</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tf.summary.scalar(name=<span class="string">""</span>, tensor)  <span class="comment"># 收集对于损失函数和准确率</span></span><br><span class="line"></span><br><span class="line">tf.summary.histogram(name=<span class="string">""</span>,tensor)  <span class="comment"># 收集高纬度的变量参数</span></span><br><span class="line"></span><br><span class="line">tf.summary.image(name=<span class="string">""</span>, tensor)  <span class="comment"># 收集输出的图片张量</span></span><br></pre></td></tr></table></figure><h3 id="合并变量并写入事件文件"><a href="#合并变量并写入事件文件" class="headerlink" title="合并变量并写入事件文件"></a>合并变量并写入事件文件</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">merged = tf.summary.merge_all()</span><br><span class="line">summary = sess.run(merged)  <span class="comment"># 运行合并，每次迭代都需运行</span></span><br><span class="line">filewrite.add_summary(summary, i)  <span class="comment"># 添加</span></span><br></pre></td></tr></table></figure>]]></content>
     
@@ -208,7 +235,7 @@
     <link href="http://stark365.com/gdo/"/>
     <id>http://stark365.com/gdo/</id>
     <published>2019-04-08T05:33:12.268Z</published>
-    <updated>2019-04-08T08:04:04.552Z</updated>
+    <updated>2019-04-14T02:05:16.759Z</updated>
     
     <content type="html"><![CDATA[<h1 id="梯度下降-API"><a href="#梯度下降-API" class="headerlink" title="梯度下降 API"></a>梯度下降 API</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.train.GradientDescentOptimizer(learning_rate)</span><br></pre></td></tr></table></figure><p>参数</p><ul><li>learning_rate 学习率</li></ul><p>方法</p><ul><li>minimize(loss) loss: 损失值</li></ul><p>返回值</p><ul><li>梯度下降 op</li></ul><h2 id="梯度爆炸-梯度消失"><a href="#梯度爆炸-梯度消失" class="headerlink" title="梯度爆炸/梯度消失"></a>梯度爆炸/梯度消失</h2><p>在极端情况下，权重的值变得非常大，以至于溢出，导致出现 NaN 值</p><p>解决方法</p><ul><li>重新设计网络</li><li>调整学习率</li><li>使用梯度截断</li><li>使用激活函数</li></ul>]]></content>
     
@@ -231,7 +258,7 @@
     <link href="http://stark365.com/mathapi/"/>
     <id>http://stark365.com/mathapi/</id>
     <published>2019-04-08T05:28:57.995Z</published>
-    <updated>2019-04-08T06:15:20.859Z</updated>
+    <updated>2019-04-14T01:56:43.375Z</updated>
     
     <content type="html"><![CDATA[<h1 id="运算-API"><a href="#运算-API" class="headerlink" title="运算 API"></a>运算 API</h1><h2 id="矩阵相乘"><a href="#矩阵相乘" class="headerlink" title="矩阵相乘"></a>矩阵相乘</h2><p>注意：矩阵相乘必须是二维</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.matmul(x,w)</span><br></pre></td></tr></table></figure><h2 id="平方"><a href="#平方" class="headerlink" title="平方"></a>平方</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.square(X)</span><br></pre></td></tr></table></figure><h2 id="均值"><a href="#均值" class="headerlink" title="均值"></a>均值</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.reduce_mean(X)</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -421,7 +448,7 @@
     <link href="http://stark365.com/%E6%AC%A0%E6%8B%9F%E5%90%88%E4%B8%8E%E8%BF%87%E6%8B%9F%E5%90%88/"/>
     <id>http://stark365.com/欠拟合与过拟合/</id>
     <published>2019-04-03T05:34:08.929Z</published>
-    <updated>2019-04-04T05:55:26.389Z</updated>
+    <updated>2019-04-15T00:50:32.169Z</updated>
     
     <content type="html"><![CDATA[<h1 id="欠拟合与过拟合"><a href="#欠拟合与过拟合" class="headerlink" title="欠拟合与过拟合"></a>欠拟合与过拟合</h1><h2 id="过拟合"><a href="#过拟合" class="headerlink" title="过拟合"></a>过拟合</h2><p>一个假设在训练数据上能够获得比其他假设更好的拟合，但是在训练数据外的数据集上却不能很好地拟合数据，此时认为这个假设出现了过拟合现象。（模型过于复杂）</p><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>原始特征过多，存在一些嘈杂特征，模型过于复杂是因为模型尝试去兼顾各个测试数据点。</p><h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><ul><li>进行特征选择，消除关联性大的特征</li><li>交叉验证，让所有数据都有进行过训练</li><li>正则化</li></ul><h2 id="欠拟合"><a href="#欠拟合" class="headerlink" title="欠拟合"></a>欠拟合</h2><p>一个假设在训练数据上不能获得更好的拟合，但是在训练数据外的数据集上也不能很好的拟合数据，此时认为这个假设出现了过拟合的现象。（模型过于简单）</p><h3 id="原因-1"><a href="#原因-1" class="headerlink" title="原因"></a>原因</h3><p>学习数据的特征过少</p><h3 id="解决方法-1"><a href="#解决方法-1" class="headerlink" title="解决方法"></a>解决方法</h3><p>增加数据的特征数量</p>]]></content>
     
@@ -789,19 +816,18 @@
     <link href="http://stark365.com/README/"/>
     <id>http://stark365.com/README/</id>
     <published>2018-10-22T16:11:18.000Z</published>
-    <updated>2019-04-12T06:38:17.237Z</updated>
+    <updated>2019-04-14T06:10:58.571Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h1><ul><li>数据特征预处理<ul><li><a href="/归一化标准化">标准缩放</a></li></ul></li><li>数据降维<ul><li><a href="./特征选择">特征选择</a></li><li><a href="./主成分分析">主成分分析</a></li></ul></li><li>算法简述<ul><li><a href="./数据类型">数据类型</a></li><li><a href="./算法分类">算法分类</a></li></ul></li><li><a href="./skl模型保存预加载">scikit-learn 模型保存预加载</a></li><li>监督学习<ul><li>分类算法<ul><li><a href="./sklearn数据集API">scikit-learn 数据集 API </a></li><li><a href="./K-近邻算法">K-近邻/KNN</a></li><li><a href="./朴素贝叶斯">朴素贝叶斯</a><ul><li><a href="./概率基础">概率基础</a></li><li><a href="./混淆矩阵">分类模型评估</a></li><li><a href="./模型选择与调优">模型选择与调优</a></li></ul></li><li><a href="./决策树">决策树</a></li><li><a href="./随机森林">随机森林</a></li><li><a href="./逻辑回归">逻辑回归</a></li></ul></li><li>回归算法<ul><li><a href="./线性回归">线性回归</a><ul><li><a href="./欠拟合与过拟合">欠拟合与过拟合</a></li><li><a href="./正则化">L2正则化</a></li></ul></li><li><a href="./岭回归">岭回归</a></li></ul></li></ul></li><li>非监督学习(只有特征值)<ul><li><a href="./k-means">k-means 聚类</a></li></ul></li></ul><h1 id="深度学习笔记"><a href="#深度学习笔记" class="headerlink" title="深度学习笔记"></a>深度学习笔记</h1><ul><li>深度学习<ul><li><a href="./深度学习介绍">深度学习介绍</a></li></ul></li><li>TensorFlow<ul><li><a href="./TensorFlow">TensorFlow 入门</a></li><li><a href="./可视化学习">可视化学习</a></li><li><a href="./模型的保存与加载">模型的保存与加载</a></li><li><a href="./mathapi">运算 API</a></li><li><a href="./gdo">梯度下降 API</a></li><li><a href="./线程队列与IO操作">线程队列与IO操作</a></li><li><a href="./文件读取">文件读取</a></li><li><a href="./图像读取">图像读取</a></li><li><a href="./TFRecords">TFRecords</a></li><li><a href="./神经网络">神经网络</a></li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="机器学习笔记"><a href="#机器学习笔记" class="headerlink" title="机器学习笔记"></a>机器学习笔记</h1><ul><li>数据特征预处理<ul><li><a href="/归一化标准化">标准缩放</a></li></ul></li><li>数据降维<ul><li><a href="./特征选择">特征选择</a></li><li><a href="./主成分分析">主成分分析</a></li></ul></li><li>算法简述<ul><li><a href="./数据类型">数据类型</a></li><li><a href="./算法分类">算法分类</a></li></ul></li><li><a href="./skl模型保存预加载">scikit-learn 模型保存预加载</a></li><li>监督学习<ul><li>分类算法<ul><li><a href="./sklearn数据集API">scikit-learn 数据集 API </a></li><li><a href="./K-近邻算法">K-近邻/KNN</a></li><li><a href="./朴素贝叶斯">朴素贝叶斯</a><ul><li><a href="./概率基础">概率基础</a></li><li><a href="./混淆矩阵">分类模型评估</a></li><li><a href="./模型选择与调优">模型选择与调优</a></li></ul></li><li><a href="./决策树">决策树</a></li><li><a href="./随机森林">随机森林</a></li><li><a href="./逻辑回归">逻辑回归 策略:对数似然损失 优化:梯度下降</a></li></ul></li><li>回归算法<ul><li><a href="./线性回归">线性回归 策略:均方误差 优化:梯度下降</a><ul><li><a href="./欠拟合与过拟合">欠拟合与过拟合</a></li><li><a href="./正则化">L2正则化</a></li></ul></li><li><a href="./岭回归">岭回归</a></li></ul></li></ul></li><li>非监督学习(只有特征值)<ul><li><a href="./k-means">k-means 聚类</a></li></ul></li></ul><h1 id="深度学习笔记"><a href="#深度学习笔记" class="headerlink" title="深度学习笔记"></a>深度学习笔记</h1><ul><li>深度学习<ul><li><a href="./深度学习介绍">深度学习介绍</a></li></ul></li><li>TensorFlow<ul><li><a href="./TensorFlow">TensorFlow 入门</a></li><li><a href="./可视化学习">可视化学习</a></li><li><a href="./模型的保存与加载">模型的保存与加载</a></li><li><a href="./mathapi">运算 API</a></li><li><a href="./gdo">梯度下降 API</a></li><li><a href="./线程队列与IO操作">线程队列与IO操作</a></li><li><a href="./文件读取">文件读取</a></li><li><a href="./图像读取">图像读取</a></li><li><a href="./TFRecords">TFRecords</a></li><li><a href="./神经网络">神经网络 策略:交叉熵损失 优化:反向传播算法</a></li><li><a href="./卷积神经网络">卷积神经网络</a></li></ul></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;学习笔记&quot;&gt;&lt;a href=&quot;#学习笔记&quot; class=&quot;headerlink&quot; title=&quot;学习笔记&quot;&gt;&lt;/a&gt;学习笔记&lt;/h1&gt;&lt;ul&gt;
+        &lt;h1 id=&quot;机器学习笔记&quot;&gt;&lt;a href=&quot;#机器学习笔记&quot; class=&quot;headerlink&quot; title=&quot;机器学习笔记&quot;&gt;&lt;/a&gt;机器学习笔记&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;数据特征预处理&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;/归一化标准化&quot;&gt;标准缩放&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/
+
       
     
     </summary>
