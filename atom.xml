@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stark365.com/"/>
-  <updated>2019-04-15T01:59:19.431Z</updated>
+  <updated>2019-04-18T07:51:39.315Z</updated>
   <id>http://stark365.com/</id>
   
   <author>
@@ -17,11 +17,83 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>基本数据类型</title>
+    <link href="http://stark365.com/go%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>http://stark365.com/go基本数据类型/</id>
+    <published>2019-04-18T07:51:07.635Z</published>
+    <updated>2019-04-18T07:51:39.315Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;基本数据类型&quot;&gt;&lt;a href=&quot;#基本数据类型&quot; class=&quot;headerlink&quot; title=&quot;基本数据类型&quot;&gt;&lt;/a&gt;基本数据类型&lt;/h1&gt;
+      
+    
+    </summary>
+    
+      <category term="Golang" scheme="http://stark365.com/categories/Golang/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Golang 笔记本</title>
+    <link href="http://stark365.com/golangnote/"/>
+    <id>http://stark365.com/golangnote/</id>
+    <published>2019-04-18T07:48:24.035Z</published>
+    <updated>2019-04-18T07:49:32.455Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Golang-笔记本"><a href="#Golang-笔记本" class="headerlink" title="Golang 笔记本"></a>Golang 笔记本</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Golang-笔记本&quot;&gt;&lt;a href=&quot;#Golang-笔记本&quot; class=&quot;headerlink&quot; title=&quot;Golang 笔记本&quot;&gt;&lt;/a&gt;Golang 笔记本&lt;/h1&gt;
+      
+    
+    </summary>
+    
+      <category term="笔记目录" scheme="http://stark365.com/categories/%E7%AC%94%E8%AE%B0%E7%9B%AE%E5%BD%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>人工智能笔记本</title>
+    <link href="http://stark365.com/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%AC%94%E8%AE%B0%E6%9C%AC/"/>
+    <id>http://stark365.com/人工智能笔记本/</id>
+    <published>2019-04-18T07:45:29.150Z</published>
+    <updated>2019-04-18T07:49:39.457Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="机器学习笔记"><a href="#机器学习笔记" class="headerlink" title="机器学习笔记"></a>机器学习笔记</h1><ul><li>数据特征预处理<ul><li><a href="/归一化标准化">标准缩放</a></li></ul></li><li>数据降维<ul><li><a href="./特征选择">特征选择</a></li><li><a href="./主成分分析">主成分分析</a></li></ul></li><li>算法简述<ul><li><a href="./数据类型">数据类型</a></li><li><a href="./算法分类">算法分类</a></li></ul></li><li><a href="./skl模型保存预加载">scikit-learn 模型保存预加载</a></li><li>监督学习<ul><li>分类算法<ul><li><a href="./sklearn数据集API">scikit-learn 数据集 API </a></li><li><a href="./K-近邻算法">K-近邻/KNN</a></li><li><a href="./朴素贝叶斯">朴素贝叶斯</a><ul><li><a href="./概率基础">概率基础</a></li><li><a href="./混淆矩阵">分类模型评估</a></li><li><a href="./模型选择与调优">模型选择与调优</a></li></ul></li><li><a href="./决策树">决策树</a></li><li><a href="./随机森林">随机森林</a></li><li><a href="./逻辑回归">逻辑回归 策略:对数似然损失 优化:梯度下降</a></li></ul></li><li>回归算法<ul><li><a href="./线性回归">线性回归 策略:均方误差 优化:梯度下降</a><ul><li><a href="./欠拟合与过拟合">欠拟合与过拟合</a></li><li><a href="./正则化">L2正则化</a></li></ul></li><li><a href="./岭回归">岭回归</a></li></ul></li></ul></li><li>非监督学习(只有特征值)<ul><li><a href="./k-means">k-means 聚类</a></li></ul></li></ul><h1 id="深度学习笔记"><a href="#深度学习笔记" class="headerlink" title="深度学习笔记"></a>深度学习笔记</h1><ul><li>深度学习<ul><li><a href="./深度学习介绍">深度学习介绍</a></li></ul></li><li>TensorFlow</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;机器学习笔记&quot;&gt;&lt;a href=&quot;#机器学习笔记&quot; class=&quot;headerlink&quot; title=&quot;机器学习笔记&quot;&gt;&lt;/a&gt;机器学习笔记&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;数据特征预处理&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/归一化标准化&quot;&gt;标准缩放&lt;/a&gt;&lt;/li&gt;
+
+      
+    
+    </summary>
+    
+      <category term="笔记目录" scheme="http://stark365.com/categories/%E7%AC%94%E8%AE%B0%E7%9B%AE%E5%BD%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>卷积神经网络</title>
     <link href="http://stark365.com/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
     <id>http://stark365.com/卷积神经网络/</id>
     <published>2019-04-14T06:11:04.864Z</published>
-    <updated>2019-04-15T01:59:19.431Z</updated>
+    <updated>2019-04-18T07:45:53.484Z</updated>
     
     <content type="html"><![CDATA[<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><h1 id="卷积神经网络"><a href="#卷积神经网络" class="headerlink" title="卷积神经网络"></a>卷积神经网络</h1><p>卷积神经网络的特点是把<strong>隐层</strong>分为<strong>卷积层</strong>和<strong>池化层</strong></p><ul><li>卷积层：通过在原始图像上平移来提取特征</li><li>池化层：通过特征后稀疏参数来减少学习的参数，降低网络的复杂度（最大池化和平均池化）</li></ul><h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><ul><li>卷积层过滤器</li><li>激活函数</li><li>池化层</li><li>全连接层</li></ul><h2 id="filter体积公式"><a href="#filter体积公式" class="headerlink" title="filter体积公式"></a>filter体积公式</h2><p>输入体积大小：\(H_1 <em> W_1 </em> D_1\)</p><ul><li>Filter 超参数<ul><li>Filter 数量 \(K\)</li><li>Filter 大小 \(F\)</li><li>步长 \(S\)</li><li>零填充大小 \(P\)</li></ul></li></ul><p>输出体积大小：\(H_2 <em> W_2 </em> D_2\)</p><p>$$ H_2 = \frac{H_1-F+2P}{S}+1 $$</p><p>$$ W_2 = \frac{W_1-F+2P}{S}+1 $$</p><p>$$ D_2 = K $$</p><h2 id="卷积网络-API"><a href="#卷积网络-API" class="headerlink" title="卷积网络 API"></a>卷积网络 API</h2><p>计算给定 4-D input 和 filter 张量的二维卷积</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.nn.conv2d(input, filter, strides, padding, name=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure><ul><li>input：给定的输入张量，具有[batch, height, width, channel]，类型为float32/64</li><li>filter：指定过滤器的大小，[filter_height，filter_width,in_channels(原图片通道), out_channels(过滤器数量)]</li><li>strides：strides = [1, stride, stride, 1], 步长</li><li>padding：”SAME”、”VALID”，使用的填充算法类型。”VALID”表示 filter 移动后超出图片部分舍弃；”SAME”表示填充</li></ul><h2 id="激活函数-API"><a href="#激活函数-API" class="headerlink" title="激活函数 API"></a>激活函数 API</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.nn.relu(features, name=<span class="literal">None</span>)  <span class="comment"># 返回结果</span></span><br></pre></td></tr></table></figure><ul><li>features:卷积后加上偏置的结果</li></ul><h2 id="池化层计算"><a href="#池化层计算" class="headerlink" title="池化层计算"></a>池化层计算</h2><p>Pooling 层主要的作用是特征提取，通过去掉 Feature Map 中不重要的样本，进一步减少参数数量。Pooling 的方法很多，最常用的是 Max Pooling 2*2 2步长</p><h3 id="池化-API"><a href="#池化-API" class="headerlink" title="池化 API"></a>池化 API</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.nn.max_pool(value, ksize=, strides=, padding=, name=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure><ul><li>value：4-D Tensor 形状，[batch, height, width, channels]</li><li>ksize：池化窗口大小，[1, ksize, ksize, 1]</li><li>strides：步长大小, [1, strides, strides, 1]</li><li>padding：”SAME”、”VALID”，使用的填充算法类型。”VALID”表示 filter 移动后超出图片部分舍弃；”SAME”表示填充</li></ul>]]></content>
     
@@ -816,18 +888,15 @@
     <link href="http://stark365.com/README/"/>
     <id>http://stark365.com/README/</id>
     <published>2018-10-22T16:11:18.000Z</published>
-    <updated>2019-04-14T06:10:58.571Z</updated>
+    <updated>2019-04-18T07:48:18.336Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="机器学习笔记"><a href="#机器学习笔记" class="headerlink" title="机器学习笔记"></a>机器学习笔记</h1><ul><li>数据特征预处理<ul><li><a href="/归一化标准化">标准缩放</a></li></ul></li><li>数据降维<ul><li><a href="./特征选择">特征选择</a></li><li><a href="./主成分分析">主成分分析</a></li></ul></li><li>算法简述<ul><li><a href="./数据类型">数据类型</a></li><li><a href="./算法分类">算法分类</a></li></ul></li><li><a href="./skl模型保存预加载">scikit-learn 模型保存预加载</a></li><li>监督学习<ul><li>分类算法<ul><li><a href="./sklearn数据集API">scikit-learn 数据集 API </a></li><li><a href="./K-近邻算法">K-近邻/KNN</a></li><li><a href="./朴素贝叶斯">朴素贝叶斯</a><ul><li><a href="./概率基础">概率基础</a></li><li><a href="./混淆矩阵">分类模型评估</a></li><li><a href="./模型选择与调优">模型选择与调优</a></li></ul></li><li><a href="./决策树">决策树</a></li><li><a href="./随机森林">随机森林</a></li><li><a href="./逻辑回归">逻辑回归 策略:对数似然损失 优化:梯度下降</a></li></ul></li><li>回归算法<ul><li><a href="./线性回归">线性回归 策略:均方误差 优化:梯度下降</a><ul><li><a href="./欠拟合与过拟合">欠拟合与过拟合</a></li><li><a href="./正则化">L2正则化</a></li></ul></li><li><a href="./岭回归">岭回归</a></li></ul></li></ul></li><li>非监督学习(只有特征值)<ul><li><a href="./k-means">k-means 聚类</a></li></ul></li></ul><h1 id="深度学习笔记"><a href="#深度学习笔记" class="headerlink" title="深度学习笔记"></a>深度学习笔记</h1><ul><li>深度学习<ul><li><a href="./深度学习介绍">深度学习介绍</a></li></ul></li><li>TensorFlow<ul><li><a href="./TensorFlow">TensorFlow 入门</a></li><li><a href="./可视化学习">可视化学习</a></li><li><a href="./模型的保存与加载">模型的保存与加载</a></li><li><a href="./mathapi">运算 API</a></li><li><a href="./gdo">梯度下降 API</a></li><li><a href="./线程队列与IO操作">线程队列与IO操作</a></li><li><a href="./文件读取">文件读取</a></li><li><a href="./图像读取">图像读取</a></li><li><a href="./TFRecords">TFRecords</a></li><li><a href="./神经网络">神经网络 策略:交叉熵损失 优化:反向传播算法</a></li><li><a href="./卷积神经网络">卷积神经网络</a></li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h1><h2 id="深度学习笔记本"><a href="#深度学习笔记本" class="headerlink" title="深度学习笔记本"></a><a href="./人工智能笔记本.md">深度学习笔记本</a></h2><h2 id="Golang-笔记本"><a href="#Golang-笔记本" class="headerlink" title="Golang 笔记本"></a><a href="./golangnote.md">Golang 笔记本</a></h2>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;机器学习笔记&quot;&gt;&lt;a href=&quot;#机器学习笔记&quot; class=&quot;headerlink&quot; title=&quot;机器学习笔记&quot;&gt;&lt;/a&gt;机器学习笔记&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;数据特征预处理&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/归一化标准化&quot;&gt;标准缩放&lt;/a&gt;&lt;/li&gt;
-
+        &lt;h1 id=&quot;学习笔记&quot;&gt;&lt;a href=&quot;#学习笔记&quot; class=&quot;headerlink&quot; title=&quot;学习笔记&quot;&gt;&lt;/a&gt;学习笔记&lt;/h1&gt;&lt;h2 id=&quot;深度学习笔记本&quot;&gt;&lt;a href=&quot;#深度学习笔记本&quot; class=&quot;headerlink&quot; title=&quot;深度学
       
     
     </summary>
