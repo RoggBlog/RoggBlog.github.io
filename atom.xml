@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stark365.com/"/>
-  <updated>2019-04-18T07:51:39.315Z</updated>
+  <updated>2019-04-18T09:35:30.110Z</updated>
   <id>http://stark365.com/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="http://stark365.com/go%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
     <id>http://stark365.com/go基本数据类型/</id>
     <published>2019-04-18T07:51:07.635Z</published>
-    <updated>2019-04-18T07:51:39.315Z</updated>
+    <updated>2019-04-18T09:35:30.110Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h1><h2 id="值类型和引用类型"><a href="#值类型和引用类型" class="headerlink" title="值类型和引用类型"></a>值类型和引用类型</h2><ol><li>值类型：基本数据类型 int、float、bool、string、数组和struct</li><li>引用类型：指针、slice(切片)、map、chan 等都是引用类型</li></ol>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;基本数据类型&quot;&gt;&lt;a href=&quot;#基本数据类型&quot; class=&quot;headerlink&quot; title=&quot;基本数据类型&quot;&gt;&lt;/a&gt;基本数据类型&lt;/h1&gt;
+        &lt;h1 id=&quot;基本数据类型&quot;&gt;&lt;a href=&quot;#基本数据类型&quot; class=&quot;headerlink&quot; title=&quot;基本数据类型&quot;&gt;&lt;/a&gt;基本数据类型&lt;/h1&gt;&lt;h2 id=&quot;值类型和引用类型&quot;&gt;&lt;a href=&quot;#值类型和引用类型&quot; class=&quot;headerlink&quot; 
       
     
     </summary>
@@ -44,15 +44,16 @@
     <link href="http://stark365.com/golangnote/"/>
     <id>http://stark365.com/golangnote/</id>
     <published>2019-04-18T07:48:24.035Z</published>
-    <updated>2019-04-18T07:49:32.455Z</updated>
+    <updated>2019-04-18T07:55:20.641Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Golang-笔记本"><a href="#Golang-笔记本" class="headerlink" title="Golang 笔记本"></a>Golang 笔记本</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="Golang-笔记本"><a href="#Golang-笔记本" class="headerlink" title="Golang 笔记本"></a>Golang 笔记本</h1><ul><li><a href="./go基本数据类型.md">基本数据类型</a></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;Golang-笔记本&quot;&gt;&lt;a href=&quot;#Golang-笔记本&quot; class=&quot;headerlink&quot; title=&quot;Golang 笔记本&quot;&gt;&lt;/a&gt;Golang 笔记本&lt;/h1&gt;
+        &lt;h1 id=&quot;Golang-笔记本&quot;&gt;&lt;a href=&quot;#Golang-笔记本&quot; class=&quot;headerlink&quot; title=&quot;Golang 笔记本&quot;&gt;&lt;/a&gt;Golang 笔记本&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;./go基本数据类型.md&quot;&gt;基本数据类型&lt;/
       
     
     </summary>
@@ -67,9 +68,9 @@
     <link href="http://stark365.com/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%AC%94%E8%AE%B0%E6%9C%AC/"/>
     <id>http://stark365.com/人工智能笔记本/</id>
     <published>2019-04-18T07:45:29.150Z</published>
-    <updated>2019-04-18T07:49:39.457Z</updated>
+    <updated>2019-04-18T07:56:21.024Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="机器学习笔记"><a href="#机器学习笔记" class="headerlink" title="机器学习笔记"></a>机器学习笔记</h1><ul><li>数据特征预处理<ul><li><a href="/归一化标准化">标准缩放</a></li></ul></li><li>数据降维<ul><li><a href="./特征选择">特征选择</a></li><li><a href="./主成分分析">主成分分析</a></li></ul></li><li>算法简述<ul><li><a href="./数据类型">数据类型</a></li><li><a href="./算法分类">算法分类</a></li></ul></li><li><a href="./skl模型保存预加载">scikit-learn 模型保存预加载</a></li><li>监督学习<ul><li>分类算法<ul><li><a href="./sklearn数据集API">scikit-learn 数据集 API </a></li><li><a href="./K-近邻算法">K-近邻/KNN</a></li><li><a href="./朴素贝叶斯">朴素贝叶斯</a><ul><li><a href="./概率基础">概率基础</a></li><li><a href="./混淆矩阵">分类模型评估</a></li><li><a href="./模型选择与调优">模型选择与调优</a></li></ul></li><li><a href="./决策树">决策树</a></li><li><a href="./随机森林">随机森林</a></li><li><a href="./逻辑回归">逻辑回归 策略:对数似然损失 优化:梯度下降</a></li></ul></li><li>回归算法<ul><li><a href="./线性回归">线性回归 策略:均方误差 优化:梯度下降</a><ul><li><a href="./欠拟合与过拟合">欠拟合与过拟合</a></li><li><a href="./正则化">L2正则化</a></li></ul></li><li><a href="./岭回归">岭回归</a></li></ul></li></ul></li><li>非监督学习(只有特征值)<ul><li><a href="./k-means">k-means 聚类</a></li></ul></li></ul><h1 id="深度学习笔记"><a href="#深度学习笔记" class="headerlink" title="深度学习笔记"></a>深度学习笔记</h1><ul><li>深度学习<ul><li><a href="./深度学习介绍">深度学习介绍</a></li></ul></li><li>TensorFlow</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="机器学习笔记"><a href="#机器学习笔记" class="headerlink" title="机器学习笔记"></a>机器学习笔记</h1><ul><li>数据特征预处理<ul><li><a href="/归一化标准化">标准缩放</a></li></ul></li><li>数据降维<ul><li><a href="./特征选择">特征选择</a></li><li><a href="./主成分分析">主成分分析</a></li></ul></li><li>算法简述<ul><li><a href="./数据类型">数据类型</a></li><li><a href="./算法分类">算法分类</a></li></ul></li><li><a href="./skl模型保存预加载">scikit-learn 模型保存预加载</a></li><li>监督学习<ul><li>分类算法<ul><li><a href="./sklearn数据集API">scikit-learn 数据集 API </a></li><li><a href="./K-近邻算法">K-近邻/KNN</a></li><li><a href="./朴素贝叶斯">朴素贝叶斯</a><ul><li><a href="./概率基础">概率基础</a></li><li><a href="./混淆矩阵">分类模型评估</a></li><li><a href="./模型选择与调优">模型选择与调优</a></li></ul></li><li><a href="./决策树">决策树</a></li><li><a href="./随机森林">随机森林</a></li><li><a href="./逻辑回归">逻辑回归 策略:对数似然损失 优化:梯度下降</a></li></ul></li><li>回归算法<ul><li><a href="./线性回归">线性回归 策略:均方误差 优化:梯度下降</a><ul><li><a href="./欠拟合与过拟合">欠拟合与过拟合</a></li><li><a href="./正则化">L2正则化</a></li></ul></li><li><a href="./岭回归">岭回归</a></li></ul></li></ul></li><li>非监督学习(只有特征值)<ul><li><a href="./k-means">k-means 聚类</a></li></ul></li></ul><h1 id="深度学习笔记"><a href="#深度学习笔记" class="headerlink" title="深度学习笔记"></a>深度学习笔记</h1><ul><li>深度学习<ul><li><a href="./深度学习介绍">深度学习介绍</a></li></ul></li><li><a href="./TensorFlow.md">TensorFlow</a></li></ul>]]></content>
     
     <summary type="html">
     
@@ -353,7 +354,7 @@
     <link href="http://stark365.com/TensorFlow/"/>
     <id>http://stark365.com/TensorFlow/</id>
     <published>2019-04-06T02:55:52.001Z</published>
-    <updated>2019-04-08T08:28:52.439Z</updated>
+    <updated>2019-04-18T07:55:56.603Z</updated>
     
     <content type="html"><![CDATA[<h1 id="TensorFlow"><a href="#TensorFlow" class="headerlink" title="TensorFlow"></a>TensorFlow</h1><h2 id="TensorFlow-特点"><a href="#TensorFlow-特点" class="headerlink" title="TensorFlow 特点"></a>TensorFlow 特点</h2><ol><li>良好的可移植性</li><li>多语言支持</li><li>高度的灵活性与效率</li><li>社区庞大</li></ol><h2 id="前端系统"><a href="#前端系统" class="headerlink" title="前端系统"></a>前端系统</h2><p>定义程序图的机构</p><h2 id="后端系统"><a href="#后端系统" class="headerlink" title="后端系统"></a>后端系统</h2><p>运算图结构</p><h2 id="Operation-OP"><a href="#Operation-OP" class="headerlink" title="Operation/OP"></a>Operation/OP</h2><p>只要使用 Tensorflow 的 API 定义的函数都是OP</p><h2 id="Tensor-张量"><a href="#Tensor-张量" class="headerlink" title="Tensor/张量"></a>Tensor/张量</h2><p>仅指代的是数据</p><h2 id="图-Graph"><a href="#图-Graph" class="headerlink" title="图 Graph"></a>图 Graph</h2><p>图默认已经注册，一组表示 tf.Operation 计算单位的对象和 tf.Tensor 表示操作之间流动的数据单元的对象</p><blockquote><p>tf.get_default_graph() 可以获取默认图</p><p>op、sess、tensor 都有 graph 属性</p></blockquote><h3 id="创建图"><a href="#创建图" class="headerlink" title="创建图"></a>创建图</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">g = tf.Graph()</span><br><span class="line"><span class="keyword">with</span> g.as_default():</span><br><span class="line">    a = tf.constant(<span class="number">1.0</span>)</span><br></pre></td></tr></table></figure><h2 id="会话-Session"><a href="#会话-Session" class="headerlink" title="会话 Session"></a>会话 Session</h2><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><ol><li>运行图的结构</li><li>分配资源计算</li><li>掌握资源（变量的资源，队列，线程）</li></ol><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> tf.Session(graph=g) <span class="keyword">as</span> sess:  <span class="comment"># graph 可以指定运行的图</span></span><br><span class="line">    sess.run(g)  <span class="comment"># run() 开启一个会话，分配资源，run() 结束后释放资源；g 为指定的图</span></span><br></pre></td></tr></table></figure><h3 id="run"><a href="#run" class="headerlink" title="run()"></a>run()</h3><p>run() 方法用于运行 ops 和计算 Tensor</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">run(fetches, feed_dict=<span class="literal">None</span>, graph=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure><blockquote><p>fetches 嵌套列表，元组，namedtuple，dict或OrderedDict(重载的运算符也可以)</p><p>feed_dict 允许调用者覆盖图中指定张量的值，提供给 placeholder 使用(placeholder 是一个占位符,用于实时提供数据进行训练)</p></blockquote><p>返回值异常：</p><ul><li>RuntimeError:Session 处于无效状态，比如已关闭</li><li>TypeError:fetches 或 feed_dict 键是不合适的类型</li><li>ValueError:fetches 或 feed_dict 键无效或引用 Tensor 不存在</li></ul><h3 id="TensorFlow-Feed-操作"><a href="#TensorFlow-Feed-操作" class="headerlink" title="TensorFlow Feed 操作"></a>TensorFlow Feed 操作</h3><p>在程序执行的时候，不确定输入的是什么，提前预定位置</p><p>placeholder 提供占位符，run 时通过 feed_dict 指定参数</p><h2 id="Tensor-张量-1"><a href="#Tensor-张量-1" class="headerlink" title="Tensor 张量"></a>Tensor 张量</h2><h3 id="张量的阶和数据类型"><a href="#张量的阶和数据类型" class="headerlink" title="张量的阶和数据类型"></a>张量的阶和数据类型</h3><p>张量是 TensorFlow 基本的数据格式，一个类型化的 N 维度数组（tf.Tensor）,有三部分，名字、形状、数据类型。</p><table><thead><tr><th>阶</th><th>数学实例</th><th>Python</th><th>例子</th></tr></thead><tbody><tr><td>0</td><td>纯量</td><td>只有大小</td><td>s = 200</td></tr><tr><td>1</td><td>向量</td><td>大小和方向</td><td>v = [1, 2, 3]</td></tr><tr><td>2</td><td>矩阵</td><td>数据表</td><td>m = [[1, 2], [3, 4]]</td></tr></tbody></table><h3 id="张量属性"><a href="#张量属性" class="headerlink" title="张量属性"></a>张量属性</h3><p>graph 张亮所属的图</p><p>op 张量的操作名</p><p>name 张量的字符串描述</p><p>shape 张量的形状</p><h3 id="动态形状与静态形状"><a href="#动态形状与静态形状" class="headerlink" title="动态形状与静态形状"></a>动态形状与静态形状</h3><ul><li>静态形状：创建一个张量，初始化状态的形状<ul><li>tf.Tensor.get_shape 获取静态形状</li><li>tf.Tensor.get_shape() 更新 Tensor 对象的静态形状，通常用于再不能直接推断的情况下</li></ul></li><li>动态形状：一种描述原始张量在执行过程中的一种形状（动态变化）<ul><li>tf.reshape 创建一个具有不同动态形状的新张量</li></ul></li></ul><p>注意：</p><ul><li>转换静态形状的时候，不能跨阶数改变形状</li><li>对于已经固定或者设置静态形状的张量/变量，不能再次设置静态形状</li><li>tf.reshape() 动态创建新张量时，元素个数不能不匹配</li></ul><h3 id="生成张量"><a href="#生成张量" class="headerlink" title="生成张量"></a>生成张量</h3><p>创建所有元素为0的张量</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.zeros(shape, dtype=tf.float32, name=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure><p>创建所有元素为1的张量</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.ones(shape, dtype=tf.float32, name=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure><p>创建一个常数张量</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.ones(shape, dtype=tf.float32, name=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure><p>创建随机张量</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.random_normal(shape, mean=<span class="number">0.0</span>, stddev=<span class="number">1.0</span>, dtype=tf.float32, seed=<span class="literal">None</span>, name=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure><p>mean: 平均值</p><p>stddev: 标准差</p><h3 id="张量类型转换"><a href="#张量类型转换" class="headerlink" title="张量类型转换"></a>张量类型转换</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.cast([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]], tf.float32)</span><br></pre></td></tr></table></figure><h3 id="张量的合并"><a href="#张量的合并" class="headerlink" title="张量的合并"></a>张量的合并</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.concat([a, b], axis=<span class="number">0</span>)</span><br></pre></td></tr></table></figure><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>变量 op 能够持久化保存，而普通张量 op 无法持久化</p><h3 id="变量的创建"><a href="#变量的创建" class="headerlink" title="变量的创建"></a>变量的创建</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.Variable(initial_value=<span class="literal">None</span>, name=<span class="literal">None</span>, trainable=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure><h3 id="变量必须要初始化"><a href="#变量必须要初始化" class="headerlink" title="变量必须要初始化"></a>变量必须要初始化</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">init_op = tf.global_variables_initializer()</span><br></pre></td></tr></table></figure><p>添加一个初始化所有变量的 op</p><p>需要在会话中开启 sess.run([init_op])</p>]]></content>
     
