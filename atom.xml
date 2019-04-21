@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stark365.com/"/>
-  <updated>2019-04-18T09:35:30.110Z</updated>
+  <updated>2019-04-19T07:08:13.714Z</updated>
   <id>http://stark365.com/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>strings 和 strconv</title>
+    <link href="http://stark365.com/gostrings/"/>
+    <id>http://stark365.com/gostrings/</id>
+    <published>2019-04-19T03:39:23.238Z</published>
+    <updated>2019-04-19T07:08:13.714Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="strings-和-strconv"><a href="#strings-和-strconv" class="headerlink" title="strings 和 strconv"></a>strings 和 strconv</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;strings-和-strconv&quot;&gt;&lt;a href=&quot;#strings-和-strconv&quot; class=&quot;headerlink&quot; title=&quot;strings 和 strconv&quot;&gt;&lt;/a&gt;strings 和 strconv&lt;/h1&gt;
+      
+    
+    </summary>
+    
+      <category term="Golang" scheme="http://stark365.com/categories/Golang/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>基本数据类型</title>
     <link href="http://stark365.com/go%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
     <id>http://stark365.com/go基本数据类型/</id>
     <published>2019-04-18T07:51:07.635Z</published>
-    <updated>2019-04-18T09:35:30.110Z</updated>
+    <updated>2019-04-19T03:41:32.982Z</updated>
     
     <content type="html"><![CDATA[<h1 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h1><h2 id="值类型和引用类型"><a href="#值类型和引用类型" class="headerlink" title="值类型和引用类型"></a>值类型和引用类型</h2><ol><li>值类型：基本数据类型 int、float、bool、string、数组和struct</li><li>引用类型：指针、slice(切片)、map、chan 等都是引用类型</li></ol>]]></content>
     
@@ -44,9 +67,9 @@
     <link href="http://stark365.com/golangnote/"/>
     <id>http://stark365.com/golangnote/</id>
     <published>2019-04-18T07:48:24.035Z</published>
-    <updated>2019-04-18T07:55:20.641Z</updated>
+    <updated>2019-04-21T06:52:32.578Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Golang-笔记本"><a href="#Golang-笔记本" class="headerlink" title="Golang 笔记本"></a>Golang 笔记本</h1><ul><li><a href="./go基本数据类型.md">基本数据类型</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="Golang-笔记本"><a href="#Golang-笔记本" class="headerlink" title="Golang 笔记本"></a>Golang 笔记本</h1><ul><li><a href="./go基本数据类型.md">基本数据类型</a></li><li><a href="./gostrings.md">strings 和 strconv</a></li></ul>]]></content>
     
     <summary type="html">
     
