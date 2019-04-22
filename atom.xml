@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stark365.com/"/>
-  <updated>2019-04-19T07:08:13.714Z</updated>
+  <updated>2019-04-22T02:29:52.173Z</updated>
   <id>http://stark365.com/</id>
   
   <author>
@@ -15,6 +15,78 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>接口</title>
+    <link href="http://stark365.com/%E6%8E%A5%E5%8F%A3/"/>
+    <id>http://stark365.com/接口/</id>
+    <published>2019-04-22T02:17:14.233Z</published>
+    <updated>2019-04-22T02:29:52.173Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">type People interface &#123;</span><br><span class="line">    Print()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">type Student struct &#123;</span><br><span class="line">    name string</span><br><span class="line">    age int</span><br><span class="line">    score int</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func (this Student) Print() &#123;</span><br><span class="line">    Println(&quot;name:&quot;, this.name)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func main () &#123;</span><br><span class="line">    var p People</span><br><span class="line">    var stu Student = Student &#123;</span><br><span class="line">        name: &quot;stu1&quot;,</span><br><span class="line">        age: 20,</span><br><span class="line">        score: 100</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    t = stu</span><br><span class="line">    t.Print()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;接口&quot;&gt;&lt;a href=&quot;#接口&quot; class=&quot;headerlink&quot; title=&quot;接口&quot;&gt;&lt;/a&gt;接口&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span 
+      
+    
+    </summary>
+    
+      <category term="Golang" scheme="http://stark365.com/categories/Golang/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>链表</title>
+    <link href="http://stark365.com/%E9%93%BE%E8%A1%A8/"/>
+    <id>http://stark365.com/链表/</id>
+    <published>2019-04-21T07:37:00.812Z</published>
+    <updated>2019-04-21T09:53:51.764Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h1><p>一个结构体的实例的一个指针属性指向另一个实例的地址</p><p>要改变指针变量的值，需要传递指针的指针</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">type Student struct &#123;</span><br><span class="line">Name string</span><br><span class="line">Age int</span><br><span class="line">scroce float64</span><br><span class="line">next *Student</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">stu1 := Student&#123;</span><br><span class="line">Name:&quot;hu&quot;,</span><br><span class="line">Age:21,</span><br><span class="line">scroce:100.0,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">stu2 := Student&#123;</span><br><span class="line">Name:&quot;liu&quot;,</span><br><span class="line">Age:20,</span><br><span class="line">scroce:101.0,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">stu1.next = &amp;stu2</span><br><span class="line"></span><br><span class="line">var p *Student = &amp;stu1</span><br><span class="line"></span><br><span class="line">for p != nil &#123;</span><br><span class="line">fmt.Println(p)</span><br><span class="line"></span><br><span class="line">p = p.next</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;链表&quot;&gt;&lt;a href=&quot;#链表&quot; class=&quot;headerlink&quot; title=&quot;链表&quot;&gt;&lt;/a&gt;链表&lt;/h1&gt;&lt;p&gt;一个结构体的实例的一个指针属性指向另一个实例的地址&lt;/p&gt;
+&lt;p&gt;要改变指针变量的值，需要传递指针的指针&lt;/p&gt;
+&lt;figure class
+      
+    
+    </summary>
+    
+      <category term="Golang" scheme="http://stark365.com/categories/Golang/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>结构体</title>
+    <link href="http://stark365.com/%E7%BB%93%E6%9E%84%E4%BD%93/"/>
+    <id>http://stark365.com/结构体/</id>
+    <published>2019-04-21T06:56:46.179Z</published>
+    <updated>2019-04-22T01:54:49.657Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h1><p>结构体的属性内存布局是连续的</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">type Student struct &#123;</span><br><span class="line">    Name string</span><br><span class="line">    Age int</span><br><span class="line">    score float64</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p>一般初始化</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var stu Student</span><br><span class="line"></span><br><span class="line">stu.Name = &quot;XiaoMing&quot;</span><br><span class="line">stu.Age = 10</span><br><span class="line">stu.score = 100.0</span><br></pre></td></tr></table></figure><p>指针初始化</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var *stu = &amp;Student&#123;</span><br><span class="line">    stu.Name = &quot;XiaoMing&quot;,</span><br><span class="line">    stu.Age = 10,</span><br><span class="line">    stu.score = 100.0,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="结构体方法"><a href="#结构体方法" class="headerlink" title="结构体方法"></a>结构体方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">func (this 结构体名) 方法名 (参数列表) (返回值列表) &#123;&#125;</span><br></pre></td></tr></table></figure><p>例子</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">func (this *Student) init (name string, age int, score float64) &#123;</span><br><span class="line">    this.Name = name</span><br><span class="line">    this.Age = age</span><br><span class="line">    this.score = score</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func (stu Student) get () Student &#123;</span><br><span class="line">    return stu</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var stu Student</span><br><span class="line"></span><br><span class="line">stu.init(&quot;stu1&quot;, 20, 100.0)  // 此时 &quot;this&quot; 就是 &quot;stu&quot;</span><br><span class="line"></span><br><span class="line">stu1 := stu.get()</span><br></pre></td></tr></table></figure><h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>可以利用匿名字段进行继承</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;结构体&quot;&gt;&lt;a href=&quot;#结构体&quot; class=&quot;headerlink&quot; title=&quot;结构体&quot;&gt;&lt;/a&gt;结构体&lt;/h1&gt;&lt;p&gt;结构体的属性内存布局是连续的&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td 
+      
+    
+    </summary>
+    
+      <category term="Golang" scheme="http://stark365.com/categories/Golang/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>strings 和 strconv</title>
@@ -44,9 +116,9 @@
     <link href="http://stark365.com/go%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
     <id>http://stark365.com/go基本数据类型/</id>
     <published>2019-04-18T07:51:07.635Z</published>
-    <updated>2019-04-19T03:41:32.982Z</updated>
+    <updated>2019-04-21T11:21:56.154Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h1><h2 id="值类型和引用类型"><a href="#值类型和引用类型" class="headerlink" title="值类型和引用类型"></a>值类型和引用类型</h2><ol><li>值类型：基本数据类型 int、float、bool、string、数组和struct</li><li>引用类型：指针、slice(切片)、map、chan 等都是引用类型</li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h1><h2 id="值类型和引用类型"><a href="#值类型和引用类型" class="headerlink" title="值类型和引用类型"></a>值类型和引用类型</h2><ol><li>值类型：基本数据类型 int、float、bool、string、数组和struct</li><li>引用类型：指针、slice(切片)、map、chan 等都是引用类型</li></ol><p>make 只能用来创建map、slice、channel</p><p>new 用来创建值类型</p>]]></content>
     
     <summary type="html">
     
@@ -67,16 +139,16 @@
     <link href="http://stark365.com/golangnote/"/>
     <id>http://stark365.com/golangnote/</id>
     <published>2019-04-18T07:48:24.035Z</published>
-    <updated>2019-04-21T06:52:32.578Z</updated>
+    <updated>2019-04-22T02:17:09.741Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Golang-笔记本"><a href="#Golang-笔记本" class="headerlink" title="Golang 笔记本"></a>Golang 笔记本</h1><ul><li><a href="./go基本数据类型.md">基本数据类型</a></li><li><a href="./gostrings.md">strings 和 strconv</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="Golang-笔记本"><a href="#Golang-笔记本" class="headerlink" title="Golang 笔记本"></a>Golang 笔记本</h1><ul><li><a href="./go基本数据类型">基本数据类型</a></li><li><a href="./结构体">结构体</a></li><li><a href="./链表">链表</a></li><li><a href="./接口">接口</a></li></ul>]]></content>
     
     <summary type="html">
     
       
       
         &lt;h1 id=&quot;Golang-笔记本&quot;&gt;&lt;a href=&quot;#Golang-笔记本&quot; class=&quot;headerlink&quot; title=&quot;Golang 笔记本&quot;&gt;&lt;/a&gt;Golang 笔记本&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;./go基本数据类型.md&quot;&gt;基本数据类型&lt;/
+&lt;li&gt;&lt;a href=&quot;./go基本数据类型&quot;&gt;基本数据类型&lt;/a&gt;&lt;
       
     
     </summary>
@@ -91,7 +163,7 @@
     <link href="http://stark365.com/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%AC%94%E8%AE%B0%E6%9C%AC/"/>
     <id>http://stark365.com/人工智能笔记本/</id>
     <published>2019-04-18T07:45:29.150Z</published>
-    <updated>2019-04-18T07:56:21.024Z</updated>
+    <updated>2019-04-21T07:02:28.049Z</updated>
     
     <content type="html"><![CDATA[<h1 id="机器学习笔记"><a href="#机器学习笔记" class="headerlink" title="机器学习笔记"></a>机器学习笔记</h1><ul><li>数据特征预处理<ul><li><a href="/归一化标准化">标准缩放</a></li></ul></li><li>数据降维<ul><li><a href="./特征选择">特征选择</a></li><li><a href="./主成分分析">主成分分析</a></li></ul></li><li>算法简述<ul><li><a href="./数据类型">数据类型</a></li><li><a href="./算法分类">算法分类</a></li></ul></li><li><a href="./skl模型保存预加载">scikit-learn 模型保存预加载</a></li><li>监督学习<ul><li>分类算法<ul><li><a href="./sklearn数据集API">scikit-learn 数据集 API </a></li><li><a href="./K-近邻算法">K-近邻/KNN</a></li><li><a href="./朴素贝叶斯">朴素贝叶斯</a><ul><li><a href="./概率基础">概率基础</a></li><li><a href="./混淆矩阵">分类模型评估</a></li><li><a href="./模型选择与调优">模型选择与调优</a></li></ul></li><li><a href="./决策树">决策树</a></li><li><a href="./随机森林">随机森林</a></li><li><a href="./逻辑回归">逻辑回归 策略:对数似然损失 优化:梯度下降</a></li></ul></li><li>回归算法<ul><li><a href="./线性回归">线性回归 策略:均方误差 优化:梯度下降</a><ul><li><a href="./欠拟合与过拟合">欠拟合与过拟合</a></li><li><a href="./正则化">L2正则化</a></li></ul></li><li><a href="./岭回归">岭回归</a></li></ul></li></ul></li><li>非监督学习(只有特征值)<ul><li><a href="./k-means">k-means 聚类</a></li></ul></li></ul><h1 id="深度学习笔记"><a href="#深度学习笔记" class="headerlink" title="深度学习笔记"></a>深度学习笔记</h1><ul><li>深度学习<ul><li><a href="./深度学习介绍">深度学习介绍</a></li></ul></li><li><a href="./TensorFlow.md">TensorFlow</a></li></ul>]]></content>
     
@@ -912,9 +984,9 @@
     <link href="http://stark365.com/README/"/>
     <id>http://stark365.com/README/</id>
     <published>2018-10-22T16:11:18.000Z</published>
-    <updated>2019-04-18T07:48:18.336Z</updated>
+    <updated>2019-04-21T06:55:38.826Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h1><h2 id="深度学习笔记本"><a href="#深度学习笔记本" class="headerlink" title="深度学习笔记本"></a><a href="./人工智能笔记本.md">深度学习笔记本</a></h2><h2 id="Golang-笔记本"><a href="#Golang-笔记本" class="headerlink" title="Golang 笔记本"></a><a href="./golangnote.md">Golang 笔记本</a></h2>]]></content>
+    <content type="html"><![CDATA[<h1 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h1><h2 id="深度学习笔记本"><a href="#深度学习笔记本" class="headerlink" title="深度学习笔记本"></a><a href="./人工智能笔记本">深度学习笔记本</a></h2><h2 id="Golang-笔记本"><a href="#Golang-笔记本" class="headerlink" title="Golang 笔记本"></a><a href="./golangnote">Golang 笔记本</a></h2>]]></content>
     
     <summary type="html">
     
