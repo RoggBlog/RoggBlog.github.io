@@ -272,6 +272,199 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://stark365.com/gdo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Rogg 罗格">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rogg 罗格">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/gdo/" itemprop="url">梯度下降 API</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-08T13:33:12+08:00">
+                2019-04-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/深度学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">深度学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  91
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="梯度下降-API"><a href="#梯度下降-API" class="headerlink" title="梯度下降 API"></a>梯度下降 API</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.train.GradientDescentOptimizer(learning_rate)</span><br></pre></td></tr></table></figure>
+<p>参数</p>
+<ul>
+<li>learning_rate 学习率</li>
+</ul>
+<p>方法</p>
+<ul>
+<li>minimize(loss) loss: 损失值</li>
+</ul>
+<p>返回值</p>
+<ul>
+<li>梯度下降 op</li>
+</ul>
+<h2 id="梯度爆炸-梯度消失"><a href="#梯度爆炸-梯度消失" class="headerlink" title="梯度爆炸/梯度消失"></a>梯度爆炸/梯度消失</h2><p>在极端情况下，权重的值变得非常大，以至于溢出，导致出现 NaN 值</p>
+<p>解决方法</p>
+<ul>
+<li>重新设计网络</li>
+<li>调整学习率</li>
+<li>使用梯度截断</li>
+<li>使用激活函数</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://stark365.com/mathapi/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2002,220 +2195,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://stark365.com/线性回归/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Rogg 罗格">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Rogg 罗格">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/线性回归/" itemprop="url">线性回归</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-02T13:15:23+08:00">
-                2019-04-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/机器学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">机器学习笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  529
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-
-<h1 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h1><p>寻找一种能预测的趋势,需要做标准化处理。</p>
-<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>线性回归通过一个或者多个<strong>自变量</strong>(<em>特征值</em>)与<strong>因变量</strong>(<em>目标值</em>)之间进行建模的回归分析，其中可以认为一个或者多个自变量之间的线性组合。</p>
-<p>一元线性回归：涉及到的变量只有一个</p>
-<p>多元线性回归：涉及到多个变量</p>
-<h2 id="线性关系模型"><a href="#线性关系模型" class="headerlink" title="线性关系模型"></a>线性关系模型</h2><p>一个通过属性的线性组合来进行预测的函数</p>
-<p>公式；</p>
-<p>$$ f(x)=w_1x_1+w_2x_2+···+w_\alpha x_\alpha + b $$</p>
-<blockquote>
-<p>\(w\) 为权重，\(b\)为偏置顶</p>
-</blockquote>
-<h2 id="矩阵乘法"><a href="#矩阵乘法" class="headerlink" title="矩阵乘法"></a>矩阵乘法</h2><p>(m行, l列)*(l行, n列) = (m行, n列)</p>
-<h2 id="通用公式"><a href="#通用公式" class="headerlink" title="通用公式"></a>通用公式</h2><p>$$ h(w)=w_0+w_1x_1+w_2x_2+···=w^Tx $$</p>
-<p>其中\(w,x\)为矩阵：</p>
-<p>$$ w=\begin{pmatrix}w_0\ w_1\ w_2\end{pmatrix} $$</p>
-<p>$$ x=\begin{pmatrix}1\ x_1\ x_2\end{pmatrix} $$</p>
-<h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><ul>
-<li>\(y_i为第i个训练样本的真实值\)</li>
-<li>\(h_w(x_i)为i个训练样本特征值组合预测函数\)</li>
-</ul>
-<h3 id="总损失定义："><a href="#总损失定义：" class="headerlink" title="总损失定义："></a>总损失定义：</h3><p>$$ J(\theta)=(h_w(x_1)-y_1)^2+(h_w(x_2)-y_2)^2+···+(h_w(x_m)-y_m)^2 $$</p>
-<p>$$=\sum_{i=1}^{m}(h_w(x_i)-y_i)^2$$</p>
-<p>又称<strong>最小二乘法</strong></p>
-<h2 id="正规方程"><a href="#正规方程" class="headerlink" title="正规方程"></a>正规方程</h2><p>当特征数量 n 较大时运算代价很大，因为矩阵逆运算时间复杂度为 \(O(n^3)\),通常来说当 n 小于 10W 时是可以接受的。正规方程只适用于线性模型。不能解决拟合问题。</p>
-<h2 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h2><p>沿着函数下降的方向找，最后找到误差的最低点，然后更新 W 值。梯度下降适合10W以上数据集使用，反之适合正规方程。梯度下降适用于各种类型的模型。</p>
-<h2 id="sklearn-API"><a href="#sklearn-API" class="headerlink" title="sklearn API"></a>sklearn API</h2><h3 id="正规方程-1"><a href="#正规方程-1" class="headerlink" title="正规方程"></a>正规方程</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.linear_model.LinearRegression</span><br></pre></td></tr></table></figure>
-<p><strong>注意</strong>:需要将数据转换为二维数组</p>
-<p><strong>警告</strong>:容易出现过拟合，需要进行L2正则化</p>
-<h3 id="梯度下降-1"><a href="#梯度下降-1" class="headerlink" title="梯度下降"></a>梯度下降</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.linear_model.SGDRegressor</span><br></pre></td></tr></table></figure>
-<h2 id="回归性能评估"><a href="#回归性能评估" class="headerlink" title="回归性能评估"></a>回归性能评估</h2><h3 id="均方误差-Mean-Squared-Error-评价机制"><a href="#均方误差-Mean-Squared-Error-评价机制" class="headerlink" title="均方误差(Mean Squared Error)评价机制"></a>均方误差(Mean Squared Error)评价机制</h3><p>公式：</p>
-<p>$$ MSE=\frac{1}{m} \sum_{i=1} ^{m} (y^i-y_z)^2 $$</p>
-<blockquote>
-<p>\(y^i\) 为预测值，\(y_z\) 为真实值</p>
-</blockquote>
-<h3 id="sklearn-API-1"><a href="#sklearn-API-1" class="headerlink" title="sklearn API"></a>sklearn API</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.metrics.mean_squared_error</span><br></pre></td></tr></table></figure>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mean_squared_error(y_true,y_pred)</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>y_true 标准化之前的真实值</p>
-<p>y_pred 预测值</p>
-<p>返回浮点数结果</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2266,7 +2245,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">43</span>
+                  <span class="site-state-item-count">44</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2353,7 +2332,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">8.7k</span>
+    <span title="Site words total count">9.9k</span>
   
 </div>
 
