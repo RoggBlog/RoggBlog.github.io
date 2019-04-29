@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="接口12345678910111213141516171819202122232425type People interface &amp;#123;    Print()&amp;#125;type Student struct &amp;#123;    name string    age int    score int&amp;#125;func (this Student) Print() &amp;#123;    Pri">
+<meta name="description" content="接口接口的方法必须全部实现 12345678910111213141516171819202122232425type People interface &amp;#123;    Print()&amp;#125;type Student struct &amp;#123;    name string    age int    score int&amp;#125;func (this Student) Print() &amp;">
 <meta name="keywords" content="罗格">
 <meta property="og:type" content="article">
 <meta property="og:title" content="接口">
 <meta property="og:url" content="http://stark365.com/接口/index.html">
 <meta property="og:site_name" content="Rogg 罗格">
-<meta property="og:description" content="接口12345678910111213141516171819202122232425type People interface &amp;#123;    Print()&amp;#125;type Student struct &amp;#123;    name string    age int    score int&amp;#125;func (this Student) Print() &amp;#123;    Pri">
+<meta property="og:description" content="接口接口的方法必须全部实现 12345678910111213141516171819202122232425type People interface &amp;#123;    Print()&amp;#125;type Student struct &amp;#123;    name string    age int    score int&amp;#125;func (this Student) Print() &amp;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-22T02:29:52.173Z">
+<meta property="og:updated_time" content="2019-04-27T01:27:38.844Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="接口">
-<meta name="twitter:description" content="接口12345678910111213141516171819202122232425type People interface &amp;#123;    Print()&amp;#125;type Student struct &amp;#123;    name string    age int    score int&amp;#125;func (this Student) Print() &amp;#123;    Pri">
+<meta name="twitter:description" content="接口接口的方法必须全部实现 12345678910111213141516171819202122232425type People interface &amp;#123;    Print()&amp;#125;type Student struct &amp;#123;    name string    age int    score int&amp;#125;func (this Student) Print() &amp;">
 
 
 
@@ -355,7 +355,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  56
+                  67
                 </span>
               
 
@@ -392,7 +392,8 @@
       
 
       
-        <h1 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">type People interface &#123;</span><br><span class="line">    Print()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">type Student struct &#123;</span><br><span class="line">    name string</span><br><span class="line">    age int</span><br><span class="line">    score int</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func (this Student) Print() &#123;</span><br><span class="line">    Println(&quot;name:&quot;, this.name)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func main () &#123;</span><br><span class="line">    var p People</span><br><span class="line">    var stu Student = Student &#123;</span><br><span class="line">        name: &quot;stu1&quot;,</span><br><span class="line">        age: 20,</span><br><span class="line">        score: 100</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    t = stu</span><br><span class="line">    t.Print()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h1 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h1><p>接口的方法必须全部实现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">type People interface &#123;</span><br><span class="line">    Print()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">type Student struct &#123;</span><br><span class="line">    name string</span><br><span class="line">    age int</span><br><span class="line">    score int</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func (this Student) Print() &#123;</span><br><span class="line">    Println(&quot;name:&quot;, this.name)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func main () &#123;</span><br><span class="line">    var p People</span><br><span class="line">    var stu Student = Student &#123;</span><br><span class="line">        name: &quot;stu1&quot;,</span><br><span class="line">        age: 20,</span><br><span class="line">        score: 100</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    t = stu</span><br><span class="line">    t.Print()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -425,6 +426,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/常用包/" rel="prev" title="Golang 常用包">
+                Golang 常用包 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -501,7 +506,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">43</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -604,7 +609,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">8.3k</span>
+    <span title="Site words total count">8.7k</span>
   
 </div>
 
