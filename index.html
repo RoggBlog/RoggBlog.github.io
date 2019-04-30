@@ -529,7 +529,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.2k
+                  1.3k
                 </span>
               
 
@@ -595,11 +595,11 @@
 <h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><ul>
 <li>服务注册和服务发现</li>
 </ul>
-<p><img src="https://images2018.cnblogs.com/blog/997599/201803/997599-20180324225908728-754497138.png" alt></p>
+<p><img src="http://i1.bvimg.com/661549/b3c10b7a5fdc0b28.png" alt="Markdown"></p>
 <ul>
 <li>配置中心(云配置</li>
 </ul>
-<p><img src="https://images2018.cnblogs.com/blog/997599/201803/997599-20180324225945047-744965166.png" alt></p>
+<p><img src="http://i1.bvimg.com/661549/b55d3632c062e00b.png" alt="Markdown"></p>
 <ul>
 <li>分布式锁</li>
 </ul>
@@ -607,6 +607,7 @@
 <h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>启动 zk</p>
 <p><code>/zookeeper-3.4.6/bin$ zkServer.sh start</code></p>
 <h2 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h2><p>Apache Kafka是分布式发布-订阅消息系统</p>
+<h3 id="消息队列概述"><a href="#消息队列概述" class="headerlink" title="消息队列概述"></a>消息队列概述</h3><p>消息队列中间件是分布式系统中重要的组件，主要解决应用耦合，异步消息，流量削锋等问题。实现高性能，高可用，可伸缩和最终一致性架构。是大型分布式系统不可缺少的中间件。</p>
 <h3 id="Kafka与传统消息系统相比，有以下不同："><a href="#Kafka与传统消息系统相比，有以下不同：" class="headerlink" title="Kafka与传统消息系统相比，有以下不同："></a>Kafka与传统消息系统相比，有以下不同：</h3><ul>
 <li>它被设计为一个分布式系统，易于向外扩展；</li>
 <li>它同时为发布和订阅提供高吞吐量；</li>
@@ -644,6 +645,11 @@
 <li>安装 zookeeper</li>
 <li>安装 Kafka</li>
 </ol>
+<h2 id="服务启动"><a href="#服务启动" class="headerlink" title="服务启动"></a>服务启动</h2><h3 id="1-启动-Zookeeper"><a href="#1-启动-Zookeeper" class="headerlink" title="1. 启动 Zookeeper"></a>1. 启动 Zookeeper</h3><p><code>/zookeeper-3.4.6$ bin/zkServer.sh start</code>  // 后台运行</p>
+<p><code>.bin/zkServer.sh start conf/zoo.conf</code>  // 后台运行</p>
+<p><code>bin/zkServer.sh start-foreground</code>  // 前台运行</p>
+<p><code>bin/zkServer.sh stop</code>  // 停止</p>
+<h3 id="2-启动-Kafka-Broker"><a href="#2-启动-Kafka-Broker" class="headerlink" title="2. 启动 Kafka Broker"></a>2. 启动 Kafka Broker</h3><p><code>bin/kafka-server-start.sh config/server.properties</code></p>
 
           
         
@@ -2230,7 +2236,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">9.9k</span>
+    <span title="Site words total count">10.1k</span>
   
 </div>
 

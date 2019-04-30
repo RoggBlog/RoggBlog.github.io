@@ -97,9 +97,9 @@
 <meta property="og:description" content="日志收集系统关于日志收集系统，业界的解决方案是ELK ELK 问题 运维成本高，每增加一个日志收集都需要修改配置。 监控缺失，无法准确获取 logstash 的状态。 无法做定制化开发及维护。  针对这种情况，其实我们想要的系统是agent可以动态的获取某个服务器我们需要监控哪些日志以及那些日志我们需要收集，并且当我们需要收集日志的服务器下线了，我们可以动态的停止收集当然这些实现的效果最终也是通过">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://i2.bvimg.com/661549/e8192702f587e299.png">
-<meta property="og:image" content="https://images2018.cnblogs.com/blog/997599/201803/997599-20180324225908728-754497138.png">
-<meta property="og:image" content="https://images2018.cnblogs.com/blog/997599/201803/997599-20180324225945047-744965166.png">
-<meta property="og:updated_time" content="2019-04-29T08:58:14.310Z">
+<meta property="og:image" content="http://i1.bvimg.com/661549/b3c10b7a5fdc0b28.png">
+<meta property="og:image" content="http://i1.bvimg.com/661549/b55d3632c062e00b.png">
+<meta property="og:updated_time" content="2019-04-30T07:46:51.423Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ELK">
 <meta name="twitter:description" content="日志收集系统关于日志收集系统，业界的解决方案是ELK ELK 问题 运维成本高，每增加一个日志收集都需要修改配置。 监控缺失，无法准确获取 logstash 的状态。 无法做定制化开发及维护。  针对这种情况，其实我们想要的系统是agent可以动态的获取某个服务器我们需要监控哪些日志以及那些日志我们需要收集，并且当我们需要收集日志的服务器下线了，我们可以动态的停止收集当然这些实现的效果最终也是通过">
@@ -359,7 +359,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.2k
+                  1.3k
                 </span>
               
 
@@ -423,11 +423,11 @@
 <h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><ul>
 <li>服务注册和服务发现</li>
 </ul>
-<p><img src="https://images2018.cnblogs.com/blog/997599/201803/997599-20180324225908728-754497138.png" alt></p>
+<p><img src="http://i1.bvimg.com/661549/b3c10b7a5fdc0b28.png" alt="Markdown"></p>
 <ul>
 <li>配置中心(云配置</li>
 </ul>
-<p><img src="https://images2018.cnblogs.com/blog/997599/201803/997599-20180324225945047-744965166.png" alt></p>
+<p><img src="http://i1.bvimg.com/661549/b55d3632c062e00b.png" alt="Markdown"></p>
 <ul>
 <li>分布式锁</li>
 </ul>
@@ -435,6 +435,7 @@
 <h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>启动 zk</p>
 <p><code>/zookeeper-3.4.6/bin$ zkServer.sh start</code></p>
 <h2 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h2><p>Apache Kafka是分布式发布-订阅消息系统</p>
+<h3 id="消息队列概述"><a href="#消息队列概述" class="headerlink" title="消息队列概述"></a>消息队列概述</h3><p>消息队列中间件是分布式系统中重要的组件，主要解决应用耦合，异步消息，流量削锋等问题。实现高性能，高可用，可伸缩和最终一致性架构。是大型分布式系统不可缺少的中间件。</p>
 <h3 id="Kafka与传统消息系统相比，有以下不同："><a href="#Kafka与传统消息系统相比，有以下不同：" class="headerlink" title="Kafka与传统消息系统相比，有以下不同："></a>Kafka与传统消息系统相比，有以下不同：</h3><ul>
 <li>它被设计为一个分布式系统，易于向外扩展；</li>
 <li>它同时为发布和订阅提供高吞吐量；</li>
@@ -472,6 +473,11 @@
 <li>安装 zookeeper</li>
 <li>安装 Kafka</li>
 </ol>
+<h2 id="服务启动"><a href="#服务启动" class="headerlink" title="服务启动"></a>服务启动</h2><h3 id="1-启动-Zookeeper"><a href="#1-启动-Zookeeper" class="headerlink" title="1. 启动 Zookeeper"></a>1. 启动 Zookeeper</h3><p><code>/zookeeper-3.4.6$ bin/zkServer.sh start</code>  // 后台运行</p>
+<p><code>.bin/zkServer.sh start conf/zoo.conf</code>  // 后台运行</p>
+<p><code>bin/zkServer.sh start-foreground</code>  // 前台运行</p>
+<p><code>bin/zkServer.sh stop</code>  // 停止</p>
+<h3 id="2-启动-Kafka-Broker"><a href="#2-启动-Kafka-Broker" class="headerlink" title="2. 启动 Kafka Broker"></a>2. 启动 Kafka Broker</h3><p><code>bin/kafka-server-start.sh config/server.properties</code></p>
 
       
     </div>
@@ -650,7 +656,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#日志收集系统"><span class="nav-number">1.</span> <span class="nav-text">日志收集系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ELK-问题"><span class="nav-number">1.1.</span> <span class="nav-text">ELK 问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日志收集系统架构"><span class="nav-number">1.2.</span> <span class="nav-text">日志收集系统架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zookeeper"><span class="nav-number">1.3.</span> <span class="nav-text">zookeeper</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#组件"><span class="nav-number">1.3.1.</span> <span class="nav-text">组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用"><span class="nav-number">1.3.2.</span> <span class="nav-text">应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用"><span class="nav-number">1.3.3.</span> <span class="nav-text">使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kafka"><span class="nav-number">1.4.</span> <span class="nav-text">Kafka</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Kafka与传统消息系统相比，有以下不同："><span class="nav-number">1.4.1.</span> <span class="nav-text">Kafka与传统消息系统相比，有以下不同：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kafka的优点："><span class="nav-number">1.4.2.</span> <span class="nav-text">Kafka的优点：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kafka中有几个基本的消息术语需要了解："><span class="nav-number">1.4.3.</span> <span class="nav-text">Kafka中有几个基本的消息术语需要了解：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kafka的应用场景："><span class="nav-number">1.4.4.</span> <span class="nav-text">Kafka的应用场景：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#log-agent"><span class="nav-number">1.5.</span> <span class="nav-text">log agent</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主要目录组成"><span class="nav-number">1.5.1.</span> <span class="nav-text">主要目录组成</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#各环境安装顺序"><span class="nav-number">1.6.</span> <span class="nav-text">各环境安装顺序</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#日志收集系统"><span class="nav-number">1.</span> <span class="nav-text">日志收集系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ELK-问题"><span class="nav-number">1.1.</span> <span class="nav-text">ELK 问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日志收集系统架构"><span class="nav-number">1.2.</span> <span class="nav-text">日志收集系统架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zookeeper"><span class="nav-number">1.3.</span> <span class="nav-text">zookeeper</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#组件"><span class="nav-number">1.3.1.</span> <span class="nav-text">组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用"><span class="nav-number">1.3.2.</span> <span class="nav-text">应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用"><span class="nav-number">1.3.3.</span> <span class="nav-text">使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kafka"><span class="nav-number">1.4.</span> <span class="nav-text">Kafka</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#消息队列概述"><span class="nav-number">1.4.1.</span> <span class="nav-text">消息队列概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kafka与传统消息系统相比，有以下不同："><span class="nav-number">1.4.2.</span> <span class="nav-text">Kafka与传统消息系统相比，有以下不同：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kafka的优点："><span class="nav-number">1.4.3.</span> <span class="nav-text">Kafka的优点：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kafka中有几个基本的消息术语需要了解："><span class="nav-number">1.4.4.</span> <span class="nav-text">Kafka中有几个基本的消息术语需要了解：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kafka的应用场景："><span class="nav-number">1.4.5.</span> <span class="nav-text">Kafka的应用场景：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#log-agent"><span class="nav-number">1.5.</span> <span class="nav-text">log agent</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主要目录组成"><span class="nav-number">1.5.1.</span> <span class="nav-text">主要目录组成</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#各环境安装顺序"><span class="nav-number">1.6.</span> <span class="nav-text">各环境安装顺序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#服务启动"><span class="nav-number">1.7.</span> <span class="nav-text">服务启动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-启动-Zookeeper"><span class="nav-number">1.7.1.</span> <span class="nav-text">1. 启动 Zookeeper</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-启动-Kafka-Broker"><span class="nav-number">1.7.2.</span> <span class="nav-text">2. 启动 Kafka Broker</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -684,7 +690,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">9.9k</span>
+    <span title="Site words total count">10.1k</span>
   
 </div>
 
